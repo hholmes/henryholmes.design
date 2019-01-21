@@ -1,6 +1,6 @@
 ---
-title: 'Frasco: Jekyll Starter Project'
-timezone: UTC
+title: 'Henry Holmes'
+timezone: EST
 collections:
   posts:
     title: Posts
@@ -8,13 +8,12 @@ collections:
   uploads:
     title: Uploads
     output: true
-email: your-email@domain.com
-description: Quick starter project for Jekyll including full setup for gulp, Sass,
-  Autoprefixer, Bourbon/Neat/Bitters, Browserify, imagemin, Browsersync, PostCSS etc.
+email: hello@henryholmes.design
+description: Henry is a product designer and movement artist based in New York City.
 baseurl: ''
-url: ''
-twitter_username: ixkaito
-github_username: ixkaito
+url: 'http://henryholmes.design'
+twitter_username: syntactile
+github_username: hholmes
 markdown: kramdown
 plugins:
 - jekyll-feed
