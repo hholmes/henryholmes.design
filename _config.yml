@@ -1,5 +1,5 @@
 ---
-title: 'Henry Holmes'
+title: Henry Holmes
 timezone: EST
 collections:
   posts:
@@ -11,7 +11,7 @@ collections:
 email: hello@henryholmes.design
 description: Henry is a product designer and movement artist based in New York City.
 baseurl: ''
-url: 'http://henryholmes.design'
+url: http://henryholmes.design
 twitter_username: syntactile
 github_username: hholmes
 markdown: kramdown
