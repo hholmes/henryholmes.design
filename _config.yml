@@ -5,6 +5,10 @@ collections:
   posts:
     title: Posts
     output: true
+  projects:
+    title: Projects
+    output: true
+    permalink: "/:collection/:name/"
   uploads:
     title: Uploads
     output: true
@@ -15,6 +19,7 @@ url: http://henryholmes.design
 twitter_username: syntactile
 github_username: hholmes
 markdown: kramdown
+permalink: pretty
 plugins:
 - jekyll-feed
 - jekyll-seo-tag
