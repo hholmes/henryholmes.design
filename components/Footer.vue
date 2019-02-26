@@ -1,5 +1,5 @@
 <template>
-  <footer>
-    &copy;2019 Henry Holmes
+  <footer class="fixed pin-b p-2">
+    ©{{ new Date().getFullYear() }} Henry Holmes
   </footer>
 </template>

@@ -14,8 +14,12 @@
     "test": "ava"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^4.5.2",
+    "@nuxtjs/google-analytics": "^2.1.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0"
+    "nuxt": "^2.4.0",
+    "nuxt-social-meta": "0.0.1",
+    "nuxtent": "^1.4.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
@@ -41,5 +45,10 @@
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^2.0.0"
-  }
+  },
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC"
 }
