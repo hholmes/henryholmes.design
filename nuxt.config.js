@@ -35,7 +35,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxtent',
+    "nuxt-netlify-cms",
     ['@nuxtjs/google-analytics', {
       id: 'UA-33669268-3',
       dev: false
