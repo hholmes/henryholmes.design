@@ -2,22 +2,11 @@
   <section class="container p-2">
     <div>
       <h1 class="intro mb-8 sm:text-5xl md:text-6xl">
-        Henry is a designer in Brooklyn.
+        Project Page
       </h1>
-      <p class="text-black">
-        This site is under construction. You can view the older one at <a href="http://syntactile.com" target="_blank">syntactile.com</a>.
-      </p>
     </div>
-    <ProjectCard />
   </section>
 </template>
 
 <script>
-import ProjectCard from '~/components/ProjectCard.vue'
-
-export default {
-  components: {
-    ProjectCard
-  }
-}
 </script>

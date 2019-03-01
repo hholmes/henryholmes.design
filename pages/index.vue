@@ -8,16 +8,8 @@
         This site is under construction. You can view the older one at <a href="http://syntactile.com" target="_blank">syntactile.com</a>.
       </p>
     </div>
-    <ProjectCard />
   </section>
 </template>
 
 <script>
-import ProjectCard from '~/components/ProjectCard.vue'
-
-export default {
-  components: {
-    ProjectCard
-  }
-}
 </script>
