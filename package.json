@@ -19,7 +19,7 @@
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
     "nuxt-social-meta": "0.0.1",
-    "nuxtent": "^1.4.1"
+    "netlify-identity-widget": "^1.5.1"
   },
   "devDependencies": {
     "@nuxt/common": "^2.3.4",
