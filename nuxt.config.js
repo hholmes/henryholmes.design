@@ -3,10 +3,17 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  env: {
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000'
+  },
+
   /*
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
     // title: pkg.name,
     // title: 'Henry Holmes',
     titleTemplate: (titleChunk) => {
