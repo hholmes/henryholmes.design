@@ -14,9 +14,9 @@ media_folder: "static/images" # Media files will be stored in the repo under sta
 public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - label: "Projects"
-    name: "projects"
-    folder: "content/projects"
+  - label: "Project"
+    name: "project"
+    folder: "content/project"
     create: true
     slug: "{{slug}}"
     format: "json"
@@ -31,14 +31,14 @@ collections:
         fields:
           - {label: Body, name: body, widget: markdown, required: false}
           - label: "Topic"
-            name: "topics"
+            name: "topic"
             widget: "relation"
-            collection: "topics"
+            collection: "topic"
             searchFields: ["title"]
             valueField: "title"
-  - label: "Topics"
-    name: "topics"
-    folder: "content/topics"
+  - label: "Topic"
+    name: "topic"
+    folder: "content/topic"
     create: true
     slug: "{{slug}}"
     format: "json"
@@ -54,10 +54,10 @@ collections:
         file: "content/about.json"
         fields:
           - {label: Title, name: title, widget: string, required: true}
-          - {label: Body, name: body, widget: text}
+          - {label: Body, name: body, widget: markdown}
       - label: "CV"
         name: "cv"
         file: "content/cv.json"
         fields:
           - {label: Title, name: title, widget: string, required: true}
-          - {label: Body, name: body, widget: text}
+          - {label: Body, name: body, widget: markdown}
