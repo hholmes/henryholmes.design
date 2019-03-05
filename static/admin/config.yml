@@ -34,7 +34,7 @@ collections:
             name: "topics"
             widget: "relation"
             collection: "topics"
-            searchFields: "title"
+            searchFields: ["title"]
             valueField: "title"
   - label: "Topics"
     name: "topics"
