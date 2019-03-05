@@ -57,8 +57,9 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-netlify-cms',
+    '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    'nuxt-netlify-cms',
     [
       '@nuxtjs/google-analytics',
       {
