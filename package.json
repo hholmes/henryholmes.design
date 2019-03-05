@@ -25,6 +25,7 @@
   "devDependencies": {
     "@nuxt/common": "^2.3.4",
     "@nuxtjs/eslint-config": "^0.0.1",
+    "@nuxtjs/markdownit": "github:syffs/nuxtv2-markdownit",
     "@vue/test-utils": "^1.0.0-beta.27",
     "autoprefixer": "^8.6.4",
     "ava": "^1.0.1",

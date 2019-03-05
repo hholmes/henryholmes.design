@@ -58,6 +58,7 @@ module.exports = {
   */
   modules: [
     'nuxt-netlify-cms',
+    '@nuxtjs/markdownit',
     [
       '@nuxtjs/google-analytics',
       {
@@ -66,6 +67,10 @@ module.exports = {
       }
     ]
   ],
+
+  markdownit: {
+    injected: true
+  },
 
   /*
   ** Build configuration
