@@ -12,13 +12,13 @@ module.exports = {
   */
   head: {
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     // title: pkg.name,
     // title: 'Henry Holmes',
-    titleTemplate: (titleChunk) => {
+    titleTemplate: titleChunk => {
       // If undefined or blank then we don't need the hyphen
-      return titleChunk ? `${titleChunk} - Henry Holmes` : 'Henry Holmes';
+      return titleChunk ? `${titleChunk} - Henry Holmes` : 'Henry Holmes'
     },
     meta: [
       { charset: 'utf-8' },
@@ -26,7 +26,16 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ type: 'text/javascript', src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+    script: [
+      {
+        type: 'text/javascript',
+        src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
+      },
+      {
+        type: 'text/javascript',
+        src: 'http://localhost:8098'
+      }
+    ]
   },
 
   /*
@@ -48,11 +57,14 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    "nuxt-netlify-cms",
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-33669268-3',
-      dev: false
-    }]
+    'nuxt-netlify-cms',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-33669268-3',
+        dev: false
+      }
+    ]
   ],
 
   /*
