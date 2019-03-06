@@ -3,8 +3,8 @@
     <Header />
     <div id="main" role="main">
       <nuxt />
-  </div>
-  <Footer />
+    </div>
+    <Footer />
   </div>
 </template>
 
