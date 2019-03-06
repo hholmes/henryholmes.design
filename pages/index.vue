@@ -13,14 +13,10 @@
       <p>
         A new site's being built with <a href="https://nuxtjs.org">Nuxt.js</a> and <a href="https://netlifycms.org">Netlify CMS</a>. Or maybe <a href="http://ghost.org">Ghost</a>. Or <a href="http://directus.io">Directus</a>. (You can see why it's taking so long.)
       </p>
-      <p>
-        <nuxt-link to="/page/about">about</nuxt-link>
-      </p>
     </div>
   </section>
 </template>
 
 <script>
-//debugger // eslint-disable-line
 export default {}
 </script>

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   // asyncData: async ({ app, route, payload }) => {
   //   return {
@@ -13,9 +13,11 @@ export default {
   //   };
   // }
   async asyncData({ params, route }) {
-    const pageData = await import('~/content/page/' + route.params.page + '.json')
+    const pageData = await import('~/content/page/' +
+      route.params.page +
+      '.json')
     return {
-      post: pageData,
+      post: pageData
     }
   },
   // async asyncData ({ params }) {
