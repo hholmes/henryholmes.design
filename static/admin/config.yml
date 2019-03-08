@@ -47,6 +47,8 @@ collections:
   - label: "Pages"
     name: "pages"
     folder: "content/page"
+    create: true
+    format: "json"
     fields:
       - {label: Title, name: title, widget: string, required: true}
       - {label: Body, name: body, widget: markdown}
