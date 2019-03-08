@@ -1,10 +1,8 @@
 backend:
   name: git-gateway
-  repo: http://github.com/hholmes/henryholmes.design
   branch: master # Branch to update (optional; defaults to master)
   accept_roles: #optional - accepts all users if left out
     - admin
-  site_domain: https://henryholmes.design/#/
 
 media_library:
   name: uploadcare
@@ -48,16 +46,7 @@ collections:
       - {label: Description, name: description, widget: text, required: false}
   - label: "Pages"
     name: "pages"
-    files:
-      - label: "About"
-        name: "about"
-        file: "content/about.json"
-        fields:
-          - {label: Title, name: title, widget: string, required: true}
-          - {label: Body, name: body, widget: markdown}
-      - label: "CV"
-        name: "cv"
-        file: "content/cv.json"
-        fields:
-          - {label: Title, name: title, widget: string, required: true}
-          - {label: Body, name: body, widget: markdown}
+    folder: "content/page"
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: Body, name: body, widget: markdown}
