@@ -1,6 +1,6 @@
 <template>
   <div class="m-4">
-    <div v-html="$md.render(post.body)" />
+    <div v-html="$md.render(project.body)" />
   </div>
 </template>
 
@@ -8,16 +8,16 @@
 // import axios from 'axios'
 export default {
   async asyncData({ params, route }) {
-    const pageData = await import('~/content/page/' +
-      route.params.page +
+    const projectData = await import('~/content/project/' +
+      route.params.project +
       '.json')
     return {
-      post: pageData
+      project: projectData
     }
   },
   head() {
     return {
-      title: this.post.title + ' | Henry Holmes'
+      title: this.project.title + ' | Henry Holmes'
     }
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <section class="container p-2">
     <div v-html="$md.render(page.body)" />
+    <nuxt-link to="/project/smileback">SmileBack</nuxt-link>
   </section>
 </template>
 

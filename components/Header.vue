@@ -3,8 +3,11 @@
     <nuxt-link to="/" class="mr-8">
       Home
     </nuxt-link>
-    <nuxt-link to="/about">
+    <nuxt-link to="/about" class="mr-8">
       About
+    </nuxt-link>
+    <nuxt-link to="/cv">
+      CV
     </nuxt-link>
   </header>
 </template>
