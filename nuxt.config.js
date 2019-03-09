@@ -74,8 +74,8 @@ module.exports = {
   },
 
   router: {
-
-    {
+    routes: [
+      {
         name: 'project',
         path: '/project/:project',
         component: 'project/_project.vue'
