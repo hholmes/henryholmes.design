@@ -6,7 +6,7 @@
         <a :href="`/${pageLink}`">{{ pageLink }}</a>
       </li>
     </ul> -->
-    <nuxt-link to="/" class="mr-8">
+    <!-- <nuxt-link to="/" class="mr-8">
       Home
     </nuxt-link>
     <nuxt-link to="/about" class="mr-8">
@@ -20,7 +20,7 @@
     </nuxt-link>
     <nuxt-link to="/project/dancemaker">
       Dancemaker
-    </nuxt-link>
+    </nuxt-link> -->
   </header>
 </template>
 
