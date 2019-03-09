@@ -12,6 +12,29 @@ media_folder: "static/images" # Media files will be stored in the repo under sta
 public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
+  - label: "Meta"
+    name: "meta"
+    files: 
+      - label: "Header"
+        name: "header"
+        file: "content/meta/header.json"
+        format: "json"
+        fields:
+            - {label: "logo", name: "logo", widget: image}
+            - label: "Pages"
+              name: "pages"
+              widget: "relation"
+              collection: "pages"
+              searchFields: ["title"]
+              valueField: "title"
+              multiple: true
+            - label: "Projects"
+              name: "projects"
+              widget: "relation"
+              collection: "project"
+              searchFields: ["title"]
+              valueField: "title"
+              multiple: true
   - label: "Project"
     name: "project"
     folder: "content/project"

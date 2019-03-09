@@ -1,6 +1,6 @@
 <template>
   <div class="m-4">
-    <h1>{{ project.title }}</h1>
+    <h2>{{ project.title }}</h2>
     <h4>{{ project.subtitle }}</h4>
     <div 
       v-for="section in project.sections"
@@ -24,7 +24,7 @@ export default {
   },
   head() {
     return {
-      title: this.project.title + ' | Henry Holmes'
+      title: this.project.title
     }
   }
 }
@@ -32,9 +32,15 @@ export default {
 
 <style>
 h2 {
-  @apply mb-4;
+  @apply mb-2;
 }
 h4 {
   @apply mb-12;
+}
+p {
+  @apply mb-8;
+}
+blockquote {
+  @apply ml-12;
 }
 </style>

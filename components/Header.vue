@@ -6,8 +6,14 @@
     <nuxt-link to="/about" class="mr-8">
       About
     </nuxt-link>
-    <nuxt-link to="/cv">
+    <nuxt-link to="/cv" class="mr-8">
       CV
+    </nuxt-link>
+    <nuxt-link to="/project/smileback" class="mr-8">
+      SmileBack
+    </nuxt-link>
+    <nuxt-link to="/project/dancemaker">
+      Dancemaker
     </nuxt-link>
   </header>
 </template>

@@ -1,7 +1,6 @@
 <template>
   <section class="container p-2">
     <div v-html="$md.render(page.body)" />
-    <nuxt-link to="/project/smileback">SmileBack</nuxt-link>
   </section>
 </template>
 
@@ -23,6 +22,6 @@ export default {
 
 <style>
 h1 {
-  @apply mb-8;
+  @apply mb-2;
 }
 </style>

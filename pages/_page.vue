@@ -17,7 +17,7 @@ export default {
   },
   head() {
     return {
-      title: this.post.title + ' | Henry Holmes'
+      title: this.post.title
     }
   }
 }

@@ -73,6 +73,16 @@ module.exports = {
     injected: true
   },
 
+  router: {
+
+    {
+        name: 'project',
+        path: '/project/:project',
+        component: 'project/_project.vue'
+      }
+    ]
+  },
+
   /*
   ** Build configuration
   */
