@@ -11,11 +11,6 @@ export default {
     return {
       page: pageData
     }
-  },
-  head() {
-    return {
-      title: 'Henry Holmes'
-    }
   }
 }
 </script>

@@ -3,9 +3,11 @@
     <h2>{{ project.title }}</h2>
     <h4>{{ project.subtitle }}</h4>
     <div 
-      v-for="section in project.sections"
-      v-bind:key="section.id">
-      <div v-html="$md.render(section.body)" class="mb-10" />
+      v-for="section in project.sections" 
+      :key="section.id"
+      class="mb-10"
+    >
+      <div v-html="$md.render(section.body)" />
     </div>
     <!-- <div v-html="$md.render(project.sections[0].body)" /> -->
   </div>
