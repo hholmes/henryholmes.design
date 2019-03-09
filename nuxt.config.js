@@ -1,4 +1,5 @@
 const pkg = require('./package')
+process.env.DEBUG = 'nuxt:*'
 
 module.exports = {
   mode: 'universal',
