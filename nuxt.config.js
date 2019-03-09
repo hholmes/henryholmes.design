@@ -92,9 +92,8 @@ module.exports = {
     */
     postcss: [require('tailwindcss')('./tailwind.js'), require('autoprefixer')],
 
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
+    extend(config, { isDev }) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
