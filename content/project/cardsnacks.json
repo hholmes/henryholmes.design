@@ -1,0 +1,10 @@
+{
+  "title": "CardSnacks",
+  "subtitle": "A greeting card app",
+  "sections": [
+    {
+      "body": "## Greetings! \n\n**Cards!**",
+      "topic": "Generic"
+    }
+  ]
+}
