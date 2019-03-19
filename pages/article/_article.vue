@@ -1,13 +1,11 @@
 <template>
   <div class="m-4">
-    <h2>{{ project.title }}</h2>
-    <h4>{{ project.subtitle }}</h4>
+    <h2>{{ article.title }}</h2>
     <img 
-      v-if="project.cover"
       class="w-1/2" 
-      :src="project.cover" />
+      :src="article.cover" />
     <div 
-      v-for="section in project.sections" 
+      v-for="section in article.sections" 
       :key="section.id"
       class="mb-10"
     >
@@ -24,16 +22,16 @@
 // import axios from 'axios'
 export default {
   async asyncData({ params, route }) {
-    const projectData = await import('~/content/project/' +
-      route.params.project +
+    const articleContents = await import('~/content/article/' +
+      route.params.article +
       '.json')
     return {
-      project: projectData
+      project: articleContents
     }
   },
   head() {
     return {
-      title: this.project.title
+      title: this.article.title
     }
   }
 }
