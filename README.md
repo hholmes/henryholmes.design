@@ -2,6 +2,6 @@
 
 Henry Holmes is a designer in Brooklyn, New York. This is their portfolio.
 
-It's built with [Nuxt.JS](https://nuxtjs.org) and, for the time being, [Netlify CMS](https://netlifycms.org).
+It's built with [Nuxt.JS](https://nuxtjs.org) and [Netlify CMS](https://netlifycms.org).
 
 _Work in progress._
