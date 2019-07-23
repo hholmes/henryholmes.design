@@ -2,7 +2,7 @@
   <header class="pin-t p-2">
     <ul class="list-reset">
       <li class="mr-8 inline">
-        <a :href='"/"'>Home</a>
+        <a :href='"/"'>Henry Holmes</a>
       </li>
       <span
         v-for="link in navPages"
@@ -24,8 +24,8 @@ const navPages = context.keys().map(key => ({
     ...context(key),
     _path: `/${key.replace('.json', '').replace('./', '')}`
   }));
-console.log(navPages)
-console.log(header.pages)
+// console.log(navPages)
+// console.log(header.pages)
 export default {
   data () {
     return {

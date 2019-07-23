@@ -1,12 +1,16 @@
 <template>
-  <section class="container p-2">
+  <section class="container p-2 font-inter">
     <div v-html="$md.render(intro.body)" />
     <ProjectsList />
+    <!-- <LensList /> -->
+    <!-- <ArticlesList /> -->
   </section>
 </template>
 
 <script>
 import ProjectsList from "~/components/ProjectsList"
+// import LensList from "~/components/LensList"
+// import ArticlesList from "~/components/ArticlesList"
 
 const intro = require('~/content/meta/intro.json')
 
@@ -17,7 +21,9 @@ export default {
     }
   },
   components: {
-    ProjectsList
+    ProjectsList,
+    // LensList,
+    // ArticlesList
   }
 }
 </script>

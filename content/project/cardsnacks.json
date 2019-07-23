@@ -1,6 +1,7 @@
 {
+  "id": 3,
   "title": "CardSnacks",
-  "subtitle": "A greeting card app",
+  "subtitle": "a greeting card collection that never stops moving",
   "sections": [
     {
       "body": "## Greetings! \n\n**Cards!**",

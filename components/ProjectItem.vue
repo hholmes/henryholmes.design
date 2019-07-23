@@ -1,12 +1,9 @@
 <template>
   <nuxt-link :to="url">
     <div class="ProjectItem container max-w-sm rounded overflow-hidden shadow-md p-8">
-      <h2 class="text-black pb-2">
-        {{ project.title }}
-      </h2>
-      <p>
+      <h2>
         {{ project.subtitle }}
-      </p>
+      </h2>
     </div>
   </nuxt-link>
 </template>

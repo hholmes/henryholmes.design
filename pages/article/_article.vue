@@ -26,7 +26,7 @@ export default {
       route.params.article +
       '.json')
     return {
-      project: articleContents
+      article: articleContents
     }
   },
   head() {

@@ -1,16 +1,21 @@
 <template>
-  <ul class="block md:flex list-reset">
-    <li
-      v-for="project in projects"
-      class="flex-1 m-4"
-      :key="project.id">
-      <ProjectItem :project="project" :url="'/project' + project._path" />
-    </li>
-  </ul>
+  <section class="container">
+    <h2>For example,</h2>
+    <ul class="block md:flex list-reset">
+      <li
+        v-for="project in orderBy(projects,'id')"
+        class="flex-1 m-4"
+        :key="project.id">
+        <ProjectItem :project="project" :url="'/project' + project._path" />
+      </li>
+    </ul>
+    <a href="/work">see more projects ›</a>
+  </section>
 </template>
 
 <script>
 import ProjectItem from "~/components/ProjectItem"
+import Vue2Filters from 'vue2-filters'
 
 const context = require.context('~/content/project/', false, /\.json$/)
 const projects = context.keys().map(key => ({
@@ -26,6 +31,7 @@ export default {
   },
   components: {
     ProjectItem
-  }
+  },
+  mixins: [Vue2Filters.mixin]
 }
 </script>
