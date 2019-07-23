@@ -80,28 +80,29 @@ collections:
             collection: "topic"
             searchFields: ["title"]
             valueField: "title"
-  - label: "Topic"
-    name: "topic"
-    folder: "content/topic"
-    create: true
-    slug: "{{slug}}"
-    format: "json"
-    fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Abbr, name: abbr, widget: string, required: true}
-      - {label: Description, name: description, widget: text, required: false}
-  - label: "Resume"
-    name: "resume"
-    file: "content/resume.json"
-    format: "json"
-    fields:
-      - label: "Companies"
-        name: "companies"
-        widget: list
-        required: true
-          - {label: Title, name: title, widget: string, required: true}
-          - {label: Logo, name: logo, widget: image, required: false}
-          - {label: Acronym, name: acronym, widget: string, required: false}
+  # - label: "Topic"
+  #   name: "topic"
+  #   folder: "content/topic"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   format: "json"
+  #   fields:
+  #     - {label: Title, name: title, widget: string, required: true}
+  #     - {label: Abbr, name: abbr, widget: string, required: true}
+  #     - {label: Description, name: description, widget: text, required: false}
+  # - label: "Resume"
+  #   name: "resume"
+  #   file: "content/resume.json"
+  #   format: "json"
+  #   fields:
+  #     - label: "Companies"
+  #       name: "companies"
+  #       widget: list
+  #       required: true
+  #       fields:
+  #         - {label: Title, name: title, widget: string, required: true}
+  #         - {label: Logo, name: logo, widget: image, required: false}
+  #         - {label: Acronym, name: acronym, widget: string, required: false}
   - label: "Pages"
     name: "pages"
     folder: "content/page"
