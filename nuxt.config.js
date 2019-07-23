@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         type: 'text/javascript',
-        src: 'http://localhost:8098'
+        src: 'https://localhost:8098'
       }
     ]
   },
