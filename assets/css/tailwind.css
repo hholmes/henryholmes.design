@@ -36,6 +36,10 @@
  * @import "components/forms";
  */
 
+ .form-input {
+   @apply appearance-none border-2 rounded w-full py-3 px-4 leading-tight;
+ }
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
@@ -61,6 +65,10 @@
  * @import "utilities/skew-transforms";
  */
 
+
+ /**
+ * Typography
+ */
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
