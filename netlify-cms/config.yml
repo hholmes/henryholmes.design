@@ -1,9 +1,8 @@
 media_folder: static/images
 backend:
   name: git-gateway
-  branch: staging
-  accept_roles:
-    - admin
+  branch: master
+  auth_endpoint: auth
 media_library:
   name: uploadcare
   config:
