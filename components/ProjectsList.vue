@@ -1,14 +1,12 @@
 <template>
-  <section class="container">
+  <section class="flex flex-wrap container mb-8 xl:mb-16 md:-mx-6 xl:-mx-6">
     <!-- <h2>For example,</h2> -->
-    <ul class="block md:flex list-reset">
-      <li
+    <div
         v-for="project in orderBy(projects,'id')"
-        class="flex-1"
+        class="w-full mb-4 md:w-1/2 md:px-2 xl:px-3"
         :key="project.id">
         <ProjectItem :project="project" :url="'/project' + project._path" />
-      </li>
-    </ul>
+    </div>
     <p class="text-right hidden">
       <a href="/work">see more projects ›</a>
     </p>

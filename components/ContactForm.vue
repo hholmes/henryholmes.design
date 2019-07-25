@@ -3,6 +3,12 @@
     <form class="w-full max-w-sm" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
       <div class="hidden">
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </div>    
+      <div class="md:flex mb-3">
+        <div class="sm:display-hidden md:w-1/3"></div>
+        <div class="sm:w-full md:w-2/3">
+          <h2 class="">Reach out</h2>
+        </div>
       </div>
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/3">

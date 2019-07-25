@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed pin-b p-2">
-    ©{{ new Date().getFullYear() }} Henry Holmes
+  <footer class="text-grey text-center m-16">
+    ♥
   </footer>
 </template>

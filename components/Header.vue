@@ -1,7 +1,7 @@
 <template>
   <header class="pin-t p-2">
     <ul class="list-reset">
-      <li class="mr-8 inline">
+      <!-- <li class="mr-8 inline">
         <a :href='"/"'>Henry Holmes</a>
       </li>
       <span
@@ -12,7 +12,7 @@
           class="mr-8 inline">
           <a :href='link._path'>{{ link.title }}</a>
         </li>
-      </span>
+      </span> -->
     </ul>
   </header>
 </template>
