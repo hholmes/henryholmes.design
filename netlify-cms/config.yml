@@ -20,21 +20,37 @@ collections:
         file: "content/meta/header.json"
         format: "json"
         fields:
-            - {label: "logo", name: "logo", widget: image}
-            - label: "Pages"
-              name: "pages"
-              widget: "relation"
-              collection: "pages"
-              searchFields: ["title"]
-              valueField: "title"
-              multiple: true
-            - label: "Projects"
-              name: "projects"
-              widget: "relation"
-              collection: "project"
-              searchFields: ["title"]
-              valueField: "title"
-              multiple: true
+          - {label: "logo", name: "logo", widget: image}
+          - label: "Pages"
+            name: "pages"
+            widget: "relation"
+            collection: "pages"
+            searchFields: ["title"]
+            valueField: "title"
+            multiple: true
+          - label: "Projects"
+            name: "projects"
+            widget: "relation"
+            collection: "project"
+            searchFields: ["title"]
+            valueField: "title"
+            multiple: true
+      - label: "Intro"
+        name: "intro"
+        file: "content/meta/intro.json"
+        format: "json"
+        fields:
+          - {label: Body, name: body, widget: markdown, required: true}
+      - label: "Social"
+        name: "social"
+        file: "content/meta/social.json"
+        format: "json"
+        fields:
+          - {label: Facebook, name: facebook, widget: string, required: false}
+          - {label: Twitter, name: twitter, widget: string, required: false}
+          - {label: GitHub, name: github, widget: string, required: false}
+          - {label: Instagram, name: instagram, widget: string, required: false}
+          - {label: LinkedIn, name: linkedin, widget: string, required: false}
   - label: "Project"
     name: "project"
     folder: "content/project"
@@ -43,6 +59,7 @@ collections:
     format: "json"
     fields:
       - {label: Title, name: title, widget: string, required: true}
+      - {label: Type, name: type, widget: string, required: true}
       - {label: Subtitle, name: subtitle, widget: string, required: false}
       - {label: CoverImage, name: cover, widget: image, required: false}
       - label: Sections

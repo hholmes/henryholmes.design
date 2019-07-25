@@ -1,10 +1,10 @@
 <template>
   <div class="m-4">
-    <h2>{{ project.title }}</h2>
-    <h4>{{ project.subtitle }}</h4>
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.subtitle }}</p>
     <img 
       v-if="project.cover"
-      class="w-1/2" 
+      class="w-full" 
       :src="project.cover" />
     <div 
       v-for="section in project.sections" 

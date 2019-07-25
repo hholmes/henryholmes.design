@@ -1,15 +1,17 @@
 <template>
   <section class="container">
-    <h2>For example,</h2>
+    <!-- <h2>For example,</h2> -->
     <ul class="block md:flex list-reset">
       <li
         v-for="project in orderBy(projects,'id')"
-        class="flex-1 m-4"
+        class="flex-1"
         :key="project.id">
         <ProjectItem :project="project" :url="'/project' + project._path" />
       </li>
     </ul>
-    <a href="/work">see more projects ›</a>
+    <p class="text-right hidden">
+      <a href="/work">see more projects ›</a>
+    </p>
   </section>
 </template>
 

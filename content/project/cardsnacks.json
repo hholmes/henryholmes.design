@@ -1,7 +1,8 @@
 {
   "id": 3,
   "title": "CardSnacks",
-  "subtitle": "a greeting card collection that never stops moving",
+  "type": "UI Designs",
+  "subtitle": "Refreshing a media-rich greeting card platform",
   "sections": [
     {
       "body": "## Greetings! \n\n**Cards!**",
