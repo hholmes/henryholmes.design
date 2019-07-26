@@ -1,24 +1,24 @@
 <template>
-  <div>
-    <form class="w-full max-w-sm" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+  <div class="md:pr-8">
+    <form class="sm:max-w-sm sm:mx-auto md:m-0 lg:max-w-md" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
       <div class="hidden">
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
       </div>    
-      <div class="md:flex mb-3">
-        <div class="sm:display-hidden md:w-1/3"></div>
-        <div class="sm:w-full md:w-2/3">
-          <h2 class="">Reach out</h2>
+      <div class="md:flex mb-8 md:mb-6">
+        <div class="sm:display-hidden md:w-1/5"></div>
+        <div class="md:w-4/5 lg:w-3/5">
+          <h2>What's your thing?</h2>
         </div>
       </div>
       <div class="md:flex md:items-center mb-6">
-        <div class="md:w-1/3">
-          <label class="block text-gray-dark font-bold md:text-right mb-1 md:mb-0 pr-4" 
+        <div class="md:w-1/5">
+          <label class="block text-purple-dark font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-full-name">
-            Your Name
+            name
           </label>
         </div>
-        <div class="md:w-2/3">
-          <input class="form-input" 
+        <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
+          <input class="form-input focus:outline-none focus:bg-white focus:border-purple-dark" 
                  id="inline-full-name" 
                  name="name"
                  type="text" 
@@ -26,14 +26,14 @@
         </div>
       </div>
       <div class="md:flex md:items-center mb-6">
-        <div class="md:w-1/3">
-          <label class="block text-gray-dark font-bold md:text-right mb-1 md:mb-0 pr-4" 
+        <div class="md:w-1/5">
+          <label class="block text-purple-dark font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-email">
-            Your Email
+            email
           </label>
         </div>
-        <div class="md:w-2/3">
-          <input class="form-input" 
+        <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
+          <input class="form-input focus:outline-none focus:bg-white focus:border-purple-dark" 
                  id="inline-email" 
                  name="email"
                  type="text" 
@@ -41,14 +41,14 @@
         </div>
       </div>
       <div class="md:flex md:items-top mb-6">
-        <div class="md:w-1/3 md:pt-3">
-          <label class="block text-gray-dark font-bold md:text-right mb-1 md:mb-0 pr-4" 
+        <div class="md:w-1/5 md:pt-3">
+          <label class="block text-purple-dark font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-message">
-            Message
+            message
           </label>
         </div>
-        <div class="md:w-2/3">
-          <textarea class="form-input" 
+        <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
+          <textarea class="form-input focus:outline-none focus:bg-white focus:border-purple-dark" 
                  id="inline-message"
                  name="message"
                  placeholder="What's on your mind?">
@@ -56,8 +56,8 @@
         </div>
       </div>
       <div class="md:flex md:items-center">
-        <div class="md:w-1/3"></div>
-        <div class="md:w-2/3">
+        <div class="md:w-1/5"></div>
+        <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
           <button class="shadow bg-purple-dark text-white hover:bg-purple focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" type="submit">
             Send
           </button>

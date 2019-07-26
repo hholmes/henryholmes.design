@@ -10,7 +10,7 @@
       class="mb-10"
     >
       <div v-html="$md.render(section.body)" />
-      <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+      <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-darker mr-2">
         {{ section.topic }}
       </span>
     </div>

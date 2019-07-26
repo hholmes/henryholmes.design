@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto">
-    <Header />
+  <div>
+    <!-- <Header /> -->
     <div id="main" role="main">
       <nuxt />
     </div>

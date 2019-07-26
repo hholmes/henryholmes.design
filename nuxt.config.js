@@ -79,7 +79,11 @@ module.exports = {
   ],
 
   markdownit: {
-    injected: true
+    injected: true,
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: ['markdown-it-div', 'markdown-it-attrs']
   },
 
   router: {

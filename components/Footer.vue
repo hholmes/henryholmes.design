@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-grey text-center m-16">
+  <footer class="text-gray text-center mb-16">
     ♥
   </footer>
 </template>

@@ -1,8 +1,11 @@
 <template>
-  <div class="px-2 pb-24 sm:pt-8 lg:pt-16">
-    <section class="container font-inter overflow-hidden">
+  <div class="container mx-auto px-4 pt-16 md:pt-24 pb-24 sm:pt-8 lg:pt-16 font-inter">
+    <section class="container overflow-hidden mb-8">
       <div class="flex flex-wrap">
-        <div class="w-full md:w-1/2" v-html="$md.render(intro.body)" />
+        <div class="w-full md:w-1/2">
+          <h1 class="mb-6 max-w-48">I'm Henry Holmes, a designer in Brooklyn.</h1>
+          <div v-html="$md.render(intro.body)" />
+        </div>
         <div class="sm:display-hidden md:w-1/4 leading-loose">
           <!-- <h3 class="">Currently</h3>
           <ul class="list-reset">
@@ -11,18 +14,33 @@
             <li>Seeking Oppo</li>
           </ul> -->
         </div>
-        <div class="sm:w-full md:w-1/4 leading-loose">
-          <h3 class="">Previously</h3>
-          <ul class="list-reset">
-            <li>National Park Service</li>
+        <div class="w-full text-center md:text-left md:w-1/4 leading-loose">
+          <h3 class="pb-2 md:pb-6 sm:mt-6 md:mt-15">Previously</h3>
+          <ul class="list-reset mb-6 uppercase tracking-wide text-sm">
             <li>92Y</li>
-            <li>GuideOne Mobile</li>
+            <li>SmileBack</li>
+            <li>GuideOne / NPS</li>
           </ul>
         </div>
       </div>
     </section>
     <ProjectsList />
-    <ContactForm />
+    <section class="container">
+      <div class="flex flex-wrap">
+        <div class="w-full md:pr-2 md:w-3/4">
+          <ContactForm />
+        </div>
+        <div class="w-full text-center md:text-left md:w-1/4 pt-1 px-4 px-0 mt-16 md:mt-0 md:px-0">
+          <h3 class="pb-6">Me, elsewhere</h3>
+          <ul class="list-reset leading-loose">
+            <!-- <li><a href="https://facebook.com/hholmes" target="_blank">Facebook</a></li> -->
+            <li><a href="https://twitter.com/syntactile" target="_blank">twitter</a></li>
+            <li><a href="https://github.com/hholmes" target="_blank">github</a></li>
+            <li><a href="https://www.linkedin.com/in/henryjholmes/" target="_blank">linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
   <!-- <LensList /> -->
   <!-- <ArticlesList /> -->
@@ -31,6 +49,7 @@
 <script>
 import ProjectsList from "~/components/ProjectsList"
 import ContactForm from "~/components/ContactForm"
+// import SocialLinks from "~/components/SocialLinks"
 // import LensList from "~/components/LensList"
 // import ArticlesList from "~/components/ArticlesList"
 
@@ -44,7 +63,8 @@ export default {
   },
   components: {
     ProjectsList,
-    ContactForm
+    ContactForm,
+    // SocialLinks
     // LensList,
     // ArticlesList
   }

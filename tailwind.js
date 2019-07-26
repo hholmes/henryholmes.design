@@ -46,13 +46,13 @@ const colors = {
   transparent: 'transparent',
 
   black: '#22292f',
-  'grey-darkest': '#3d4852',
-  'grey-darker': '#606f7b',
-  'grey-dark': '#8795a1',
-  grey: '#b8c2cc',
-  'grey-light': '#dae1e7',
-  'grey-lighter': '#f1f5f8',
-  'grey-lightest': '#f8fafc',
+  'gray-darkest': '#3d4852',
+  'gray-darker': '#606f7b',
+  'gray-dark': '#8795a1',
+  gray: '#b8c2cc',
+  'gray-light': '#dae1e7',
+  'gray-lighter': '#f1f5f8',
+  'gray-lightest': '#f8fafc',
   white: '#ffffff',
 
   'red-darkest': '#3b0d0c',
@@ -298,9 +298,10 @@ module.exports = {
 
   leading: {
     none: 1,
-    tight: 1.25,
-    normal: 1.5,
-    loose: 2
+    snug: 1.15,
+    tight: 1.325,
+    normal: 1.52,
+    loose: 1.75
   },
 
   /*
@@ -318,7 +319,9 @@ module.exports = {
   tracking: {
     tight: '-0.05em',
     normal: '0',
-    wide: '0.05em'
+    wide: '0.05em',
+    wider: '0.075em',
+    widest: '1em'
   },
 
   /*
@@ -408,7 +411,7 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: global.Object.assign({ default: colors['gray-light'] }, colors),
 
   /*
   |-----------------------------------------------------------------------------
@@ -557,7 +560,13 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    quarter: '25%',
+    half: '50%',
+    twothird: '67%',
+    threequarter: '75%',
     full: '100%',
+    screenhalf: '50vh',
+    screenthreequarter: '67vh',
     screen: '100vh'
   },
 
@@ -669,6 +678,7 @@ module.exports = {
     '8': '2rem',
     '10': '2.5rem',
     '12': '3rem',
+    '15': '3.5rem',
     '16': '4rem',
     '20': '5rem',
     '24': '6rem',

@@ -8,8 +8,9 @@ media_library:
   name: uploadcare
   config:
     publicKey: 6e0aed1d8c0dcc0424c4
+    
 media_folder: "static/images" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: "/images" # The src attribute for uploaded media will begin with /images
 
 collections:
   - label: "Meta"
@@ -74,6 +75,7 @@ collections:
             collection: "topic"
             searchFields: ["title"]
             valueField: "title"
+            required: false
   - label: "Article"
     name: "article"
     folder: "content/article"
@@ -97,16 +99,16 @@ collections:
             collection: "topic"
             searchFields: ["title"]
             valueField: "title"
-  # - label: "Topic"
-  #   name: "topic"
-  #   folder: "content/topic"
-  #   create: true
-  #   slug: "{{slug}}"
-  #   format: "json"
-  #   fields:
-  #     - {label: Title, name: title, widget: string, required: true}
-  #     - {label: Abbr, name: abbr, widget: string, required: true}
-  #     - {label: Description, name: description, widget: text, required: false}
+  - label: "Topic"
+    name: "topic"
+    folder: "content/topic"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: Abbr, name: abbr, widget: string, required: true}
+      - {label: Description, name: description, widget: text, required: false}
   # - label: "Resume"
   #   name: "resume"
   #   file: "content/resume.json"
