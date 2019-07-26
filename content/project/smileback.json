@@ -5,7 +5,7 @@
   "cover": "https://ucarecdn.com/de14b32e-9de2-4a6d-a12a-e286c0e88563/",
   "sections": [
     {
-      "body": "## First section\n\nInteraction design. Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.\n\n![Several flamingos are carried in the arms of zoo staff](https://ucarecdn.com/d204b81e-e6e6-4930-b0bc-a6424a52bb35/ \"Zookeepers move flamingoes by hand\"){ .rounded }\n\nThis is new text added after the image.",
+      "body": "## First section\n\nInteraction design. Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.\n\n![Several flamingos are carried in the arms of zoo staff](https://ucarecdn.com/d204b81e-e6e6-4930-b0bc-a6424a52bb35/ \"Zookeepers move flamingoes by hand\"){: .rounded }\n\nThis is new text added after the image.",
       "topic": "Interaction & Animation"
     },
     {
