@@ -56,7 +56,8 @@
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^2.0.0",
-    "tailwindcss": "^0.7.0"
+    "tailwindcss": "^0.7.0",
+    "tailwindcss-scrims": "^1.0.0"
   },
   "main": ".eslintrc.js",
   "directories": {

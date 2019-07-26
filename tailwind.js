@@ -910,6 +910,22 @@ module.exports = {
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',
+    }),
+    require('tailwindcss-scrims')({
+      // directions: {
+      //   t: 'to bottom',
+      //   b: 'to top',
+      //   r: 'to left',
+      //   l: 'to right'
+      // },
+      // distances: {
+      //   '1/4': '25%',
+      //   '1/3': '33.33333%',
+      //   '1/2': '50%',
+      //   '2/3': '66.66666%',
+      //   '3/4': '75%'
+      // },
+      // variants: ['responsive', 'hover']
     })
   ],
 

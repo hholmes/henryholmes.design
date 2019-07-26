@@ -48,6 +48,18 @@ h1, h2, h3 {
   @apply leading-tight;
 }
 
+.scrim-t, .scrim-r, .scrim-b, .scrim-l {
+  background-image: url('https://source.unsplash.com/random/800x600');
+}
+
+.scrim-t *, .scrim-r *, .scrim-b *, .scrim-l * {
+  @apply z-10 relative;
+}
+
+.scrim-t::after, .scrim-r::after, .scrim-b::after, .scrim-l::after {
+  @apply z-0;
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.

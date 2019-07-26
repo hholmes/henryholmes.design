@@ -1,7 +1,8 @@
 <template>
   <div>
-    <section class="flex items-end px-2 pt-16 min-h-screenhalf md:min-h-screen bg-cover bg-center" :style="{ backgroundImage: `url('${ project.cover }')` }">
-      <div class="w-full max-w-lg mx-auto text-4xl md:text-6xl">
+    <section class="flex items-end px-2 pt-16 min-h-screenhalf md:min-h-screen bg-cover bg-center text-white scrim-b">
+             <!-- :style="{ backgroundImage: `url('${ project.cover }')` }" -->
+      <div class="w-full max-w-lg mx-auto text-4xl md:text-6xl z-10">
         <h1>{{ project.title }}</h1>
         <p class="leading-snug">{{ project.subtitle }}</p>
       </div>

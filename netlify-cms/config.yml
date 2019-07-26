@@ -59,6 +59,7 @@ collections:
     slug: "{{slug}}"
     format: "json"
     fields:
+      - {label: ID, name: id, widget: string, required: true}
       - {label: Title, name: title, widget: string, required: true}
       - {label: Type, name: type, widget: string, required: true}
       - {label: Subtitle, name: subtitle, widget: string, required: false}
