@@ -1,9 +1,9 @@
 <template>
   <div>
-    <section class="flex items-end px-2 pt-16 min-h-screenhalf md:min-h-screen bg-cover bg-center text-white scrim-b">
-             <!-- :style="{ backgroundImage: `url('${ project.cover }')` }" -->
-      <div class="w-full max-w-lg mx-auto text-4xl md:text-6xl z-10">
-        <h1>{{ project.title }}</h1>
+    <section class="flex items-end px-2 pt-16 min-h-screenhalf md:min-h-screen bg-cover bg-center bg-fixed text-white scrim-b"
+             :style="{ backgroundImage: `url('${ project.cover }')` }">
+      <div class="w-full max-w-lg mx-auto text-xl z-10 mb-4">
+        <h1 class="mb-4 text-4xl md:text-6xl">{{ project.title }}</h1>
         <p class="leading-snug">{{ project.subtitle }}</p>
       </div>
     </section>
@@ -13,7 +13,7 @@
         :key="section.id"
         class="mb-16">
         <div v-html="$md.render(section.body)" />
-        <!-- <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-darker mr-2">
+        <!-- <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">
           {{ section.topic }}
         </span> -->
       </div>

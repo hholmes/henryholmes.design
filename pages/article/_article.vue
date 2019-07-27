@@ -10,7 +10,7 @@
       class="mb-10"
     >
       <div v-html="$md.render(section.body)" />
-      <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-darker mr-2">
+      <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">
         {{ section.topic }}
       </span>
     </div>
@@ -36,18 +36,3 @@ export default {
   }
 }
 </script>
-
-<style>
-h2 {
-  @apply mb-2;
-}
-h4 {
-  @apply mb-12;
-}
-p {
-  @apply mb-8;
-}
-blockquote {
-  @apply ml-12;
-}
-</style>

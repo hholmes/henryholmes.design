@@ -1,6 +1,7 @@
 <template>
   <nuxt-link :to="url">
-    <div class="ProjectItem text-white container rounded overflow-hidden h-64 bg-gray-lighter px-2 sm:px-8 md:px-4 lg:px-8 relative scrim-t">
+    <div class="ProjectItem text-white container rounded overflow-hidden h-screen-1/3 lg:h-screen-1/2 bg-gray-lighter px-4 sm:px-8 relative scrim-t bg-cover bg-center"
+         :style="{ backgroundImage: `url('${ project.cover }')` }">
       <p class="pt-6 mb-2">
         {{ project.title }}
       </p>

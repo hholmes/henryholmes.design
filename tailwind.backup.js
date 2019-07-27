@@ -164,10 +164,10 @@ module.exports = {
   */
 
   screens: {
-    sm: '576px',
-    md: '768px',
-    lg: '992px',
-    xl: '1200px'
+    'sm': '640px',
+    'md': '768px',
+    'lg': '1024px',
+    'xl': '1280px',
   },
 
   /*
@@ -301,7 +301,8 @@ module.exports = {
     snug: 1.15,
     tight: 1.325,
     normal: 1.52,
-    loose: 1.75
+    loose: 1.75,
+    double: 2
   },
 
   /*
@@ -522,6 +523,8 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     full: '100%',
+    screenhalf: '50vh',
+    screenthreequarter: '75vh',
     screen: '100vh'
   },
 
@@ -925,6 +928,9 @@ module.exports = {
       //   '2/3': '66.66666%',
       //   '3/4': '75%'
       // },
+      colors: {
+        default: [`rgba(0,0,0,0.5)`, `rgba(0,0,0,0)`]
+      }
       // variants: ['responsive', 'hover']
     })
   ],

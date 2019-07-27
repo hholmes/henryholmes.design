@@ -1,4 +1,7 @@
-const pkg = require('./package')
+import pkg from './package'
+const path = require('path')
+const glob = require('glob-all')
+
 process.env.DEBUG = 'nuxt:*'
 
 module.exports = {
@@ -55,7 +58,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/tailwind.css'],
+  css: ['~assets/css/tailwind.css'],
 
   /*
   ** Plugins to load before mounting the App
@@ -75,8 +78,12 @@ module.exports = {
         id: 'UA-33669268-3',
         dev: false
       }
-    ]
+    ],
+    'nuxt-purgecss',
+    'nuxt-webfontloader'
   ],
+
+  purgeCSS: {},
 
   markdownit: {
     injected: true,
@@ -100,10 +107,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    postcss: [require('tailwindcss')('./tailwind.js'), require('autoprefixer')],
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js')
+      }
+    },
+    extractCSS: true,
     extend(config, { isDev }) {
       if (isDev && process.client) {
         config.devtool = 'eval-source-map'

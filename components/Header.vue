@@ -1,5 +1,5 @@
 <template>
-  <header class="pin-t p-2">
+  <header class="hidden pin-t p-2">
     <ul class="list-reset">
       <!-- <li class="mr-8 inline">
         <a :href='"/"'>Henry Holmes</a>
@@ -37,10 +37,5 @@ export default {
 </script>
 
 <style lang="postcss">
-a {
-  @apply no-underline text-indigo-dark
-}
-a:hover {
-  @apply text-orange-dark
-}
+
 </style>

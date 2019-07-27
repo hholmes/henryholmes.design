@@ -1,0 +1,58 @@
+import pkg from './package'
+const path = require('path')
+const glob = require('glob-all')
+
+export default {
+  mode: 'spa',
+  head: {
+    title: pkg.name,
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: pkg.description }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  },
+  loading: { color: '#fff' },
+  css: [
+    '~assets/css/tailwind.css'
+  ],
+  modules: [
+    'nuxt-purgecss'
+  ],
+  purgeCSS: {},
+  build: {
+    extractCSS: true, // if you use purgeCSS
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        cssnano: {
+          preset: 'default',
+          discardComments: { removeAll: true },
+          zIndex: false
+        }
+      },
+      // Change the postcss-preset-env settings
+      preset: {
+        stage: 0, // enable all (experimental) polyfills
+        autoprefixer: {
+          cascade: false,
+          grid: true
+        }
+      }
+    },
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 <template>
-  <section class="flex flex-wrap m-0 md:-mx-6 lg:-mx-10 xl:-mx-18 mb-16">
+  <section class="flex flex-wrap m-0 sm:-mx-6 md:-mx-10 xl:-mx-18 mb-16">
     <!-- <h2>For example,</h2> -->
     <div
         v-for="project in orderBy(projects,'id')"
-        class="w-full md:w-1/2 py-2 px-0 md:p-2"
+        class="w-full md:w-1/2 py-2 px-0 sm:p-2"
         :key="project.id">
         <ProjectItem :project="project" :url="'/project' + project._path" />
     </div>

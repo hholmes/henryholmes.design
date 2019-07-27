@@ -12,13 +12,13 @@
       </div>
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/5">
-          <label class="block text-purple-dark font-semibold mb-2 md:mb-1 pr-4" 
+          <label class="block text-black font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-full-name">
             name
           </label>
         </div>
         <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
-          <input class="form-input focus:outline-none focus:bg-white focus:border-purple-dark" 
+          <input class="form-input focus:outline-none focus:bg-white focus:border-black" 
                  id="inline-full-name" 
                  name="name"
                  type="text" 
@@ -27,13 +27,13 @@
       </div>
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/5">
-          <label class="block text-purple-dark font-semibold mb-2 md:mb-1 pr-4" 
+          <label class="block text-black font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-email">
             email
           </label>
         </div>
         <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
-          <input class="form-input focus:outline-none focus:bg-white focus:border-purple-dark" 
+          <input class="form-input focus:outline-none focus:bg-white focus:border-black" 
                  id="inline-email" 
                  name="email"
                  type="text" 
@@ -42,13 +42,13 @@
       </div>
       <div class="md:flex md:items-top mb-6">
         <div class="md:w-1/5 md:pt-3">
-          <label class="block text-purple-dark font-semibold mb-2 md:mb-1 pr-4" 
+          <label class="block text-black font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-message">
             message
           </label>
         </div>
         <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
-          <textarea class="form-input focus:outline-none focus:bg-white focus:border-purple-dark" 
+          <textarea class="form-input focus:outline-none focus:bg-white focus:border-black" 
                  id="inline-message"
                  name="message"
                  placeholder="What's on your mind?">
@@ -58,7 +58,7 @@
       <div class="md:flex md:items-center">
         <div class="md:w-1/5"></div>
         <div class="sm:max-w-sm md:w-4/5 lg:w-3/5">
-          <button class="shadow bg-purple-dark text-white hover:bg-purple focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" type="submit">
+          <button class="shadow bg-black text-white hover:bg-black focus:shadow-outline focus:outline-none font-bold py-2 px-4 rounded" type="submit">
             Send
           </button>
         </div>

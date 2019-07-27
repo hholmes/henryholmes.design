@@ -1,22 +1,15 @@
 <template>
-  <div class="container mx-auto px-4 pt-16 md:pt-24 pb-24 sm:pt-8 lg:pt-16 font-inter">
-    <section class="container overflow-hidden mb-8">
+  <div class="container mx-auto px-4 sm:px-8 md:px-12 pt-8 font-inter">
+    <section class="container overflow-hidden sm:px-8 md:px-0 lg:my-12 xl:my-16">
       <div class="flex flex-wrap">
-        <div class="w-full md:w-1/2">
-          <h1 class="mb-6 max-w-48">I'm Henry Holmes, a designer in Brooklyn.</h1>
+        <div class="w-full pr-4 lg:pr-8 md:w-1/2">
+          <h1 class="mb-6max-w-48">I'm Henry Holmes, a designer in Brooklyn.</h1>
           <div v-html="$md.render(intro.body)" />
         </div>
-        <div class="sm:display-hidden md:w-1/4 leading-loose">
-          <!-- <h3 class="">Currently</h3>
-          <ul class="list-reset">
-            <li>Seeking Opportunities</li>
-            <li>Feweve fdfds</li>
-            <li>Seeking Oppo</li>
-          </ul> -->
-        </div>
+        <div class="sm:display-hidden md:w-1/4 leading-loose"></div>
         <div class="w-full text-center md:text-left md:w-1/4 leading-loose">
-          <h3 class="pb-2 md:pb-6 sm:mt-6 md:mt-15">Previously</h3>
-          <ul class="list-reset mb-6 uppercase tracking-wide text-sm">
+          <h3 class="pb-2 md:pb-6 md:mt-2">Previously</h3>
+          <ul class="list-reset mb-6 uppercase tracking-wider text-xs leading-double text-gray-600">
             <li>92Y</li>
             <li>SmileBack</li>
             <li>GuideOne / NPS</li>
@@ -70,9 +63,3 @@ export default {
   }
 }
 </script>
-
-<style>
-h1 {
-  @apply mb-2;
-}
-</style>
