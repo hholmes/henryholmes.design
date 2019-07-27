@@ -3,19 +3,19 @@
     <section class="container overflow-hidden sm:px-4 md:px-0 my-8 lg:my-12 xl:my-16">
       <div class="flex flex-wrap">
         <div class="w-full pr-4 lg:pr-8 md:w-1/2">
-          <h1 class="mb-6max-w-48">I'm Henry Holmes, a designer in Brooklyn.</h1>
+          <h1 class="mb-6 max-w-48 xl:pr-16">I'm Henry Holmes, a&nbsp;designer in Brooklyn.</h1>
           <div v-html="$md.render(intro.body)" />
         </div>
         <div class="w-full md:w-1/2 mt-1">
           <div class="flex mx-4 md:mx-8">
-            <div class="md:w-1/3"></div>
+            <div class="hidden lg:block md:w-1/3"></div>
             <IntroList 
-              class="w-1/2 md:w-1/3"
+              class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
               :header="'Skills'" 
               :items="['Design', 'Code', 'Write', 'Teach']" 
               />
             <IntroList 
-              class="w-1/2 md:w-1/3"
+              class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
               :header="'Previously'" 
               :items="['92Y', 'SmileBack', 'GuideOne / NPS']" 
               />
