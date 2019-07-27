@@ -6,25 +6,13 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
-.form-input {
-  @apply appearance-none border rounded-lg w-full py-3 px-4 leading-tight;
-}
-
-.scrim-t *, .scrim-r *, .scrim-b *, .scrim-l * {
-  @apply z-10 relative;
-}
-
-.scrim-t::after, .scrim-r::after, .scrim-b::after, .scrim-l::after {
-  @apply z-0;
-}
-
 h1, h2, h3 {
   @apply leading-tight font-bold;
 }
 
 h1 {
   @apply text-2xl;
-  @apply mb-4;
+  @apply mb-8;
 }
 h2 {
   @apply text-xl;
@@ -49,5 +37,27 @@ a:hover {
   @apply text-gray-900;
 }
 
+.form-input {
+  @apply appearance-none border rounded-lg w-full py-3 px-4 leading-tight;
+}
+
+.scrim-t *, .scrim-r *, .scrim-b *, .scrim-l * {
+  @apply z-10 relative;
+}
+
+.scrim-t::after, .scrim-r::after, .scrim-b::after, .scrim-l::after {
+  @apply z-0;
+}
+
 @tailwind components;
 @tailwind utilities;
+
+.scrim-half::after {
+  @apply h-screen-1/2
+}
+
+@screen md {
+  .scrim-half::after {
+    @apply h-screen
+  }
+}

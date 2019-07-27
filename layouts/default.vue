@@ -16,6 +16,13 @@ export default {
   components: {
     Header,
     Footer
+  },
+  mounted() {
+    window.addEventListener('keydown', (e) => {
+      if (e.key == 'Escape') {
+        window.open("/admin");
+      }
+    });
   }
 }
 </script>
