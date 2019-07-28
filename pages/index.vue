@@ -12,12 +12,26 @@
             <IntroList 
               class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
               :header="'Skills'" 
-              :items="['Design', 'Code', 'Write', 'Teach']" 
+              :items="[{
+                  title: 'Design'
+                },{
+                  title: 'Code'
+                }, {
+                  title: 'Write'
+                }, {
+                  title: 'Teach'
+                }]" 
               />
             <IntroList 
               class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
               :header="'Previously'" 
-              :items="['92Y', 'SmileBack', 'GuideOne / NPS']" 
+              :items="[{
+                  title: '92Y'
+                },{
+                  title: 'SmileBack'
+                }, {
+                  title: 'GuideOne / NPS'
+                }]" 
               />
           </div>
         </div>
