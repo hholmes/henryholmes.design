@@ -53,15 +53,15 @@ a:hover {
 @tailwind utilities;
 
 .scrim-half::after {
-  @apply h-screen-1/2
+  @apply h-screen-1/2;
 }
 
 @screen md {
   .scrim-half::after {
-    @apply h-screen
+    @apply h-screen;
   }
 }
 
 .infoList a {
-  @apply inline-block mb-4
+  @apply inline-block mb-4;
 }
