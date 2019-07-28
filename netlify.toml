@@ -8,8 +8,5 @@
 [context.deploy-preview]
   command = "BASE_URL=$DEPLOY_PRIME_URL npm run generate"
 
-[context.staging]
-  command = "BASE_URL=$DEPLOY_PRIME_URL npm run generate"
-
 [context.branch-deploy]
   command = "BASE_URL=$DEPLOY_URL npm run generate"

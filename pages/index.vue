@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-4 sm:px-8 md:px-12 pt-8 font-inter">
-    <section class="container overflow-hidden sm:px-4 md:px-0 my-8 lg:my-12 xl:my-16">
+    <section class="container overflow-hidden sm:px-8 md:px-0 my-8 lg:my-12 xl:my-16">
       <div class="flex flex-wrap">
         <div class="w-full pr-4 lg:pr-8 md:w-1/2">
           <h1 class="mb-6 max-w-48 xl:pr-16">I'm Henry Holmes, a&nbsp;designer in Brooklyn.</h1>
@@ -10,7 +10,7 @@
           <div class="flex mx-4 md:mx-8">
             <div class="hidden lg:block md:w-1/3"></div>
             <IntroList 
-              class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
+              class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 lg:mt-14"
               :header="'Skills'" 
               :items="[{
                   title: 'Design'
@@ -23,7 +23,7 @@
                 }]" 
               />
             <IntroList 
-              class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
+              class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 lg:mt-14"
               :header="'Previously'" 
               :items="[{
                   title: '92Y'
