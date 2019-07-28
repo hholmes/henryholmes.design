@@ -11,13 +11,26 @@
             <div class="hidden lg:block md:w-1/3"></div>
             <IntroList 
               class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
-              :header="'Skills'" 
-              :items="['Design', 'Code', 'Write', 'Teach']" 
-              />
+              :heading="'Skills'" 
+              :items="[{
+                title: 'Design'
+              }, {
+                title: 'Code'
+              }, {
+                title: 'Write'
+              }, {
+                title: 'Teach'
+              }]" />
             <IntroList 
               class="w-1/2 lg:w-1/3 pb-2 md:pb-8 mt-8 md:mt-24 xl:mt-14"
-              :header="'Previously'" 
-              :items="['92Y', 'SmileBack', 'GuideOne / NPS']" 
+              :heading="'Previously'" 
+              :items="[{
+                title: '92Y'
+              }, {
+                title: 'SmileBack'
+              }, {
+                title: 'GuideOne / NPS'
+              }]"
               />
           </div>
         </div>
@@ -34,17 +47,29 @@
     <ProjectsList />
     <section class="container">
       <div class="flex flex-wrap">
-        <div class="w-full md:pr-2 md:w-3/4">
+        <div class="w-full md:pr-2 md:w-1/2">
           <ContactForm />
         </div>
-        <div class="w-full text-center md:text-left md:w-1/4 pt-1 px-4 px-0 my-16 md:my-0 md:px-0">
-          <h3 class="pb-5">Me, elsewhere</h3>
-          <ul class="list-reset leading-loose">
-            <!-- <li><a href="https://facebook.com/hholmes" target="_blank">Facebook</a></li> -->
-            <li><a href="https://twitter.com/syntactile" target="_blank">twitter</a></li>
-            <li><a href="https://github.com/hholmes" target="_blank">github</a></li>
-            <li><a href="https://www.linkedin.com/in/henryjholmes/" target="_blank">linkedin</a></li>
-          </ul>
+        <div class="w-full md:w-1/2 md:text-left md:w-1/2 pt-1 px-0 my-16 md:my-0">
+          <div class="flex">
+            <div class="hidden md:block md:w-1/3"></div>
+            <IntroList
+              class="w-full md:w-2/3 text-center md:text-left"
+              :heading="'Me, elsewhere'"
+              :items="[{
+                  title: 'twitter',
+                  href: 'https://twitter.com/syntactile',
+                  external: true
+                }, {
+                  title: 'github',
+                  href: 'https://twitter.com/syntactile',
+                  external: true
+                }, {
+                  title: 'linkedin',
+                  href: 'https://twitter.com/syntactile',
+                  external: true
+                }]" />
+          </div>
         </div>
       </div>
     </section>

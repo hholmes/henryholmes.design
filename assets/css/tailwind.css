@@ -15,7 +15,7 @@ h1 {
   @apply mb-8;
 }
 h2 {
-  @apply text-xl;
+  @apply text-2xl;
   @apply mb-2;
 }
 h3 {
@@ -31,10 +31,10 @@ blockquote {
 }
 
 a {
-  @apply text-gray-500;
+  @apply text-gray-500 border-b-2 border-solid;
 }
 a:hover {
-  @apply text-gray-900;
+  @apply text-gray-900 border-b-2 border-solid border-black;
 }
 
 .form-input {
@@ -60,4 +60,8 @@ a:hover {
   .scrim-half::after {
     @apply h-screen
   }
+}
+
+.infoList a {
+  @apply inline-block mb-4
 }
