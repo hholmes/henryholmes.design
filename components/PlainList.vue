@@ -6,8 +6,8 @@
     <ul class="list-reset md:mt-8 uppercase tracking-wider text-xs leading-double text-gray-600">
       <li 
         v-for="item in items"
-        :key="item.title">
-        {{ item.title }}
+        :key="item">
+        {{ item }}
       </li>
     </ul>
   </div>

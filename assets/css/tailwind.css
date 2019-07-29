@@ -11,10 +11,6 @@ section {
   margin-bottom: theme('spacing.rhythm');
 }
 
-h1, h2, h3, h4, p {
-  @apply leading-normal mt-0 mb-4;
-}
-
 h1, h2, h3 {
   @apply leading-tight font-bold;
 }
@@ -35,10 +31,6 @@ p {
   @apply mb-8 leading-normal;
 }
 
-blockquote {
-  @apply ml-12;
-}
-
 a {
   @apply text-gray-500 border-b-2 border-solid;
 }
@@ -46,8 +38,15 @@ a:hover {
   @apply text-gray-900 border-gray-900;
 }
 
-.list-loose li {
-  @apply mb-3;
+blockquote {
+  @apply ml-12;
+}
+
+ol {
+  @apply list-outside list-decimal;
+}
+ol li {
+  @apply mb-main;
 }
 
 .form-input {
@@ -64,100 +63,3 @@ a:hover {
 
 @tailwind components;
 @tailwind utilities;
-
-.scrim-half::after {
-  @apply h-screen-1/2
-}
-
-/* 
-introTitle
-pl-6 md:pl-0 pr-16 lg:pr-48 xl:pr-64
-
-introList
-mt-8 md:mt-24 lg:mt-14 pb-2 md:pb-8 md:pl-0 md:pt-2 lg:pt-0 
-
-projectCard
-
-*/
-
-
-.introList {
-  padding-left: calc(theme('spacing.main'));
-}
-
-.projectCard {
-  padding: calc(theme('spacing.main')) calc(theme('spacing.main'));
-}
-
-.introList {
-  margin-top: calc(theme('spacing.main') * 2)
-}
-
-.introForm {
-  margin-left: theme('spacing.main');
-  margin-right: theme('spacing.main');
-}
-
-@screen sm {
-  .introTitle, .introForm {
-    margin-left: calc(theme('spacing.main') * 2);
-    margin-right: calc(theme('spacing.main') * 2);
-  }
-  .introList {
-    padding-left: calc(theme('spacing.main') * 2);
-  }
-  .projectsList {
-    margin-left: calc(theme('spacing.main') * -.5);
-    margin-right: calc(theme('spacing.main') * -.5);
-  }
-  .projectCard {
-    padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 2);
-  }
-}
-
-@screen md {
-  .introTitle {
-    padding-left: 0;
-    margin: 0;
-  }
-  .introList {
-    margin-top: 6.75rem;
-    padding: 0;
-  }
-  .introList h3 {
-    margin-bottom: 2.25rem;
-  }
-  .projectsList {
-    margin-left: calc(theme('spacing.main') * -2);
-    margin-right: calc(theme('spacing.main') * -2);
-  }
-  .projectCard {
-    padding: calc(theme('spacing.main') * 1) calc(theme('spacing.main') * 1.5);
-  }
-
-  .scrim-half::after {
-    @apply h-screen
-  }
-}
-
-@screen lg {
-  .introList {
-    margin-top: 4rem;
-  }
-  .projectsList {
-    margin-left: calc(theme('spacing.main') * -2);
-    margin-right: calc(theme('spacing.main') * -2);
-  }
-  .projectCard {
-    padding: calc(theme('spacing.main') * 1) calc(theme('spacing.main') * 1.5);
-  }
-}
-
-@screen xl {
-  .introTitle {
-    padding-left: calc(theme('spacing.main') * 2);
-  }
-  .projectCard {
-    padding: calc(theme('spacing.main') * 2.5) calc(theme('spacing.main') * 3.5);
-  }
-}

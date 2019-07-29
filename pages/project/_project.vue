@@ -1,18 +1,43 @@
 <template>
   <div>
-    <div class="flex block items-end px-4 pt-16 h-screen-1/2 md:min-h-screen bg-cover bg-center bg-scroll md:bg-fixed text-white scrim-b scrim-half"
+    <div class="projectCover flex block items-end px-4 md:px-0 pt-16 bg-cover bg-center bg-scroll md:bg-fixed text-white scrim-b"
               :style="{ backgroundImage: `url('${ project.cover }')` }">
-      <div class="w-full max-w-lg mx-auto text-xl z-10 mb-4">
-        <h1 class="mb-2 md:mb-4 text-4xl md:text-6xl">{{ project.title }}</h1>
+      <div class="w-full max-w-3xl mx-auto text-xl z-10 mb-4">
+        <h1 class="mb-2 md:mb-4 text-3xl md:text-6xl">{{ project.title }}</h1>
         <p class="leading-snug mb-4 md:mb-8">{{ project.subtitle }}</p>
       </div>
     </div>
-    <section class="py-16 max-w-lg mx-auto">
+    <section class="flex flex-wrap max-w-3xl mx-auto">
+      <PlainList
+        class="projectContext my-8 md:my-0"
+        :header="'Timeframe'" 
+        :items="[project.start]"
+        />
+      <PlainList
+        class="projectContext my-8 md:my-0"
+        :header="'Roles'" 
+        :items='project.roles'
+        />
+      <PlainList
+        class="projectContext my-8 md:my-0"
+        :header="'Tasks'" 
+        :items="project.tasks"
+        />
+      <PlainList
+        class="projectContext my-8 md:my-0"
+        :header="'Tools'" 
+        :items="project.tools"
+        />
+    </section>
+    <section class="py-16 max-w-3xl mx-auto">
       <div 
         v-for="section in project.sections" 
         :key="section.id"
-        class="mb-16">
-        <div v-html="$md.render(section.body)" />
+        class="flex flex-wrap mb-16">
+        <h2 class="w-full md:w-1/4">{{ section.heading }}</h2>
+        <div 
+          class="w-full md:w-3/4"
+          v-html="$md.render(section.body)" />
         <!-- <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">
           {{ section.topic }}
         </span> -->
@@ -22,6 +47,8 @@
 </template>
 
 <script>
+import PlainList from "~/components/PlainList"
+
 // import axios from 'axios'
 export default {
   async asyncData({ params, route }) {
@@ -36,21 +63,36 @@ export default {
     return {
       title: this.project.title
     }
+  },
+  // computed: {
+  //   rolesWithKeys: function () {
+  //     rolesArray = [];
+  //     this.project.roles.forEach(function (item, id) {
+  //       rolesArray.push({'title',item})
+  //     });
+  //     return rolesArray;
+  //   }
+  // },
+  components: {
+    PlainList
   }
 }
 </script>
 
 <style>
-h2 {
-  @apply mb-2;
+.projectCover, .projectCover::after {
+  @apply h-screen-1/2
 }
-h4 {
-  @apply mb-12;
+.projectContext {
+  @apply w-1/2
 }
-p {
-  @apply mb-8;
-}
-blockquote {
-  @apply ml-12;
+
+@screen md {
+  .projectCover, .projectCover::after {
+    @apply h-screen-2/3
+  }
+  .projectContext {
+    @apply w-1/4;
+  }
 }
 </style>

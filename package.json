@@ -22,6 +22,7 @@
     "nuxt-social-meta": "0.0.1",
     "redux": "^4.0.4",
     "slate": "^0.47.4",
+    "stylelint-config-recommended": "^2.2.0",
     "uploadcare-widget": "^3.7.0",
     "vue2-filters": "^0.7.0"
   },
