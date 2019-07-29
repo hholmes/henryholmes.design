@@ -1,11 +1,5 @@
 {
-  "id": "1",
-  "title": "Dancemaker",
   "start": "September 2016",
-  "end": "",
-  "type": "Case Study",
-  "subtitle": "Shaping the future of dance education",
-  "cover": "https://ucarecdn.com/d49c1fbe-3c4f-405a-bbd5-9e989b4b2f50/-/preview/-/enhance/70/",
   "sections": [
     {
       "heading": "Summary",
@@ -19,5 +13,15 @@
       "heading": "Outcomes",
       "body": "We built something useful that students and teachers around the country understand and enjoy using. By grounding the experience in clear language, we also found a way to expand the audience of the underlying concepts and increase engagement with DEL’s pedagogy.\n\nDancemaker is available on iOS and Android. It’s been featured in some press and was incorporated into an exhibit at the Children’s Museum of Manhattan."
     }
+  ],
+  "cover": "https://ucarecdn.com/d49c1fbe-3c4f-405a-bbd5-9e989b4b2f50/-/preview/-/enhance/70/",
+  "subtitle": "Shaping the future of dance education",
+  "title": "Dancemaker",
+  "type": "Case Study",
+  "end": "",
+  "id": "1",
+  "roles": [
+    "Product Manager",
+    "Product Design"
   ]
 }
