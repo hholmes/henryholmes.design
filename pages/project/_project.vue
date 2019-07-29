@@ -76,6 +76,9 @@ export default {
 </script>
 
 <style>
+h3 {
+  @apply mb-4;
+}
 .projectCover, .projectCover::after {
   @apply h-screen-1/2
 }
