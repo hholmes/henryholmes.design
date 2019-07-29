@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-scroll:throttle="{fn: onScroll, throttle: 500 }">
     <div class="projectCover flex block items-end px-4 md:px-0 pt-16 bg-cover bg-bottom bg-scroll md:bg-fixed text-white scrim-b"
               :style="{ backgroundImage: `url('${ project.cover }')` }">
       <div class="w-full max-w-3xl xl:max-w-4xl mx-auto text-xl z-10 mb-4">
@@ -49,7 +49,6 @@
 <script>
 import PlainList from "~/components/PlainList"
 
-// import axios from 'axios'
 export default {
   async asyncData({ params, route }) {
     const projectData = await import('~/content/project/' +
@@ -66,11 +65,21 @@ export default {
   },
   computed: {
     timeframeText() {
-      return this.project.start + ' → ' + this.project.end; 
+      return this.project.start + (this.project.ongoing ? ' →' : '<br />↓<br />' + this.project.end); 
     }
   },
   components: {
     PlainList
+  },
+  data: function() {
+    return {
+      position: { scrollTop: 0, scrollLeft: 0 }
+    };
+  },
+  methods: {
+    onScroll: function(e, position) {
+      console.log(position);
+    }
   }
 }
 </script>
@@ -80,15 +89,15 @@ h3 {
   @apply mb-4;
 }
 .projectCover, .projectCover::after {
-  @apply h-screen-1/2
+  @apply h-screen-1/2;
 }
 .projectContext {
-  @apply w-1/2
+  @apply w-1/2 pr-4;
 }
 
 @screen md {
   .projectCover, .projectCover::after {
-    @apply h-screen-2/3
+    @apply h-screen-2/3;
   }
   .projectContext {
     @apply w-1/4;

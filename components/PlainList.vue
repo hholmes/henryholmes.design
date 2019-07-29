@@ -7,7 +7,7 @@
       <li 
         v-for="item in items"
         :key="item">
-        {{ item }}
+        <span v-html="item" />
       </li>
     </ul>
   </div>

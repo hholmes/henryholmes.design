@@ -63,7 +63,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/vue2-filters'],
+  plugins: ['~/plugins/vue2-filters', '~/plugins/vue-scroll'],
 
   /*
   ** Nuxt.js modules

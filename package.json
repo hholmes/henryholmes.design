@@ -24,6 +24,7 @@
     "slate": "^0.47.4",
     "stylelint-config-recommended": "^2.2.0",
     "uploadcare-widget": "^3.7.0",
+    "vue-scroll": "^2.1.12",
     "vue2-filters": "^0.7.0"
   },
   "devDependencies": {
