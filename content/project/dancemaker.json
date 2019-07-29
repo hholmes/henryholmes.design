@@ -24,7 +24,7 @@
   "subtitle": "Shaping the future of dance education",
   "title": "Dancemaker",
   "type": "Case Study",
-  "end": "",
+  "end": "March 2019",
   "id": "1",
   "tools": [
     "Sketch",
@@ -33,6 +33,7 @@
     "Python",
     "XCode"
   ],
+  "ongoing": false,
   "roles": [
     "Product Manager",
     "Design Principle"
