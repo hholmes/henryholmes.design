@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+// const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   prefix: '',
@@ -9,7 +9,9 @@ module.exports = {
       spacing: {
         'screen-1/3': '33vh',
         'screen-1/2': '50vh',
-        'screen-2/3': '67vh'
+        'screen-2/3': '67vh',
+        main: '1rem',
+        rhythm: '4rem'
       },
       margin: {
         '14': '3.5rem'

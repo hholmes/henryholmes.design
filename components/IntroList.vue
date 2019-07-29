@@ -1,9 +1,9 @@
 <template>
   <div class="leading-loose">
-    <h3 class="">
+    <h3 class="mb-4">
       {{ header }}
     </h3>
-    <ul class="list-reset mb-6 mt-4 md:mt-8 uppercase tracking-wider text-xs leading-double text-gray-600">
+    <ul class="list-reset md:mt-8 uppercase tracking-wider text-xs leading-double text-gray-600">
       <li 
         v-for="item in items"
         :key="item.title">

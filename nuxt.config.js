@@ -1,6 +1,6 @@
 import pkg from './package'
 const path = require('path')
-const glob = require('glob-all')
+// const glob = require('glob-all')
 
 process.env.DEBUG = 'nuxt:*'
 
