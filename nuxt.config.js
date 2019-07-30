@@ -1,6 +1,7 @@
+import axios from 'axios'
 import pkg from './package'
 const path = require('path')
-// const glob = require('glob-all')
+const glob = require('glob-all')
 
 process.env.DEBUG = 'nuxt:*'
 
@@ -83,7 +84,16 @@ module.exports = {
     'nuxt-webfontloader'
   ],
 
-  purgeCSS: {},
+  // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/
+  purgeCSS: {
+    paths: glob.sync([
+      path.join(__dirname, './pages/**/*.vue'),
+      path.join(__dirname, './layouts/**/*.vue'),
+      path.join(__dirname, './components/**/*.vue')
+    ]),
+    whitelist: ['html', 'body', 'ul', 'ol', 'pre', 'code', 'blockquote'],
+    whitelistPatterns: [/\bhljs\S*/]
+  },
 
   markdownit: {
     injected: true,
@@ -100,6 +110,19 @@ module.exports = {
         path: '/project/:project',
         component: 'project/_project.vue'
       }
+    ],
+    scrollBehavior: function(to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
+
+  generate: {
+    routes: [
+      '/project/dancemaker',
+      '/project/park-mobile',
+      '/project/sentinel',
+      '/project/smileback',
+      '/project/yeltsin'
     ]
   },
 
