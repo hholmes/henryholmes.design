@@ -70,12 +70,10 @@ export default {
 </script>
 
 <style>
-.introTitle, .introList {
-  padding-left: calc(theme('spacing.main'));
-  padding-right: calc(theme('spacing.main'));
-}
 .introList {
   margin-top: calc(theme('spacing.main') * 2);
+  padding-left: calc(theme('spacing.main'));
+  padding-right: calc(theme('spacing.main'));
 }
 
 .projectCard {
@@ -107,8 +105,7 @@ export default {
 
 @screen md {
   .introTitle {
-    padding-left: 0;
-    margin: 0;
+    @apply pr-16 pl-0 m-0;
   }
   .introList {
     margin-top: 6.75rem;
@@ -127,6 +124,9 @@ export default {
 }
 
 @screen lg {
+  .introTitle {
+    @apply pr-32;
+  }
   .introList {
     margin-top: 4rem;
   }
@@ -142,6 +142,7 @@ export default {
 @screen xl {
   .introTitle {
     padding-left: calc(theme('spacing.main') * 2);
+    @apply pr-64;
   }
   .projectCard {
     padding: calc(theme('spacing.main') * 2.5) calc(theme('spacing.main') * 3.5);
