@@ -9,7 +9,7 @@
           :style="{ backgroundImage: `url('${ project.cover }')` }">
           {{ project.title }}
         </h1>
-        <p class="subtitle">{{ project.subtitle }}</p>
+        <p class="subtitle skip-kern">{{ project.subtitle }}</p>
       </div>
     </div>
     <section class="flex flex-wrap items-top mainstream min-h-screen-1/2 md:min-h-screen-1/4 md:mb-rhythm lg:min-h-screen-1/3">
@@ -97,21 +97,24 @@ export default {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 6rem;
-  line-height: 6rem;
-  height: 6rem;
+  font-size: 7rem;
+  line-height: 7rem;
+  height: 8rem;
 }
 
 .subtitle { 
-  @apply leading-none text-4xl font-bold max-w-sm pb-8;
+  @apply leading-tight text-4xl font-bold max-w-sm pb-8 -mt-4;
 }
 
 @screen sm {
   .title {
     @apply -ml-1;
-    font-size: 8rem;
-    line-height: 8rem;
-    height: 9rem;
+    font-size: 10rem;
+    line-height: 10rem;
+    height: 11rem;
+  }
+  .subtitle {
+    @apply -mt-6;
   }
 }
 
@@ -123,7 +126,7 @@ export default {
     height: 14rem;
   }
   .subtitle {
-    @apply text-4xl -mt-12;
+    @apply -mt-12;
   }
 }
 
@@ -134,7 +137,7 @@ export default {
     height: 20rem;
   }
   .subtitle {
-    @apply text-6xl max-w-lg;
+    @apply text-6xl max-w-xl;
   }
 }
 
@@ -144,6 +147,9 @@ export default {
     font-size: 20rem;
     line-height: 20rem;
     height: 22rem;
+  }
+  .subtitle {
+    @apply text-6xl max-w-2xl;
   }
 }
 

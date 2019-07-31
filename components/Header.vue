@@ -1,19 +1,21 @@
 <template>
-  <header class="hidden pin-t p-2">
-    <ul class="list-reset">
-      <!-- <li class="mr-8 inline">
-        <a :href='"/"'>Henry Holmes</a>
-      </li>
-      <span
-        v-for="link in navPages"
-        :key="link.id">
-        <li
-          v-if="header.pages.includes(link.title)"
-          class="mr-8 inline">
-          <a :href='link._path'>{{ link.title }}</a>
+  <header class="mainstream relative py-6 z-20 uppercase text-sm type-thin tracking-wider text-black">
+    <nav class="pin-t fixed">
+      <ul class="list-reset">
+        <li class="mr-8 inline">
+          <a :href='"/"'>Henry Holmes</a>
         </li>
-      </span> -->
-    </ul>
+        <span
+          v-for="link in navPages"
+          :key="link.id">
+          <li
+            v-if="header.pages.includes(link.title)"
+            class="mr-8 inline">
+            <a :href='link._path'>{{ link.title }}</a>
+          </li>
+        </span>
+      </ul>
+    </nav>
   </header>
 </template>
 

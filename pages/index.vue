@@ -1,11 +1,11 @@
 <template>
-  <div class="container mx-auto px-4 sm:px-8 md:px-12 font-inter">
+  <div class="mainstream container">
     <section class="flex flex-wrap overflow-hidden my-rhythm">
-      <div class="introTitle w-full md:w-4/6 md:pr-16 lg:pr-32 xl:pr-48">
-        <h1 class="max-w-48">I'm Henry Holmes, a&nbsp;designer in Brooklyn.</h1>
+      <div class="introTitle w-full md:w-4/6">
+        <h1 class="max-w-48 type-serif leading-none">I'm Henry Holmes, a&nbsp;designer.</h1>
         <div 
-          v-html="$md.render(intro.body)"
-          class="text-lg" />
+          class="text-lg mt-8 mb-6 md:mb-0 type-sans"
+          v-html="$md.render(intro.body)" />
       </div>
       <PlainList 
         class="introList w-1/2 md:w-1/6"
@@ -31,16 +31,16 @@
         </div>
         <div class="column-spacer hidden lg:block lg:w-1/6"></div>
         <div class="w-full text-center md:text-left md:w-2/6 lg:w-1/6 mt-rhythm md:mt-0">
-          <h2 class="pb-5">Elsewhere</h2>
+          <h4 class="pb-5 mt-3">Elsewhere</h4>
           <ul class="list-reset uppercase text-xs tracking-wider">
             <!-- <li><a href="https://facebook.com/hholmes" target="_blank">Facebook</a></li> -->
-            <li class="mb-6">
+            <li class="mb-4">
               <a href="https://twitter.com/syntactile" target="_blank">twitter</a>
             </li>
-            <li class="mb-6">
+            <li class="mb-4">
               <a href="https://github.com/hholmes" target="_blank">github</a>
             </li>
-            <li class="mb-6">
+            <li class="mb-4">
               <a href="https://www.linkedin.com/in/henryjholmes/" target="_blank">linkedin</a>
             </li>
           </ul>
@@ -77,6 +77,9 @@ export default {
   padding-left: calc(theme('spacing.main'));
   padding-right: calc(theme('spacing.main'));
 }
+.introList ul {
+  @apply mt-8;
+}
 
 .projectCard {
   padding: calc(theme('spacing.main')) calc(theme('spacing.main'));
@@ -89,10 +92,10 @@ export default {
 
 
 @screen sm {
-  .introTitle, .introForm {
+  /* .introTitle, .introForm {
     margin-left: calc(theme('spacing.main') * 2);
     margin-right: calc(theme('spacing.main') * 2);
-  }
+  } */
   .introList {
     padding-left: calc(theme('spacing.main') * 2);
   }
@@ -107,44 +110,48 @@ export default {
 
 @screen md {
   .introTitle {
-    @apply pr-16 pl-0 m-0;
+    @apply pl-0 m-0 pr-8;
   }
   .introList {
     margin-top: 6.75rem;
     padding: 0;
   }
-  .introList h3 {
-    margin-bottom: 2.25rem;
-  }
   .projectsList {
     margin-left: calc(theme('spacing.main') * -2);
     margin-right: calc(theme('spacing.main') * -2);
   }
   .projectCard {
-    padding: calc(theme('spacing.main') * 1) calc(theme('spacing.main') * 1.5);
+    padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 1.5);
   }
 }
 
 @screen lg {
   .introTitle {
-    @apply pr-32;
+    @apply pr-24;
   }
   .introList {
     margin-top: 4rem;
   }
   .projectsList {
-    margin-left: calc(theme('spacing.main') * -2);
-    margin-right: calc(theme('spacing.main') * -2);
+    margin-left: calc(theme('spacing.main') * -3);
+    margin-right: calc(theme('spacing.main') * -3);
   }
   .projectCard {
-    padding: calc(theme('spacing.main') * 1) calc(theme('spacing.main') * 1.5);
+    padding: calc(theme('spacing.main') * 2) calc(theme('spacing.main') * 2.5);
   }
 }
 
 @screen xl {
   .introTitle {
-    padding-left: calc(theme('spacing.main') * 2);
-    @apply pr-64;
+    /* padding-left: calc(theme('spacing.main') * 2); */
+    @apply pr-48;
+  }
+  .introList {
+    margin-top: 4.25rem;
+  }
+  .projectsList {
+    margin-left: calc(theme('spacing.main') * -4);
+    margin-right: calc(theme('spacing.main') * -4);
   }
   .projectCard {
     padding: calc(theme('spacing.main') * 2.5) calc(theme('spacing.main') * 3.5);

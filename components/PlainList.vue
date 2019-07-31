@@ -3,7 +3,7 @@
     <h4>
       {{ header }}
     </h4>
-    <ul class="list-reset uppercase tracking-widest text-xs text-gray-600">
+    <ul class="list-reset uppercase tracking-widest text-xs">
       <li 
         v-for="item in items"
         :key="item">

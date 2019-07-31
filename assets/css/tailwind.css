@@ -13,10 +13,6 @@ h1, h2, h3, h4 {
   @apply leading-tight font-bold mb-4;
 }
 
-.type-sans, form label, form input {
-  font-family: 'Aktiv Grotesk', sans-serif;
-}
-
 h1 {
   font-family: 'Aktiv Grotesk', sans-serif;
   @apply text-5xl font-extrabold;
@@ -46,8 +42,11 @@ p + h1, p + h2, p + h3, p + h4 {
 a {
   @apply text-gray-700 border-b-2 border-solid;
 }
-a:hover {
-  @apply text-gray-900 border-gray-900;
+nav a {
+  @apply border-b-0;
+}
+a:hover, nav a:hover {
+  @apply text-gray-900 border-b-2 border-gray-900;
 }
 
 blockquote {
@@ -71,6 +70,19 @@ ol li {
 
 .scrim-t::after, .scrim-r::after, .scrim-b::after, .scrim-l::after {
   @apply z-0;
+}
+
+.type-serif {
+  font-family: freight-text-pro, sans-serif !important; 
+}
+.type-sans, form label, form input, form textarea {
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+.type-thin {
+  font-family: 'Aktiv Grotesk Thin', sans-serif;
+}
+.skip-kern {
+  font-kerning: none;
 }
 
 @tailwind components;
