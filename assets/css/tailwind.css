@@ -1,38 +1,50 @@
-@import url('https://rsms.me/2165144er/inter.css');
+@import url("https://use.typekit.net/ulb8wcl.css");
 @tailwind base;
 
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
+html { 
+  font-family: freight-text-pro, sans-serif; 
+  @apply text-gray-900;
+}
+/* @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
+} */
+
+h1, h2, h3, h4 {
+  @apply leading-tight font-bold mb-4;
 }
 
-section {
-  margin-top: theme('spacing.rhythm');
-  margin-bottom: theme('spacing.rhythm');
-}
-
-h1, h2, h3 {
-  @apply leading-tight font-bold;
+.type-sans, form label, form input {
+  font-family: 'Aktiv Grotesk', sans-serif;
 }
 
 h1 {
-  @apply text-4xl;
-  @apply mb-8;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  @apply text-5xl font-extrabold;
 }
 h2 {
-  @apply text-xl;
-  @apply mb-2;
+  @apply text-3xl font-extrabold;
 }
 h3 {
-  @apply text-lg;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  @apply tracking-wide text-lg font-extrabold text-gray-800;
+}
+h4 {
+  font-family: 'Aktiv Grotesk Thin', sans-serif;
+  @apply text-xl font-thin tracking-wider;
 }
 
 p {
-  @apply mb-8 leading-normal;
+  @apply leading-relaxed text-gray-800;
+}
+p + p {
+  @apply mt-main;
+}
+p + h1, p + h2, p + h3, p + h4 {
+  @apply mt-12;
 }
 
 a {
-  @apply text-gray-500 border-b-2 border-solid;
+  @apply text-gray-700 border-b-2 border-solid;
 }
 a:hover {
   @apply text-gray-900 border-gray-900;
@@ -63,3 +75,53 @@ ol li {
 
 @tailwind components;
 @tailwind utilities;
+
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.w-spill {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  margin-top: theme('spacing.rhythm');
+  /* margin-bottom: theme('spacing.rhythm'); */
+}
+
+content img {
+  @apply my-rhythm;
+}
+
+.float-aside { @apply float-none mx-auto }
+
+@screen lg {
+  .float-aside { 
+    @apply float-right ml-8 w-3/4;
+    margin-right: -66.7%;
+    margin-top: theme('spacing.2');
+    margin-bottom: theme('spacing.2');
+  }
+}
+
+@screen xl {
+  .float-aside { 
+    margin-right: -85%;
+  }
+}
+
+.mainstream { @apply w-full mx-auto px-main; }
+@screen sm { .mainstream { @apply max-w-xl; }}
+@screen md { .mainstream { @apply max-w-3xl; }}
+@screen lg { .mainstream { @apply max-w-4xl; }}
+@screen xl { .mainstream { @apply max-w-6xl; }}

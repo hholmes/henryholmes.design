@@ -1,9 +1,11 @@
 <template>
   <div class="container mx-auto px-4 sm:px-8 md:px-12 font-inter">
-    <section class="flex flex-wrap overflow-hidden">
+    <section class="flex flex-wrap overflow-hidden my-rhythm">
       <div class="introTitle w-full md:w-4/6 md:pr-16 lg:pr-32 xl:pr-48">
         <h1 class="max-w-48">I'm Henry Holmes, a&nbsp;designer in Brooklyn.</h1>
-        <div v-html="$md.render(intro.body)" />
+        <div 
+          v-html="$md.render(intro.body)"
+          class="text-lg" />
       </div>
       <PlainList 
         class="introList w-1/2 md:w-1/6"
@@ -17,7 +19,7 @@
         />
     </section>
     <ProjectsList 
-      class="projectsList flex flex-wrap"
+      class="projectsList flex flex-wrap mb-rhythm"
       />
     <section class="container">
       <div class="flex flex-wrap">
@@ -29,8 +31,8 @@
         </div>
         <div class="column-spacer hidden lg:block lg:w-1/6"></div>
         <div class="w-full text-center md:text-left md:w-2/6 lg:w-1/6 mt-rhythm md:mt-0">
-          <h3 class="pb-5">Me, elsewhere</h3>
-          <ul class="list-reset">
+          <h2 class="pb-5">Elsewhere</h2>
+          <ul class="list-reset uppercase text-xs tracking-wider">
             <!-- <li><a href="https://facebook.com/hholmes" target="_blank">Facebook</a></li> -->
             <li class="mb-6">
               <a href="https://twitter.com/syntactile" target="_blank">twitter</a>

@@ -56,6 +56,16 @@ module.exports = {
   */
   loading: { color: '#dc6017' },
 
+  /* Page Transitions */
+  pageTransition: {
+    name: 'default',
+    mode: 'out-in'
+  },
+  // layoutTransition: {
+  //   name: 'project',
+  //   mode: 'out-in'
+  // },
+
   /*
   ** Global CSS
   */
@@ -111,6 +121,7 @@ module.exports = {
         component: 'project/_project.vue'
       }
     ],
+    // middleware: 'pages',
     scrollBehavior: function(to, from, savedPosition) {
       return { x: 0, y: 0 }
     }

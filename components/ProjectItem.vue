@@ -2,10 +2,10 @@
   <nuxt-link :to="url">
     <div class="projectCard text-white container rounded overflow-hidden h-screen-1/3 lg:h-screen-1/2 relative scrim-t bg-cover bg-center"
          :style="{ backgroundImage: `url('${ project.cover }')` }">
-      <p class="text-xs md:text-sm opacity-75 uppercase tracking-wide mb-1">
+      <h4 class="text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-4">
         {{ project.title }}
-      </p>
-      <h2 class="pr-12 leading-tight text-2xl">
+      </h4>
+      <h2 class="pr-12 leading-none text-4xl">
         {{ project.subtitle }}
       </h2>
     </div>
