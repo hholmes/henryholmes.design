@@ -1,5 +1,7 @@
 <template>
-  <footer class="text-sm text-gray text-center my-rhythm type-sans">
+  <footer 
+    :style="{ backgroundColor: bg || '' }" 
+    class="text-sm text-gray text-center py-rhythm type-sans">
     <fa :icon="['fas','heart']"></fa>
   </footer>
 </template>
@@ -9,6 +11,9 @@
   import { fab } from '@fortawesome/free-brands-svg-icons'
 
   export default {
+    props: [
+      "bg"
+    ],
     computed: {
       fas () {
          return fas

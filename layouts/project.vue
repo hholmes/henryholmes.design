@@ -4,7 +4,7 @@
     <div id="main" role="main">
       <nuxt />
     </div>
-    <Footer />
+    <Footer :bg="this.footerBg" />
   </div>
 </template>
 
@@ -17,7 +17,23 @@ export default {
     Header,
     Footer
   },
+  data() {
+    return {
+      footerBg: ''
+    }
+  },
+  created() {
+    // console.log('template created')
+    this.$nuxt.$on('footer-bg', (e) => {
+      // console.log('got color: ' + e);
+      this.footerBg = e;
+    });
+  },
   mounted() {
+    // console.log('template mounted')
+    this.$nuxt.$on('clicked', function(value) {
+      alert('clicked! ' + value);
+    });
     window.addEventListener('keydown', (e) => {
       if (e.key == 'Escape') {
         window.open("/admin");

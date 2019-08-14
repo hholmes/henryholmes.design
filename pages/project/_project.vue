@@ -34,15 +34,19 @@
         :items="project.tools"
         />
     </section>
-    <content class="flex flex-wrap mainstream">
+    <content>
       <section 
-        v-for="section in project.sections" 
-        :key="section.id"
-        class="flex flex-wrap clearfix mb-rhythm">
-        <h2 class="w-full lg:pr-8 lg:-mt-2 lg:leading-none lg:w-1/4">{{ section.heading }}</h2>
-        <div 
-          class="w-full lg:w-2/4 xl:max-w-full"
-          v-html="$md.render(section.body)" />
+        v-for="(section, index) in project.sections" 
+        :key="index">
+        <img class="w-full my-0" :src="section.sectionBanner" />
+        <div :style="{ backgroundColor: section.bg, color: section.fg }">
+          <div class="mainstream flex flex-wrap clearfix py-rhythm">
+            <h2 class="w-full lg:pr-8 lg:-mt-2 lg:leading-tight lg:w-1/4">{{ section.heading }}</h2>
+            <div 
+              class="w-full lg:w-2/4 xl:max-w-full"
+              v-html="$md.render(section.body)" />
+          </div>
+        </div>
         <!-- <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">
           {{ section.topic }}
         </span> -->
@@ -55,6 +59,8 @@
 import SimpleList from "~/components/SimpleList"
 
 export default {
+  name: 'Project',
+  layout: 'project',
   async asyncData({ params, route }) {
     const projectData = await import('~/content/project/' +
       route.params.project +
@@ -73,18 +79,26 @@ export default {
       return this.project.start + (this.project.ongoing ? ' →' : '<br />↓<br />' + this.project.end); 
     }
   },
-  // layout: 'project',
   components: {
     SimpleList
   },
-  data: function() {
+  data () {
     return {
       position: { scrollTop: 0, scrollLeft: 0 }
     };
   },
+  mounted () {
+    // console.log('_project mounted');
+    // this.$on('footer-bg', (e) => {
+    //   console.log("_project emitted: " + e);
+    // });
+    if (this.project.sections.length > 0) {
+      this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)
+    }
+  },
   methods: {
     onScroll: function(e, position) {
-      console.log(position);
+      // console.log(position);
     }
   }
 }
@@ -126,7 +140,7 @@ export default {
     height: 14rem;
   }
   .subtitle {
-    @apply -mt-12;
+    @apply -mt-12 max-w-md;
   }
 }
 
@@ -137,7 +151,7 @@ export default {
     height: 20rem;
   }
   .subtitle {
-    @apply text-6xl max-w-xl;
+    @apply text-6xl max-w-2xl;
   }
 }
 
@@ -149,7 +163,7 @@ export default {
     height: 22rem;
   }
   .subtitle {
-    @apply text-6xl max-w-2xl;
+    @apply text-6xl;
   }
 }
 

@@ -39,7 +39,7 @@ h4 {
 }
 
 p {
-  @apply leading-relaxed text-gray-800;
+  @apply leading-relaxed text-gray-800 text-xl;
 }
 p + p {
   @apply mt-main;
@@ -103,8 +103,7 @@ ol li {
   right: 50% !important;
   margin-left: -50vw !important;
   margin-right: -50vw !important;
-  margin-top: theme('spacing.rhythm');
-  /* margin-bottom: theme('spacing.rhythm'); */
+  /* margin-top: theme('spacing.rhythm'); */
 }
 
 content img {
@@ -115,8 +114,8 @@ content img {
 
 @screen lg {
   .float-aside { 
-    @apply float-right ml-8 w-3/4;
-    margin-right: -66.7%;
+    @apply float-right ml-12 w-3/4 rounded;
+    margin-right: -55%;
     margin-top: theme('spacing.2');
     margin-bottom: theme('spacing.2');
   }
@@ -124,7 +123,7 @@ content img {
 
 @screen xl {
   .float-aside { 
-    margin-right: -85%;
+    /* margin-right: -85%; */
   }
 }
 
