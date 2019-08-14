@@ -1,21 +1,33 @@
 <template>
-  <div class="mainstream container">
-    <section class="flex flex-wrap overflow-hidden my-rhythm">
+  <div class="mainstream container mt-rhythm">
+    <section class="flex flex-wrap overflow-hidden mb-rhythm">
       <div class="introTitle w-full md:w-4/6">
         <h1 class="max-w-48 type-serif leading-none">I'm Henry Holmes, a&nbsp;designer.</h1>
         <div 
-          class="text-lg mt-8 mb-6 md:mb-0 type-sans"
+          class="text-lg mt-8 mb-6 md:mb-0s"
           v-html="$md.render(intro.body)" />
       </div>
-      <PlainList 
-        class="introList w-1/2 md:w-1/6"
+      <SimpleList 
+        class="introList w-1/2 md:w-1/6 text-gray-600"
         :header="'Skills'" 
         :items="['Design', 'Code', 'Write', 'Teach']" 
         />
-      <PlainList 
+      <SimpleList 
         class="introList w-1/2 md:w-1/6"
         :header="'Previously'" 
-        :items="['92Y', 'GuideOne/NPS', 'SmileBack']" 
+        :items="[
+          {
+            href: 'https://92y.org',
+            hrefTarget: '_blank',
+            content: '92Y'
+          },
+          '<a href=\'https://www.nps.gov/yose/planyourvisit/app.htm\' target=\'_blank\'>NPS</a>/<a href=\'http://guideonemobile.com/\' target=\'_blank\'>GuideOne</a>', 
+          {
+            href: 'http://smileback.co/',
+            hrefTarget: '_blank',
+            content: 'SmileBack'
+          }
+        ]"
         />
     </section>
     <ProjectsList 
@@ -26,25 +38,38 @@
         <div class="w-full md:w-4/6">
           <ContactForm 
             prompt="What's your thing?"
-            class="introForm max-w-md"
+            class="introForm"
             />
         </div>
-        <div class="column-spacer hidden lg:block lg:w-1/6"></div>
-        <div class="w-full text-center md:text-left md:w-2/6 lg:w-1/6 mt-rhythm md:mt-0">
-          <h4 class="pb-5 mt-3">Elsewhere</h4>
-          <ul class="list-reset uppercase text-xs tracking-wider">
-            <!-- <li><a href="https://facebook.com/hholmes" target="_blank">Facebook</a></li> -->
-            <li class="mb-4">
-              <a href="https://twitter.com/syntactile" target="_blank">twitter</a>
-            </li>
-            <li class="mb-4">
-              <a href="https://github.com/hholmes" target="_blank">github</a>
-            </li>
-            <li class="mb-4">
-              <a href="https://www.linkedin.com/in/henryjholmes/" target="_blank">linkedin</a>
-            </li>
-          </ul>
-        </div>
+        <div class="column-spacer hidden md:block md:w-1/6"></div>
+        <SimpleList 
+          class="w-full text-center md:text-left md:w-1/6 lg:w-1/6 mt-rhythm pt-2 md:mt-8"
+          :header="'Elsewhere'"
+          :useIcons="true"
+          :items="[
+            {
+              href: 'https://twitter.com/syntactile',
+              hrefTarget: '_blank',
+              icon: ['fab', 'twitter'],
+              iconColor: 'text-gray-300',
+              content: 'twitter'
+            },
+            {
+              href: 'https://github.com/hholmes',
+              hrefTarget: '_blank',
+              icon: ['fab', 'github'],
+              iconColor: 'text-gray-300',
+              content: 'github'
+            },
+            {
+              href: 'https://www.linkedin.com/in/henryjholmes/',
+              hrefTarget: '_blank',
+              icon: ['fab', 'linkedin'],
+              iconColor: 'text-gray-300',
+              content: 'linkedin'
+            }
+          ]"
+        />
       </div>
     </section>
   </div>
@@ -53,7 +78,7 @@
 <script>
 import ProjectsList from "~/components/ProjectsList"
 import ContactForm from "~/components/ContactForm"
-import PlainList from "~/components/PlainList"
+import SimpleList from "~/components/SimpleList"
 
 const intro = require('~/content/meta/intro.json')
 
@@ -66,7 +91,7 @@ export default {
   components: {
     ProjectsList,
     ContactForm,
-    PlainList
+    SimpleList
   }
 }
 </script>
@@ -77,19 +102,14 @@ export default {
   padding-left: calc(theme('spacing.main'));
   padding-right: calc(theme('spacing.main'));
 }
-.introList ul {
-  @apply mt-8;
-}
 
 .projectCard {
   padding: calc(theme('spacing.main')) calc(theme('spacing.main'));
 }
 
 .introForm {
-  margin-left: theme('spacing.main');
-  margin-right: theme('spacing.main');
+  @apply w-full;
 }
-
 
 @screen sm {
   /* .introTitle, .introForm {
@@ -103,17 +123,17 @@ export default {
     margin-left: calc(theme('spacing.main') * -.5);
     margin-right: calc(theme('spacing.main') * -.5);
   }
-  .projectCard {
+  .projectCard, .introForm {
     padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 2);
   }
 }
 
 @screen md {
   .introTitle {
-    @apply pl-0 m-0 pr-8;
+    @apply pl-0 m-0 pr-16;
   }
   .introList {
-    margin-top: 6.75rem;
+    margin-top: 4.25rem;
     padding: 0;
   }
   .projectsList {
@@ -123,6 +143,9 @@ export default {
   .projectCard {
     padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 1.5);
   }
+  .introForm {
+    @apply px-0 max-w-md;
+  }
 }
 
 @screen lg {
@@ -130,7 +153,7 @@ export default {
     @apply pr-24;
   }
   .introList {
-    margin-top: 4rem;
+    margin-top: 4.25rem;
   }
   .projectsList {
     margin-left: calc(theme('spacing.main') * -3);

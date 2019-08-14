@@ -75,8 +75,11 @@ collections:
         widget: list
         required: false
         fields:
+          - {label: SectionBanner, name: sectionBanner, widget: image, required: false}
           - {label: Heading, name: heading, widget: string, required: true}
           - {label: Body, name: body, widget: markdown, required: true}
+          - {label: Background Color, name: bg, widget: string, required: false}
+          - {label: Foreground Color, name: fg, widget: string, required: false}
           - label: "Topic"
             name: "topic"
             widget: "relation"

@@ -48,6 +48,10 @@ module.exports = {
         type: 'text/javascript',
         src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
       }
+      // {
+      //   type: 'text/javascript',
+      //   src: 'https://kit.fontawesome.com/27baa66abc.js'
+      // }
     ]
   },
 
@@ -83,6 +87,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     'nuxt-netlify-cms',
+    'nuxt-fontawesome',
     [
       '@nuxtjs/google-analytics',
       {
@@ -93,6 +98,20 @@ module.exports = {
     'nuxt-purgecss',
     'nuxt-webfontloader'
   ],
+
+  fontawesome: {
+    component: 'fa',
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      }
+    ]
+  },
 
   // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/
   purgeCSS: {

@@ -5,6 +5,15 @@ html {
   font-family: freight-text-pro, sans-serif; 
   @apply text-gray-900;
 }
+.type-serif {
+  font-family: freight-text-pro, sans-serif !important; 
+}
+.type-sans, form label, form input, form textarea {
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+.skip-kern {
+  font-kerning: none;
+}
 /* @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 } */
@@ -14,19 +23,19 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-family: 'Aktiv Grotesk', sans-serif;
+  /* font-family: 'Aktiv Grotesk', sans-serif; */
   @apply text-5xl font-extrabold;
 }
 h2 {
   @apply text-3xl font-extrabold;
 }
 h3 {
-  font-family: 'Aktiv Grotesk', sans-serif;
+  /* font-family: 'Aktiv Grotesk', sans-serif; */
   @apply tracking-wide text-lg font-extrabold text-gray-800;
 }
 h4 {
-  font-family: 'Aktiv Grotesk Thin', sans-serif;
-  @apply text-xl font-thin tracking-wider;
+  /* font-family: 'Aktiv Grotesk', sans-serif; */
+  @apply text-xl font-bold tracking-wide;
 }
 
 p {
@@ -70,19 +79,6 @@ ol li {
 
 .scrim-t::after, .scrim-r::after, .scrim-b::after, .scrim-l::after {
   @apply z-0;
-}
-
-.type-serif {
-  font-family: freight-text-pro, sans-serif !important; 
-}
-.type-sans, form label, form input, form textarea {
-  font-family: 'Aktiv Grotesk', sans-serif;
-}
-.type-thin {
-  font-family: 'Aktiv Grotesk Thin', sans-serif;
-}
-.skip-kern {
-  font-kerning: none;
 }
 
 @tailwind components;

@@ -13,23 +13,23 @@
       </div>
     </div>
     <section class="flex flex-wrap items-top mainstream min-h-screen-1/2 md:min-h-screen-1/4 md:mb-rhythm lg:min-h-screen-1/3">
-      <PlainList
+      <SimpleList
         class="w-1/2 md:w-1/4"
         :header="'Timeframe'" 
         :items="[timeframeText]"
         />
-      <PlainList
-        class="w-1/2 md:w-1/4"
+      <SimpleList
+        class="w-1/2 md:flex-auto md:w-auto"
         :header="'Roles'" 
         :items='project.roles'
         />
-      <PlainList
-        class="w-1/2 md:w-1/4"
+      <SimpleList
+        class="w-1/2 md:flex-auto md:w-auto"
         :header="'Tasks'" 
         :items="project.tasks"
         />
-      <PlainList
-        class="w-1/2 md:w-1/4"
+      <SimpleList
+        class="w-1/2 md:flex-auto md:w-auto"
         :header="'Tools'" 
         :items="project.tools"
         />
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import PlainList from "~/components/PlainList"
+import SimpleList from "~/components/SimpleList"
 
 export default {
   async asyncData({ params, route }) {
@@ -75,7 +75,7 @@ export default {
   },
   // layout: 'project',
   components: {
-    PlainList
+    SimpleList
   },
   data: function() {
     return {

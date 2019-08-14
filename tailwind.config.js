@@ -2,7 +2,7 @@
 
 module.exports = {
   prefix: '',
-  important: false,
+  important: true,
   separator: ':',
   theme: {
     minHeight: {
@@ -37,15 +37,16 @@ module.exports = {
       //   r: 'to left',
       //   l: 'to right'
       // },
-      // distances: {
-      //   '1/4': '25%',
+      distances: {
+        default: '75%'
+      },
       //   '1/3': '33.33333%',
       //   '1/2': '50%',
       //   '2/3': '66.66666%',
       //   '3/4': '75%'
       // },
       colors: {
-        default: [`rgba(0,0,0,0.5)`, `rgba(0,0,0,0)`]
+        default: [`rgba(0,0,0,0.6)`, `rgba(0,0,0,0.0)`]
       }
     })
   ]
