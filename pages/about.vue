@@ -10,7 +10,11 @@
         </li>
       </transition-group>
     </div>
-    <input v-model="query" class="border-gray-100 border-solid border-2">
+    <input 
+      class="border-gray-100 border-solid border-2" 
+      v-model="query"
+      @mouseenter="showTopics = true"
+      @mouseleave="showTopics = false">
     <transition-group
       name="staggered-fade"
       tag="ul"
@@ -20,7 +24,7 @@
       v-on:leave="leave"
     >
       <li
-        class="inline-block"
+        class="inline-block mx-4"
         v-for="(item, index) in computedList"
         v-bind:key="item.msg"
         v-bind:data-index="index"
@@ -57,7 +61,8 @@
   export default {
     data () {
       return {
-        showTopics: true,
+        showTopics: false,
+        numTopics: 0,
         page,
         items: [1,2,3,4,5,6,7,8,9],
         query: '',
@@ -96,7 +101,10 @@
         el.style.height = 0
       },
       enter: function (el, done) {
-        var delay = el.dataset.index * 150
+        var i = el.dataset.index
+        if (i > this.numTopics)
+          this.numTopics = i
+        var delay = i * 100
         setTimeout(function () {
           Velocity(
             el,
@@ -106,7 +114,7 @@
         }, delay)
       },
       leave: function (el, done) {
-        var delay = el.dataset.index * 150
+        var delay = (this.numTopics - el.dataset.index) * 100
         setTimeout(function () {
           Velocity(
             el,
