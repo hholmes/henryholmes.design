@@ -77,7 +77,6 @@
     },
     computed: {
       computedList: function () {
-        var vm = this
         if (this.showTopics)
           return this.list
         else 

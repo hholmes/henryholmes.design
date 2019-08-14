@@ -76,108 +76,108 @@
 </template>
 
 <script>
-import ProjectsList from "~/components/ProjectsList"
-import ContactForm from "~/components/ContactForm"
-import SimpleList from "~/components/SimpleList"
+  import ProjectsList from "~/components/ProjectsList"
+  import ContactForm from "~/components/ContactForm"
+  import SimpleList from "~/components/SimpleList"
 
-const intro = require('~/content/meta/intro.json')
+  const intro = require('~/content/meta/intro.json')
 
-export default {
-  data () {
-    return {
-      intro
+  export default {
+    data () {
+      return {
+        intro
+      }
+    },
+    components: {
+      ProjectsList,
+      ContactForm,
+      SimpleList
     }
-  },
-  components: {
-    ProjectsList,
-    ContactForm,
-    SimpleList
   }
-}
 </script>
 
 <style>
-.introList {
-  margin-top: calc(theme('spacing.main') * 2);
-  padding-left: calc(theme('spacing.main'));
-  padding-right: calc(theme('spacing.main'));
-}
-
-.projectCard {
-  padding: calc(theme('spacing.main')) calc(theme('spacing.main'));
-}
-
-.introForm {
-  @apply w-full;
-}
-
-@screen sm {
-  /* .introTitle, .introForm {
-    margin-left: calc(theme('spacing.main') * 2);
-    margin-right: calc(theme('spacing.main') * 2);
-  } */
   .introList {
-    padding-left: calc(theme('spacing.main') * 2);
+    margin-top: calc(theme('spacing.main') * 2);
+    padding-left: calc(theme('spacing.main'));
+    padding-right: calc(theme('spacing.main'));
   }
-  .projectsList {
-    margin-left: calc(theme('spacing.main') * -.5);
-    margin-right: calc(theme('spacing.main') * -.5);
-  }
-  .projectCard, .introForm {
-    padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 2);
-  }
-}
 
-@screen md {
-  .introTitle {
-    @apply pl-0 m-0 pr-16;
-  }
-  .introList {
-    margin-top: 4.25rem;
-    padding: 0;
-  }
-  .projectsList {
-    margin-left: calc(theme('spacing.main') * -2);
-    margin-right: calc(theme('spacing.main') * -2);
-  }
   .projectCard {
-    padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 1.5);
+    padding: calc(theme('spacing.main')) calc(theme('spacing.main'));
   }
+
   .introForm {
-    @apply px-0 max-w-md;
+    @apply w-full;
   }
-}
 
-@screen lg {
-  .introTitle {
-    @apply pr-24;
+  @screen sm {
+    /* .introTitle, .introForm {
+      margin-left: calc(theme('spacing.main') * 2);
+      margin-right: calc(theme('spacing.main') * 2);
+    } */
+    .introList {
+      padding-left: calc(theme('spacing.main') * 2);
+    }
+    .projectsList {
+      margin-left: calc(theme('spacing.main') * -.5);
+      margin-right: calc(theme('spacing.main') * -.5);
+    }
+    .projectCard, .introForm, .project-preview {
+      padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 2);
+    }
   }
-  .introList {
-    margin-top: 4.25rem;
-  }
-  .projectsList {
-    margin-left: calc(theme('spacing.main') * -3);
-    margin-right: calc(theme('spacing.main') * -3);
-  }
-  .projectCard {
-    padding: calc(theme('spacing.main') * 2) calc(theme('spacing.main') * 2.5);
-  }
-}
 
-@screen xl {
-  .introTitle {
-    /* padding-left: calc(theme('spacing.main') * 2); */
-    @apply pr-48;
+  @screen md {
+    .introTitle {
+      @apply pl-0 m-0 pr-16;
+    }
+    .introList {
+      margin-top: 4.25rem;
+      padding: 0;
+    }
+    .projectsList {
+      margin-left: calc(theme('spacing.main') * -2);
+      margin-right: calc(theme('spacing.main') * -2);
+    }
+    .projectCard, .project-preview {
+      padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 1.5);
+    }
+    .introForm {
+      @apply px-0 max-w-md;
+    }
   }
-  .introList {
-    margin-top: 4.25rem;
+
+  @screen lg {
+    .introTitle {
+      @apply pr-24;
+    }
+    .introList {
+      margin-top: 4.25rem;
+    }
+    .projectsList {
+      margin-left: calc(theme('spacing.main') * -3);
+      margin-right: calc(theme('spacing.main') * -3);
+    }
+    .projectCard, .project-preview {
+      padding: calc(theme('spacing.main') * 2) calc(theme('spacing.main') * 2.5);
+    }
   }
-  .projectsList {
-    margin-left: calc(theme('spacing.main') * -4);
-    margin-right: calc(theme('spacing.main') * -4);
+
+  @screen xl {
+    .introTitle {
+      /* padding-left: calc(theme('spacing.main') * 2); */
+      @apply pr-48;
+    }
+    .introList {
+      margin-top: 4.25rem;
+    }
+    .projectsList {
+      margin-left: calc(theme('spacing.main') * -4);
+      margin-right: calc(theme('spacing.main') * -4);
+    }
+    .projectCard, .project-preview {
+      padding: calc(theme('spacing.main') * 2.5) calc(theme('spacing.main') * 3.5);
+    }
   }
-  .projectCard {
-    padding: calc(theme('spacing.main') * 2.5) calc(theme('spacing.main') * 3.5);
-  }
-}
 </style>

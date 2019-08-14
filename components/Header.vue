@@ -1,9 +1,9 @@
 <template>
-  <header class="mainstream relative py-6 z-20 uppercase text-sm tracking-wider">
+  <header class="mainstream relative py-6 z-20 uppercase tracking-wider">
     <nav class="pin-t fixed">
       <ul class="list-reset">
         <li class="mr-8 inline">
-          <a class="text-black type-sans" :href='"/"'>Henry Holmes</a>
+          <a class="text-black type-sans font-bold" :href='"/"'>Henry Holmes</a>
         </li>
         <span
           v-for="link in navPages"
@@ -11,7 +11,7 @@
           <li
             v-if="header.pages.includes(link.title)"
             class="mr-8 inline">
-            <a class="text-black type-sans" :href='link._path'>{{ link.title }}</a>
+            <a class="text-gray-900 type-sans font-bold" :href='link._path'>{{ link.title }}</a>
           </li>
         </span>
       </ul>
