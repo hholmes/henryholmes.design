@@ -47,11 +47,17 @@ module.exports = {
       {
         type: 'text/javascript',
         src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
+      },
+      {
+        type: 'text/javascript',
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js'
+      },
+      {
+        type: 'text/javascript',
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'
       }
-      // {
-      //   type: 'text/javascript',
-      //   src: 'https://kit.fontawesome.com/27baa66abc.js'
-      // }
     ]
   },
 

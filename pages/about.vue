@@ -2,6 +2,30 @@
   <div class="mainstream container mt-rhythm">
     <h1>{{ page.title }}</h1>
     <div v-html="$md.render(page.body)" />
+    <div id="flip-list-demo" class="demo">
+      <button @mouseenter="shuffle">Shuffle</button>
+      <transition-group name="flip-list" tag="ul">
+        <li v-for="item in items" v-bind:key="item">
+          {{ item }}
+        </li>
+      </transition-group>
+    </div>
+    <input v-model="query" class="border-gray-100 border-solid border-2">
+    <transition-group
+      name="staggered-fade"
+      tag="ul"
+      v-bind:css="false"
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+      v-on:leave="leave"
+    >
+      <li
+        class="inline-block"
+        v-for="(item, index) in computedList"
+        v-bind:key="item.msg"
+        v-bind:data-index="index"
+      >{{ item.msg }}</li>
+    </transition-group>
     <SimpleList 
           class="w-full text-center md:text-left mt-rhythm md:mt-8"
           :useIcons="true"
@@ -33,7 +57,26 @@
   export default {
     data () {
       return {
-        page
+        showTopics: true,
+        page,
+        items: [1,2,3,4,5,6,7,8,9],
+        query: '',
+        list: [
+          { msg: 'Bruce Lee' },
+          { msg: 'Jackie Chan' },
+          { msg: 'Chuck Norris' },
+          { msg: 'Jet Li' },
+          { msg: 'Kung Fury' }
+        ]
+      }
+    },
+    computed: {
+      computedList: function () {
+        var vm = this
+        if (this.showTopics)
+          return this.list
+        else 
+          return []
       }
     },
     components: {
@@ -43,6 +86,35 @@
       return {
         title: this.page.title
       }
+    },
+    methods: {
+      shuffle: function () {
+        this.items = _.shuffle(this.items)
+      },
+      beforeEnter: function (el) {
+        el.style.opacity = 0
+        el.style.height = 0
+      },
+      enter: function (el, done) {
+        var delay = el.dataset.index * 150
+        setTimeout(function () {
+          Velocity(
+            el,
+            { opacity: 1, height: '1.6em' },
+            { complete: done }
+          )
+        }, delay)
+      },
+      leave: function (el, done) {
+        var delay = el.dataset.index * 150
+        setTimeout(function () {
+          Velocity(
+            el,
+            { opacity: 0, height: 0 },
+            { complete: done }
+          )
+        }, delay)
+      }
     }
   }
 </script>
@@ -50,5 +122,8 @@
 <style>
   h3 {
     @apply mb-4;
+  }
+  .flip-list-move {
+    transition: transform 1s;
   }
 </style>
