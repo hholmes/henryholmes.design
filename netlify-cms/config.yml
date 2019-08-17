@@ -13,37 +13,40 @@ media_folder: "static/images" # Media files will be stored in the repo under sta
 public_folder: "/images" # The src attribute for uploaded media will begin with /images
 
 collections:
-  - label: "Global"
-    name: "global"
-    file: "content/global.json"
-    format: "json"
-    fields:
-      - label: "Pages"
-        name: "pages"
-        widget: "relation"
-        collection: "pages"
-        searchFields: ["title"]
-        valueField: "title"
-        multiple: true
-  - label: "Home"
-    name: "home"
-    file: "content/home.json"
-    format: "json"
-    fields:
-      - {label: "logo", name: "logo", widget: image}
-      - {label: Body, name: body, widget: markdown, required: true}
-      - label: "Projects"
-        name: "projects"
-        widget: "relation"
-        collection: "project"
-        searchFields: ["title"]
-        valueField: "title"
-        multiple: true
-      - {label: Facebook, name: facebook, widget: string, required: false}
-      - {label: Twitter, name: twitter, widget: string, required: false}
-      - {label: GitHub, name: github, widget: string, required: false}
-      - {label: Instagram, name: instagram, widget: string, required: false}
-      - {label: LinkedIn, name: linkedin, widget: string, required: false}
+  - label: "Basics"
+    name: "basics"
+    files:
+      - label: "Global"
+        name: "global"
+        file: "content/global.json"
+        format: "json"
+        fields:
+          - label: "Navigation"
+            name: "nav"
+            widget: "relation"
+            collection: "pages"
+            searchFields: ["title"]
+            valueField: "title"
+            multiple: true
+      - label: "Home"
+        name: "home"
+        file: "content/home.json"
+        format: "json"
+        fields:
+          - {label: "logo", name: "logo", widget: image}
+          - {label: Body, name: body, widget: markdown, required: true}
+          - label: "Projects"
+            name: "projects"
+            widget: "relation"
+            collection: "project"
+            searchFields: ["title"]
+            valueField: "title"
+            multiple: true
+          - {label: Facebook, name: facebook, widget: string, required: false}
+          - {label: Twitter, name: twitter, widget: string, required: false}
+          - {label: GitHub, name: github, widget: string, required: false}
+          - {label: Instagram, name: instagram, widget: string, required: false}
+          - {label: LinkedIn, name: linkedin, widget: string, required: false}
   - label: "Project"
     name: "project"
     folder: "content/project"
