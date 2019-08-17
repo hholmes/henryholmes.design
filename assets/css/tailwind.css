@@ -54,7 +54,7 @@ a {
 nav a {
   @apply border-b-0;
 }
-a:hover, nav a:hover {
+a:hover, nav a:hover, .nuxt-link-exact-active {
   @apply text-gray-900 border-b-2 border-gray-900;
 }
 

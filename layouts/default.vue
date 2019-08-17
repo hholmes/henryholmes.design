@@ -3,7 +3,7 @@
     <div>
       <Header />
       <div id="main" role="main">
-        <nuxt />
+        <nuxt class="mainstream container mt-rhythm" />
       </div>
       <Footer />
     </div>

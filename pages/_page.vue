@@ -1,16 +1,19 @@
 <template>
-  <div class="m-4">
+  <div>
     <h1>{{ page.title }}</h1>
     <div v-html="$md.render(page.body)" />
   </div>
 </template>
 
 <script>
-const page = require('~/content/page/cv.json')
+// import axios from 'axios'
 export default {
-  data () {
+  async asyncData({ params, route }) {
+    const pageContents = await import('~/content/page/' +
+      route.params.page +
+      '.json')
     return {
-      page
+      page: pageContents
     }
   },
   head() {
@@ -18,12 +21,5 @@ export default {
       title: this.page.title
     }
   }
-  
 }
 </script>
-
-<style>
-h3 {
-  @apply mb-4;
-}
-</style>

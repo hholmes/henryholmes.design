@@ -1,5 +1,5 @@
 <template>
-  <div class="mainstream container mt-rhythm">
+  <div>
     <section class="flex flex-wrap overflow-hidden mb-rhythm">
       <div class="introTitle w-full md:w-4/6">
         <h1 class="max-w-48 type-serif leading-none">I'm Henry Holmes, a&nbsp;designer.</h1>

@@ -1,5 +1,5 @@
 <template>
-  <div class="mainstream container mt-rhythm">
+  <div>
     <h1>{{ page.title }}</h1>
     <div v-html="$md.render(page.body)" />
     <SimpleList 

@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4">
+  <div>
     <h2>{{ article.title }}</h2>
     <img 
       class="w-1/2" 
