@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 import pkg from './package'
 const path = require('path')
 const glob = require('glob-all')
@@ -87,6 +87,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     'nuxt-netlify-cms',
+    '@bazzite/nuxt-netlify',
     'nuxt-fontawesome',
     [
       '@nuxtjs/google-analytics',
@@ -130,6 +131,19 @@ module.exports = {
     linkify: true,
     breaks: true,
     use: ['markdown-it-div', 'markdown-it-attrs']
+  },
+
+  netlify: {
+    mergeSecurityHeaders: true,
+    headers: {
+      '/favicon.ico': ['Cache-Control: public, max-age=86400']
+    },
+    redirects: [
+      {
+        from: '/home',
+        to: '/'
+      }
+    ]
   },
 
   router: {

@@ -15,6 +15,7 @@
     "test": "ava"
   },
   "dependencies": {
+    "@bazzite/nuxt-netlify": "^0.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",

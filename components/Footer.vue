@@ -8,7 +8,7 @@
         <span v-if="leftContents" v-html="leftContents" />
       </div>
       <div class="w-1/3 lg:w-1/6 text-center">
-        <fa :icon="['fas','heart']"></fa>
+        <fa :icon="['fas','heart']" class="text-sm"></fa>
       </div>
       <div class="w-1/3 lg:w-1/6 text-right">
         <span v-if="rightContents" v-html="rightContents" />

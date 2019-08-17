@@ -1,20 +1,20 @@
 <template>
   <div>
     <section class="flex flex-wrap overflow-hidden mb-rhythm">
-      <div class="introTitle w-full md:w-4/6">
+      <div class="introTitle w-full md:w-3/5 lg:w-4/6">
         <h1 class="max-w-48 type-serif leading-none">I'm Henry Holmes, a&nbsp;designer.</h1>
         <div 
           class="text-lg mt-8 mb-6 md:mb-0s"
           v-html="$md.render(home.body)" />
       </div>
       <SimpleList 
-        class="introList w-1/2 md:w-1/6"
-        :header="'Skills'" 
+        class="introList w-1/2 md:w-1/5 lg:w-1/6 sm:border-l-2 md:border-dotted md:px-2 xl:px-4"
+        :header="'I can...'" 
         :items="['Design', 'Code', 'Write', 'Teach']" 
         />
       <SimpleList 
-        class="introList w-1/2 md:w-1/6"
-        :header="'Previously'" 
+        class="introList w-1/2 md:w-1/5 lg:w-1/6 sm:border-l-2 md:border-dotted md:px-2 xl:px-4"
+        :header="'Previously,'" 
         :items="[
           {
             href: 'https://92y.org',
@@ -26,6 +26,11 @@
             href: 'http://smileback.co/',
             hrefTarget: '_blank',
             content: 'SmileBack'
+          },
+          {
+            href: 'https://www.cardsnacks.com/',
+            hrefTarget: '_blank',
+            content: 'CardSnacks'
           }
         ]"
         />
@@ -126,10 +131,10 @@
 
   @screen md {
     .introTitle {
-      @apply pl-0 m-0 pr-16;
+      @apply pl-0 m-0 pr-12;
     }
     .introList {
-      margin-top: 4.25rem;
+      margin-top: 7.5rem;
       padding: 0;
     }
     .projectsList {

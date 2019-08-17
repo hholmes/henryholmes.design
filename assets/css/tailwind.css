@@ -48,13 +48,13 @@ p + h1, p + h2, p + h3, p + h4 {
   @apply mt-12;
 }
 
-a {
+a, .nuxt-link-exact-active {
   @apply text-gray-700 border-b-2 border-solid;
 }
 nav a {
   @apply border-b-0;
 }
-a:hover, nav a:hover, .nuxt-link-exact-active {
+a:hover, nav a:hover {
   @apply text-gray-900 border-b-2 border-gray-900;
 }
 

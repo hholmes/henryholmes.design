@@ -15,9 +15,7 @@
             class="mr-8 inline">
             <NuxtLink 
               :class="['text-gray-900', 'type-sans', 'text-sm']" 
-              :to='link._path'>
-              {{ link.title }}
-            </NuxtLink>
+              :to='link._path'>{{ link.title }}</NuxtLink>
           </li>
         </span>
       </ul>
