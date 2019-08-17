@@ -47,9 +47,6 @@
               v-html="$md.render(section.body)" />
           </div>
         </div>
-        <!-- <span class="inline-block bg-gray-lighter rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">
-          {{ section.topic }}
-        </span> -->
       </section>
     </content>
   </div>
@@ -88,83 +85,73 @@ export default {
     };
   },
   mounted () {
-    // console.log('_project mounted');
-    // this.$on('footer-bg', (e) => {
-    //   console.log("_project emitted: " + e);
-    // });
     if (this.project.sections.length > 0) {
       this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)
-    }
-  },
-  methods: {
-    onScroll: function(e, position) {
-      // console.log(position);
     }
   }
 }
 </script>
 
-<style>
-.title {
-  @apply inline-flex bg-center bg-cover;
-  white-space: nowrap;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 7rem;
-  line-height: 7rem;
-  height: 8rem;
-}
-
-.subtitle { 
-  @apply leading-tight text-4xl font-bold max-w-sm pb-8 -mt-4;
-}
-
-@screen sm {
+<style scoped>
   .title {
-    @apply -ml-1;
-    font-size: 10rem;
-    line-height: 10rem;
-    height: 11rem;
+    @apply inline-flex bg-center bg-cover;
+    white-space: nowrap;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 7rem;
+    line-height: 7rem;
+    height: 8rem;
   }
-  .subtitle {
-    @apply -mt-6;
-  }
-}
 
-@screen md {
-  .title {
-    @apply -ml-2;
-    font-size: 12rem;
-    line-height: 12rem;
-    height: 14rem;
+  .subtitle { 
+    @apply leading-tight text-4xl font-bold max-w-sm pb-8 -mt-4;
   }
-  .subtitle {
-    @apply -mt-12 max-w-md;
-  }
-}
 
-@screen lg {
-  .title {
-    font-size: 18rem;
-    line-height: 18rem;
-    height: 20rem;
+  @screen sm {
+    .title {
+      @apply -ml-1;
+      font-size: 10rem;
+      line-height: 10rem;
+      height: 11rem;
+    }
+    .subtitle {
+      @apply -mt-6;
+    }
   }
-  .subtitle {
-    @apply text-6xl max-w-2xl;
-  }
-}
 
-@screen xl {
-  .title {
-    @apply -ml-4;
-    font-size: 20rem;
-    line-height: 20rem;
-    height: 22rem;
+  @screen md {
+    .title {
+      @apply -ml-2;
+      font-size: 12rem;
+      line-height: 12rem;
+      height: 14rem;
+    }
+    .subtitle {
+      @apply -mt-12 max-w-md;
+    }
   }
-  .subtitle {
-    @apply text-6xl;
-  }
-}
 
+  @screen lg {
+    .title {
+      font-size: 18rem;
+      line-height: 18rem;
+      height: 20rem;
+    }
+    .subtitle {
+      @apply text-6xl max-w-2xl;
+    }
+  }
+
+  @screen xl {
+    .title {
+      @apply -ml-4;
+      font-size: 20rem;
+      line-height: 20rem;
+      height: 22rem;
+    }
+    .subtitle {
+      @apply text-6xl;
+    }
+  }
 </style>

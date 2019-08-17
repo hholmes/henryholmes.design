@@ -84,7 +84,7 @@ ol li {
 @tailwind components;
 @tailwind utilities;
 
-.page-enter-active,
+/* .page-enter-active,
 .page-leave-active {
   transition-property: opacity;
   transition-timing-function: ease-in-out;
@@ -93,6 +93,42 @@ ol li {
 .page-enter,
 .page-leave-to {
   opacity: 0;
+} */
+
+.layout-enter-active, 
+.layout-leave-to,
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .5s ease-out;
+}
+.layout-enter, 
+.layout-leave-to,
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.project-enter-active {
+  animation: acrossIn .30s ease-out both;
+} 
+.project-leave-active {
+  animation: acrossOut .60s ease-out both;
+} 
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 
 .w-spill {

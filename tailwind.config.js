@@ -11,6 +11,9 @@ module.exports = {
       'screen-1/2': '50vh',
       'screen-2/3': '67vh'
     },
+    boxShadow: {
+      darken: 'inset 0 0 0 150vw rgba(0,0,0,0.4)'
+    },
     extend: {
       spacing: {
         '18': '4.5rem',
@@ -38,7 +41,7 @@ module.exports = {
       //   l: 'to right'
       // },
       distances: {
-        default: '75%'
+        default: '85%'
       },
       //   '1/3': '33.33333%',
       //   '1/2': '50%',
@@ -46,7 +49,7 @@ module.exports = {
       //   '3/4': '75%'
       // },
       colors: {
-        default: [`rgba(0,0,0,0.6)`, `rgba(0,0,0,0.0)`]
+        default: [`rgba(0,0,0,0.6)`, `rgba(0,0,0,0.1)`]
       }
     })
   ]

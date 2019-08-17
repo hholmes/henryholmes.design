@@ -5,10 +5,10 @@
         <h1 class="max-w-48 type-serif leading-none">I'm Henry Holmes, a&nbsp;designer.</h1>
         <div 
           class="text-lg mt-8 mb-6 md:mb-0s"
-          v-html="$md.render(intro.body)" />
+          v-html="$md.render(home.body)" />
       </div>
       <SimpleList 
-        class="introList w-1/2 md:w-1/6 text-gray-600"
+        class="introList w-1/2 md:w-1/6"
         :header="'Skills'" 
         :items="['Design', 'Code', 'Write', 'Teach']" 
         />
@@ -48,21 +48,21 @@
           :useIcons="true"
           :items="[
             {
-              href: 'https://twitter.com/syntactile',
+              href: home.twitter,
               hrefTarget: '_blank',
               icon: ['fab', 'twitter'],
               iconColor: 'text-gray-300',
               content: 'twitter'
             },
             {
-              href: 'https://github.com/hholmes',
+              href: home.github,
               hrefTarget: '_blank',
               icon: ['fab', 'github'],
               iconColor: 'text-gray-300',
               content: 'github'
             },
             {
-              href: 'https://www.linkedin.com/in/henryjholmes/',
+              href: home.linkedin,
               hrefTarget: '_blank',
               icon: ['fab', 'linkedin'],
               iconColor: 'text-gray-300',
@@ -80,12 +80,12 @@
   import ContactForm from "~/components/ContactForm"
   import SimpleList from "~/components/SimpleList"
 
-  const intro = require('~/content/meta/intro.json')
+  const home = require('~/content/home.json')
 
   export default {
     data () {
       return {
-        intro
+        home
       }
     },
     components: {
@@ -112,10 +112,6 @@
   }
 
   @screen sm {
-    /* .introTitle, .introForm {
-      margin-left: calc(theme('spacing.main') * 2);
-      margin-right: calc(theme('spacing.main') * 2);
-    } */
     .introList {
       padding-left: calc(theme('spacing.main') * 2);
     }
@@ -166,7 +162,6 @@
 
   @screen xl {
     .introTitle {
-      /* padding-left: calc(theme('spacing.main') * 2); */
       @apply pr-48;
     }
     .introList {

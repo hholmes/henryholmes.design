@@ -50,13 +50,7 @@ module.exports = {
       },
       {
         type: 'text/javascript',
-        src:
-          'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js'
-      },
-      {
-        type: 'text/javascript',
-        src:
-          'https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'
+        src: '//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js'
       }
     ]
   },

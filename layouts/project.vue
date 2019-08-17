@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <Header />
-    <div id="main" role="main">
-      <nuxt />
+  <transition name="project" mode="out-in">
+    <div>
+      <Header />
+      <div id="main" role="main">
+        <nuxt />
+      </div>
+      <Footer :bg="this.footerBg" :left-contents="'left'" :right-contents="'<a href=\'#\'>right →</a>'" />
     </div>
-    <Footer :bg="this.footerBg" />
-  </div>
+  </transition>
 </template>
 
 <script>

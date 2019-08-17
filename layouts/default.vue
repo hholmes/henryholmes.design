@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <Header />
-    <div id="main" role="main">
-      <nuxt />
+  <transition name="layout" mode="out-in">
+    <div>
+      <Header />
+      <div id="main" role="main">
+        <nuxt />
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
+  </transition>
 </template>
 
 <script>

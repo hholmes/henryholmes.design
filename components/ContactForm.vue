@@ -5,14 +5,13 @@
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
       </div>    
       <div class="md:flex mb-8 md:mb-6">
-        <div class="hidden sm:block w-1/5"></div>
-        <div class="md:w-4/5">
+        <div>
           <h2>{{ prompt }}</h2>
         </div>
       </div>
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/5">
-          <label class="block text-black text-md font-semibold mb-2 md:mb-1 pr-4 lg:text-right" 
+          <label class="block text-black text-md font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-full-name">
             name
           </label>
@@ -27,7 +26,7 @@
       </div>
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/5">
-          <label class="block text-black text-md font-semibold mb-2 md:mb-1 pr-4 lg:text-right" 
+          <label class="block text-black text-md font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-email">
             email
           </label>
@@ -42,7 +41,7 @@
       </div>
       <div class="md:flex md:items-top mb-6">
         <div class="md:w-1/5 md:pt-3">
-          <label class="block text-black text-md font-semibold mb-2 md:mb-1 pr-4 lg:text-right" 
+          <label class="block text-black text-md font-semibold mb-2 md:mb-1 pr-4" 
                  for="inline-message">
             message
           </label>
