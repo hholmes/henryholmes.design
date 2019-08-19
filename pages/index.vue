@@ -38,6 +38,24 @@
     <ProjectsList 
       class="projectsList flex flex-wrap mb-rhythm"
       />
+    <section class="flex flex-wrap overflow-hidden mb-rhythm">
+      <div class="details-block md:pl-0 md:w-1/2">
+        <h2>How I work</h2>
+        <p>Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.</p>
+      </div>
+      <div class="details-block md:w-1/2 md:mb-8">
+        <img class="w-full" src="https://loremflickr.com/375/275" />
+      </div>
+    </section>
+    <section class="flex flex-wrap md:flex-row-reverse overflow-hidden mb-rhythm">
+      <div class="details-block md:w-1/2">
+        <h2>What matters</h2>
+        <p>Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.</p>
+      </div>
+      <div class="details-block md:pl-0 md:w-1/2 md:mb-8">
+        <img class="w-full" src="https://loremflickr.com/375/275" />
+      </div>
+    </section>
     <section class="container">
       <div class="flex flex-wrap">
         <div class="w-full md:w-4/6">
@@ -108,8 +126,8 @@
     padding-right: calc(theme('spacing.main'));
   }
 
-  .projectCard {
-    padding: calc(theme('spacing.main')) calc(theme('spacing.main'));
+  .projectCard, .details-block {
+    padding: calc(theme('spacing.main'));
   }
 
   .introForm {
@@ -124,7 +142,7 @@
       margin-left: calc(theme('spacing.main') * -.5);
       margin-right: calc(theme('spacing.main') * -.5);
     }
-    .projectCard, .introForm, .project-preview {
+    .projectCard, .introForm, .project-preview, .details-block {
       padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 2);
     }
   }
@@ -141,7 +159,7 @@
       margin-left: calc(theme('spacing.main') * -2);
       margin-right: calc(theme('spacing.main') * -2);
     }
-    .projectCard, .project-preview {
+    .projectCard, .project-preview, .details-block {
       padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 1.5);
     }
     .introForm {
@@ -160,7 +178,7 @@
       margin-left: calc(theme('spacing.main') * -3);
       margin-right: calc(theme('spacing.main') * -3);
     }
-    .projectCard, .project-preview {
+    .projectCard, .project-preview, .details-block {
       padding: calc(theme('spacing.main') * 2) calc(theme('spacing.main') * 2.5);
     }
   }
@@ -176,8 +194,8 @@
       margin-left: calc(theme('spacing.main') * -4);
       margin-right: calc(theme('spacing.main') * -4);
     }
-    .projectCard, .project-preview {
+    .projectCard, .project-preview, .details-block {
       padding: calc(theme('spacing.main') * 2.5) calc(theme('spacing.main') * 3.5);
     }
   }
-</style>
+</style> 

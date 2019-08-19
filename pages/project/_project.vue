@@ -1,5 +1,6 @@
 <template>
-  <div v-scroll:throttle="{fn: onScroll, throttle: 500 }"
+  <!-- <div v-scroll:throttle="{fn: onScroll, throttle: 500 }" -->
+  <div 
     class="overflow-hidden">
     <!-- <div class="projectCover flex block items-end px-4 md:px-0 pt-16 bg-cover bg-bottom bg-scroll md:bg-fixed text-white scrim-b">
               :style="{ backgroundImage: `url('${ project.cover }')` }"> -->
@@ -79,11 +80,11 @@ export default {
   components: {
     SimpleList
   },
-  data () {
-    return {
-      position: { scrollTop: 0, scrollLeft: 0 }
-    };
-  },
+  // data () {
+  //   return {
+  //     position: { scrollTop: 0, scrollLeft: 0 }
+  //   };
+  // },
   mounted () {
     if (this.project.sections.length > 0) {
       this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)

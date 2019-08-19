@@ -80,6 +80,22 @@ module.exports = {
   */
   plugins: ['~/plugins/vue2-filters', '~/plugins/vue-scroll'],
 
+  textSizes: {
+    sm: '14px',
+    md: {
+      min: '16px',
+      max: '20px',
+      minvw: '320px',
+      maxvw: '1280px'
+    },
+    lg: {
+      min: '26px',
+      max: '40px',
+      minvw: '320px',
+      maxvw: '1280px'
+    }
+  },
+
   /*
   ** Nuxt.js modules
   */
@@ -87,7 +103,6 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     'nuxt-netlify-cms',
-    '@bazzite/nuxt-netlify',
     'nuxt-fontawesome',
     [
       '@nuxtjs/google-analytics',
@@ -97,7 +112,14 @@ module.exports = {
       }
     ],
     'nuxt-purgecss',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    [
+      'tailwindcss-fluid',
+      {
+        suffix: '',
+        textSizes: true
+      }
+    ]
   ],
 
   fontawesome: {
@@ -131,19 +153,6 @@ module.exports = {
     linkify: true,
     breaks: true,
     use: ['markdown-it-div', 'markdown-it-attrs']
-  },
-
-  netlify: {
-    mergeSecurityHeaders: true,
-    headers: {
-      '/favicon.ico': ['Cache-Control: public, max-age=86400']
-    },
-    redirects: [
-      {
-        from: '/home',
-        to: '/'
-      }
-    ]
   },
 
   router: {

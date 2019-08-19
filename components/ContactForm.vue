@@ -21,7 +21,7 @@
                  id="inline-full-name" 
                  name="name"
                  type="text" 
-                 placeholder="First Last">
+                 placeholder="You">
         </div>
       </div>
       <div class="md:flex md:items-center mb-6">
@@ -36,7 +36,7 @@
                  id="inline-email" 
                  name="email"
                  type="text" 
-                 placeholder="your@email.com">
+                 placeholder="Your email address">
         </div>
       </div>
       <div class="md:flex md:items-top mb-6">
@@ -50,7 +50,7 @@
           <textarea class="form-input focus:outline-none focus:bg-white focus:border-black" 
                  id="inline-message"
                  name="message"
-                 placeholder="What's on your mind?">
+                 placeholder="Your inquiry">
           </textarea>
         </div>
       </div>

@@ -49,7 +49,10 @@ export default {
       if (this.showTopics) {
         if (this.topics.length < 1 && this.project.sections && this.project.sections.length > 0) {
           this.project.sections.forEach(section => {
-            if (section.topic != null && section.topic != "Generic" && this.topics.indexOf(section.topic) < 0)
+            if (section.topic != null 
+             && section.topic != "Generic"
+             && section.topic.length > 0
+             && this.topics.indexOf(section.topic) < 0)
               this.topics.push(section.topic)
           });
         }

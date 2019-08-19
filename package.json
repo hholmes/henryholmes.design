@@ -68,6 +68,7 @@
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^2.0.0",
     "tailwindcss": "^1.0.5",
+    "tailwindcss-fluid": "^0.2.0",
     "tailwindcss-scrims": "^1.0.0"
   },
   "main": ".eslintrc.js",
