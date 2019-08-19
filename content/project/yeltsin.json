@@ -1,8 +1,30 @@
 {
-  "id": "3",
+  "start": "August 2019",
+  "sections": [
+    {
+      "heading": "Lorem Ipsum",
+      "body": "Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.",
+      "topic": "Interaction & Animation"
+    }
+  ],
+  "tasks": [
+    "Audio Tour UX",
+    "Automatic Media",
+    "Immersive UI"
+  ],
+  "cover": "https://ucarecdn.com/bdf19007-698c-4c7a-a7ee-b3b558f808fb/",
+  "subtitle": "Developing a new kind of audio tour",
   "title": "Yeltsin",
   "type": "Case Study",
-  "subtitle": "Developing a new kind of audio tour",
-  "cover": "https://ucarecdn.com/bdf19007-698c-4c7a-a7ee-b3b558f808fb/",
-  "sections": []
+  "end": "August 2019",
+  "id": "3",
+  "tools": [
+    "iBeacons",
+    "Adobe CS",
+    "Sketch",
+    ""
+  ],
+  "roles": [
+    "Proximity Specialist"
+  ]
 }
