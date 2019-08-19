@@ -1,7 +1,7 @@
 <template>
   <section>
     <div
-        v-for="project in orderBy(projects,'id')"
+        v-for="project in orderBy(projectsToShow,'id')"
         class="w-full md:w-1/2 py-2 px-0 sm:p-2"
         :key="project.id">
         <ProjectItem :project="project" :url="'/project' + project._path" />
@@ -23,9 +23,21 @@ const projects = context.keys().map(key => ({
   }));
 
 export default {
+  props: ['visibleProjects'],
   data () {
     return {
       projects
+    }
+  },
+  computed: {
+    projectsToShow: function() {
+      var projectsSelected = []
+      projects.forEach(p => {
+        if (this.visibleProjects.includes(p.title)) {
+          projectsSelected.push(p)
+        }
+      });
+      return projectsSelected;
     }
   },
   components: {

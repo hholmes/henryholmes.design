@@ -5,7 +5,7 @@
         <li class="mr-8 inline">
           <NuxtLink 
             :class="['text-black', 'type-sans', 'text-sm']" 
-            :to="'/'">Henry Holmes</NuxtLink>
+            :to="'/'">{{ homeLink ? 'Home' : 'Henry Holmes' }}</NuxtLink>
         </li>
         <span
           v-for="link in navPages"
@@ -32,6 +32,7 @@ const navPages = context.keys().map(key => ({
   }));
 
 export default {
+  props: ['homeLink'],
   data () {
     return {
       global,

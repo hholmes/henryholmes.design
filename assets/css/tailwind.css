@@ -27,7 +27,12 @@ h1 {
   @apply text-5xl font-extrabold;
 }
 h2 {
-  @apply text-3xl font-extrabold;
+  @apply text-center text-3xl font-extrabold mb-rhythm;
+}
+@screen lg {
+  h2 {
+    @apply text-left mb-auto;
+  }
 }
 h3 {
   /* font-family: 'Aktiv Grotesk', sans-serif; */
@@ -49,7 +54,8 @@ p + h1, p + h2, p + h3, p + h4 {
 }
 
 a, .nuxt-link-exact-active {
-  @apply text-gray-700 border-b-2 border-solid;
+  @apply text-gray-700 border-b-2 border-solid border-black-300t;
+  padding-bottom: 1px;
 }
 nav a {
   @apply border-b-0;
@@ -83,6 +89,10 @@ ol li {
 
 @tailwind components;
 @tailwind utilities;
+
+button:hover {
+  @apply shadow-lg;
+}
 
 /* .page-enter-active,
 .page-leave-active {

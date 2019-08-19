@@ -80,22 +80,6 @@ module.exports = {
   */
   plugins: ['~/plugins/vue2-filters', '~/plugins/vue-scroll'],
 
-  textSizes: {
-    sm: '14px',
-    md: {
-      min: '16px',
-      max: '20px',
-      minvw: '320px',
-      maxvw: '1280px'
-    },
-    lg: {
-      min: '26px',
-      max: '40px',
-      minvw: '320px',
-      maxvw: '1280px'
-    }
-  },
-
   /*
   ** Nuxt.js modules
   */
@@ -113,13 +97,7 @@ module.exports = {
     ],
     'nuxt-purgecss',
     'nuxt-webfontloader',
-    [
-      'tailwindcss-fluid',
-      {
-        suffix: '',
-        textSizes: true
-      }
-    ]
+    'tailwindcss-fluid'
   ],
 
   fontawesome: {
@@ -175,7 +153,8 @@ module.exports = {
       '/project/park-mobile',
       '/project/sentinel',
       '/project/smileback',
-      '/project/yeltsin'
+      '/project/yeltsin',
+      '/project/a-long-project-title-name-with-elephants-in-it'
     ]
   },
 

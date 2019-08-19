@@ -37,27 +37,28 @@
     </section>
     <ProjectsList 
       class="projectsList flex flex-wrap mb-rhythm"
+      :visibleProjects="home.projects"
       />
-    <section class="flex flex-wrap overflow-hidden mb-rhythm">
+    <section class="flex flex-wrap overflow-hidden mt-rhythm2x mb-rhythm">
       <div class="details-block md:pl-0 md:w-1/2">
         <h2>How I work</h2>
         <p>Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.</p>
       </div>
-      <div class="details-block md:w-1/2 md:mb-8">
+      <div class="details-block md:w-1/2">
         <img class="w-full" src="https://loremflickr.com/375/275" />
       </div>
     </section>
-    <section class="flex flex-wrap md:flex-row-reverse overflow-hidden mb-rhythm">
+    <section class="flex flex-wrap md:flex-row-reverse overflow-hidden mb-rhythm2x">
       <div class="details-block md:w-1/2">
         <h2>What matters</h2>
         <p>Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.</p>
       </div>
-      <div class="details-block md:pl-0 md:w-1/2 md:mb-8">
+      <div class="details-block md:pl-0 md:w-1/2">
         <img class="w-full" src="https://loremflickr.com/375/275" />
       </div>
     </section>
     <section class="container">
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap">  
         <div class="w-full md:w-4/6">
           <ContactForm 
             prompt="What's your thing?"

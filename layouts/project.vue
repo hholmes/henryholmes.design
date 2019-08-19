@@ -1,7 +1,7 @@
 <template>
   <transition name="project" mode="out-in">
     <div>
-      <Header />
+      <Header :homeLink="true" />
       <div id="main" role="main">
         <nuxt />
       </div>

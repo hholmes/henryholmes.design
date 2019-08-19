@@ -4,7 +4,7 @@
     class="overflow-hidden">
     <!-- <div class="projectCover flex block items-end px-4 md:px-0 pt-16 bg-cover bg-bottom bg-scroll md:bg-fixed text-white scrim-b">
               :style="{ backgroundImage: `url('${ project.cover }')` }"> -->
-    <div class="cover mainstream flex items-center min-h-screen-1/2 lg:min-h-screen-2/3">
+    <div class="cover mainstream flex items-center min-h-screen-1/2 md:min-h-screen-5/8">
       <div>
         <h1 class="title"
           :style="{ backgroundImage: `url('${ project.cover }')` }">
@@ -13,7 +13,7 @@
         <p class="subtitle skip-kern">{{ project.subtitle }}</p>
       </div>
     </div>
-    <section class="flex flex-wrap items-top mainstream min-h-screen-1/2 md:min-h-screen-1/4 md:mb-rhythm lg:min-h-screen-1/3">
+    <section class="flex flex-wrap items-top mainstream min-h-screen-1/2 md:min-h-screen-1/4 md:mb-rhythm">
       <SimpleList
         class="w-1/2 md:w-1/4"
         :header="'Timeframe'" 
@@ -86,7 +86,7 @@ export default {
   //   };
   // },
   mounted () {
-    if (this.project.sections.length > 0) {
+    if (this.project.sections && this.project.sections.length > 0) {
       this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)
     }
   }
@@ -96,63 +96,16 @@ export default {
 <style scoped>
   .title {
     @apply inline-flex bg-center bg-cover;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 7rem;
-    line-height: 7rem;
-    height: 8rem;
+    font-size: calc(86px + (180 - 86) * ((100vw - 480px) / (1600 - 480)));
+    line-height: 1em;
   }
 
   .subtitle { 
-    @apply leading-tight text-4xl font-bold max-w-sm pb-8 -mt-4;
-  }
-
-  @screen sm {
-    .title {
-      @apply -ml-1;
-      font-size: 10rem;
-      line-height: 10rem;
-      height: 11rem;
-    }
-    .subtitle {
-      @apply -mt-6;
-    }
-  }
-
-  @screen md {
-    .title {
-      @apply -ml-2;
-      font-size: 12rem;
-      line-height: 12rem;
-      height: 14rem;
-    }
-    .subtitle {
-      @apply -mt-12 max-w-md;
-    }
-  }
-
-  @screen lg {
-    .title {
-      font-size: 18rem;
-      line-height: 18rem;
-      height: 20rem;
-    }
-    .subtitle {
-      @apply text-6xl max-w-2xl;
-    }
-  }
-
-  @screen xl {
-    .title {
-      @apply -ml-4;
-      font-size: 20rem;
-      line-height: 20rem;
-      height: 22rem;
-    }
-    .subtitle {
-      @apply text-6xl;
-    }
+    @apply leading-tight font-bold w-2/3 pb-8;
+    font-size: calc(24px + (56 - 24) * ((100vw - 300px) / (1600 - 300)));
   }
 </style>
