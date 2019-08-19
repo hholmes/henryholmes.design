@@ -1,7 +1,6 @@
 <template>
   <!-- <div v-scroll:throttle="{fn: onScroll, throttle: 500 }" -->
-  <div 
-    class="overflow-hidden">
+  <article class="overflow-hidden">
     <!-- <div class="projectCover flex block items-end px-4 md:px-0 pt-16 bg-cover bg-bottom bg-scroll md:bg-fixed text-white scrim-b">
               :style="{ backgroundImage: `url('${ project.cover }')` }"> -->
     <div class="cover mainstream flex items-center min-h-screen-1/2 md:min-h-screen-5/8">
@@ -35,22 +34,20 @@
         :items="project.tools"
         />
     </section>
-    <content>
-      <section 
-        v-for="(section, index) in project.sections" 
-        :key="index">
-        <img class="w-full my-0" :src="section.sectionBanner" />
-        <div :style="{ backgroundColor: section.bg, color: section.fg }">
-          <div class="mainstream flex flex-wrap clearfix py-rhythm">
-            <h2 class="w-full lg:pr-8 lg:-mt-2 lg:leading-tight lg:w-1/4">{{ section.heading }}</h2>
-            <div 
-              class="w-full lg:w-2/4 xl:max-w-full"
-              v-html="$md.render(section.body)" />
-          </div>
+    <section 
+      v-for="(section, index) in project.sections" 
+      :key="index">
+      <img class="w-full my-0" :src="section.sectionBanner" />
+      <div :style="{ backgroundColor: section.bg, color: section.fg }">
+        <div class="mainstream flex flex-wrap clearfix py-rhythm">
+          <h2 class="w-full lg:pr-8 lg:-mt-2 lg:leading-tight lg:w-1/4">{{ section.heading }}</h2>
+          <div 
+            class="w-full lg:w-2/4 xl:max-w-full"
+            v-html="$md.render(section.body)" />
         </div>
-      </section>
-    </content>
-  </div>
+      </div>
+    </section>
+  </article>
 </template>
 
 <script>

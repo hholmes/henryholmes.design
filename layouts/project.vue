@@ -5,7 +5,7 @@
       <div id="main" role="main">
         <nuxt />
       </div>
-      <Footer :bg="this.footerBg" :left-contents="'left'" :right-contents="'<a href=\'#\'>right →</a>'" />
+      <Footer :bg="this.footerBg" :left-contents="leftContents" :right-contents="rightContents" />
     </div>
   </transition>
 </template>
@@ -21,14 +21,20 @@ export default {
   },
   data() {
     return {
-      footerBg: ''
+      footerBg: '',
+      leftContents: '',
+      rightContents: ''
     }
   },
   created() {
-    // console.log('template created')
     this.$nuxt.$on('footer-bg', (e) => {
-      // console.log('got color: ' + e);
       this.footerBg = e;
+    });
+    this.$nuxt.$on('left-contents', (e) => {
+      this.leftContents = e;
+    });
+    this.$nuxt.$on('right-contents', (e) => {
+      this.rightContents = e;
     });
   },
   mounted() {

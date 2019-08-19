@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
       <div class="hidden">
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </form>
-  </div>
+  </section>
 </template>
 
 <script>

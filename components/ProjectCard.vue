@@ -106,7 +106,10 @@ export default {
   },
   mounted: function() {
     var imagePrefetch = new Image();
-    imagePrefetch.src = this.bgURL.hover;
+    var imagePrefetchHover = new Image();
+    
+    imagePrefetch.src = this.bgURL.normal;
+    imagePrefetchHover.src = this.bgURL.hover;
   }
 }
 </script>
