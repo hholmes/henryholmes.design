@@ -2,7 +2,7 @@
   <nuxt-link :to="url">
     <div 
       class="projectCard text-white container rounded overflow-hidden h-screen-1/3 lg:h-screen-1/2 relative scrim-t bg-cover bg-center"
-      :style="{ backgroundImage: `url('${ project.cover }')`}"
+      :style="showTopics ? bgImage.hover : bgImage.normal"
       @mouseenter="showTopics = true"
       @mouseleave="showTopics = false">
       <h4 class="type-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-2 z-10">
@@ -60,6 +60,18 @@ export default {
       } else {
         return []
       }
+    },
+    bgImage: function() {
+      return {
+        normal: 'background-image: url(' + this.bgURL.normal + ')',
+        hover: 'background-image: url(' + this.bgURL.hover + ')'
+      }
+    },
+    bgURL: function() {
+      return {
+        normal: this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/filter/adaris/',
+        hover: this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/filter/adaris/-/blur/75/'
+      }
     }
   },
   methods: {
@@ -91,6 +103,10 @@ export default {
         )
       }, delay)
     }
+  },
+  mounted: function() {
+    var imagePrefetch = new Image();
+    imagePrefetch.src = this.bgURL.hover;
   }
 }
 </script>

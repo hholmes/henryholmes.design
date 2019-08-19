@@ -4,7 +4,7 @@
         v-for="project in orderBy(projectsToShow,'id')"
         class="w-full md:w-1/2 py-2 px-0 sm:p-2"
         :key="project.id">
-        <ProjectItem :project="project" :url="'/project' + project._path" />
+        <ProjectCard :project="project" :url="'/project' + project._path" />
     </div>
     <p class="text-right hidden">
       <a href="/work">see more projects ›</a>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import ProjectItem from "~/components/ProjectItem"
+import ProjectCard from "~/components/ProjectCard"
 import Vue2Filters from 'vue2-filters'
 
 const context = require.context('~/content/project/', false, /\.json$/)
@@ -41,7 +41,7 @@ export default {
     }
   },
   components: {
-    ProjectItem
+    ProjectCard
   },
   mixins: [Vue2Filters.mixin]
 }

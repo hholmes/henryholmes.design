@@ -95,7 +95,7 @@ export default {
 
 <style scoped>
   .title {
-    @apply inline-flex bg-center bg-cover;
+    @apply bg-center bg-cover;
     /* white-space: nowrap; */
     background-clip: text;
     -webkit-background-clip: text;
