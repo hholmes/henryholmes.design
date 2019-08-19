@@ -152,6 +152,10 @@ button:hover {
   /* margin-top: theme('spacing.rhythm'); */
 }
 
+.fa-li {
+  @apply align-middle;
+}
+
 content img {
   @apply my-rhythm;
 }
