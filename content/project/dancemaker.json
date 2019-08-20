@@ -27,6 +27,11 @@
       "topic": "Prototyping"
     },
     {
+      "heading": "Oblique Strategies",
+      "body": "As the application’s features began to coalesce, I noticed a pattern to learning that reminded me of something I’d experimented with before, Brian Eno and Peter Schmidt’s [Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies). _Strategies_ presents a method of encouraging lateral thinking by subverting the prototypical relationships among various ideas and actions. In other words it breaks us out of our usual way of thinking about things.\n\nI put two and two together and sketched out a feature called the “Idea Machine” that would source thought exercises from the DEL community as an extension of the app’s main workflow.\n\nWhen I presented the feature to our team, we realized it could incorporate suggestions from the NYC DoE Blueprint for Dance, a document we had been trying to incorporate into the app in other ways.\n\nThe resulting module offered a novel, non-linear way for teachers to brainstorm institutionally validated lesson objectives for a given K-12 age cohort.\n\n![Three screenshots depicting the tips and tricks feature (originally idea machine)](https://ucarecdn.com/5235c8ab-b0fd-4e24-94a6-92504f50fdf1/ \"Tips and tricks\")",
+      "topic": "Prototyping"
+    },
+    {
       "heading": "Building content",
       "body": "After arriving at specifications for a minimum viable product, I extrapolated placeholders into an information architecture with a supporting content strategy the community could engage with.\n\nWorking directly with students and teachers, I built out a database of vocabulary terms and converted existing materials into a format our interface would be able to understand.\n\nI also produced basic documentation and schedules for content generation, with guidelines meant to scaffold on DEL’s programs and professional development courses.",
       "topic": "Information Architecture"
