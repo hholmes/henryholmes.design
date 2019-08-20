@@ -28,7 +28,8 @@
     },
     {
       "heading": "Building content",
-      "body": "After arriving at specifications for a minimum viable product, I extrapolated placeholders into an information architecture with a supporting content strategy the community could engage with.\n\nWorking directly with students and teachers, I built out a database of vocabulary terms and converted existing materials into a format our interface would be able to understand.\n\nI also produced basic documentation and schedules for content generation, with guidelines meant to scaffold on DEL’s programs and professional development courses."
+      "body": "After arriving at specifications for a minimum viable product, I extrapolated placeholders into an information architecture with a supporting content strategy the community could engage with.\n\nWorking directly with students and teachers, I built out a database of vocabulary terms and converted existing materials into a format our interface would be able to understand.\n\nI also produced basic documentation and schedules for content generation, with guidelines meant to scaffold on DEL’s programs and professional development courses.",
+      "topic": "Information Architecture"
     },
     {
       "heading": "Painting with pixels",
@@ -37,11 +38,13 @@
     },
     {
       "heading": "Implementation",
-      "body": "What we lacked in resources we made up for with an ambition to do more with less. I worked closely with our developer throughout the implementation stage to clarify and revise almost every detail of the application, from custom algorithms to pixel polish.\n\nTogether we were able to build a native iOS app on a firebase backend that responded live to content updates, worked reliably across a variety of devices and generated the analytics we would need to provide meaningful improvements over the product’s life."
+      "body": "What we lacked in resources we made up for with an ambition to do more with less. I worked closely with our developer throughout the implementation stage to clarify and revise almost every detail of the application, from custom algorithms to pixel polish.\n\nTogether we were able to build a native iOS app on a firebase backend that responded live to content updates, worked reliably across a variety of devices and generated the analytics we would need to provide meaningful improvements over the product’s life.",
+      "topic": "Code & QA"
     },
     {
       "heading": "Sharing and caring",
-      "body": "App in hand, we returned to the community for a series of presentations and workshops. I led a variety of exercises and discussions around the intentions and techniques of using the app before and during class. \n\nWe consolidated feedback and first impressions, brainstormed next-steps and considered the implications of the product at both the individual and systemic level."
+      "body": "App in hand, we returned to the community for a series of presentations and workshops. I led a variety of exercises and discussions around the intentions and techniques of using the app before and during class. \n\nWe consolidated feedback and first impressions, brainstormed next-steps and considered the implications of the product at both the individual and systemic level.",
+      "topic": "Teaching & Training"
     },
     {
       "heading": "Outcomes",
