@@ -19,17 +19,12 @@
     {
       "heading": "Listening & learning",
       "body": "At the onset of our design process, we worked with a panel of professional advisors to establish goals and determine avenues of concern. I led a series of discussions where we whittled an extensive proposal down to a clear, purposeful scope.\n\nThe most important change we made was to reduce the number of steps in our  MVP, focusing instead on the “exploration” and “development” components of the 7-part lesson outline. We made this change for two reasons: \n\n1. Teachers each have a unique way of working on and running lessons, so it’s unlikely a turn-key lesson building walkthrough would satisfy most of our users.\n2. Reducing complexity in this case increases flexibility of application, an especially significant gain for an app designed to expand creative thinking and encourage imagination.",
-      "topic": ""
+      "topic": "UX Research"
     },
     {
       "heading": "Exploring a click-a-bout",
       "body": "I assembled a series of wireframes and interactive prototypes to communicate the flow of interaction through several primary funnels. These funnels were meant to address the needs of our educator personas. \n\nAs our research evolved, I adjusted our prototypes to emphasize certain touchpoints, mitigate confusion and reinforce the underlying principles of DEL’s method.",
-      "topic": ""
-    },
-    {
-      "heading": "Outcomes",
-      "body": "We built something useful that students and teachers around the country understand and enjoy using. By grounding the experience in clear written language, we also found a way to expand the audience of the underlying concepts and increase engagement with DEL’s pedagogy.\n\nUnexpectedly, teachers of ELL students (English Language Learners) have shared their success using the app to build on language concepts during creative exercises, suggesting new possibilities for the future.\n\nDancemaker is available on iOS and Android. It’s been featured in the press (eg. [Broadway World](https://www.broadwayworld.com/article/92Y-Unveils-Free-Dance-Maker-Choreography-App-20170918)) and was incorporated into [an exhibit at the Children’s Museum of Manhattan](https://cmom.org/press/cmom-press-release-childrens-museum-of-manhattan-announces-opening-of-lets-dance/).",
-      "topic": "Generic"
+      "topic": "Prototyping"
     },
     {
       "heading": "Building content",
@@ -47,6 +42,11 @@
     {
       "heading": "Sharing and caring",
       "body": "App in hand, we returned to the community for a series of presentations and workshops. I led a variety of exercises and discussions around the intentions and techniques of using the app before and during class. \n\nWe consolidated feedback and first impressions, brainstormed next-steps and considered the implications of the product at both the individual and systemic level."
+    },
+    {
+      "heading": "Outcomes",
+      "body": "We built something useful that students and teachers around the country understand and enjoy using. By grounding the experience in clear written language, we also found a way to expand the audience of the underlying concepts and increase engagement with DEL’s pedagogy.\n\nUnexpectedly, teachers of ELL students (English Language Learners) have shared their success using the app to build on language concepts during creative exercises, suggesting new possibilities for the future.\n\nDancemaker is available on iOS and Android. It’s been featured in the press (eg. [Broadway World](https://www.broadwayworld.com/article/92Y-Unveils-Free-Dance-Maker-Choreography-App-20170918)) and was incorporated into [an exhibit at the Children’s Museum of Manhattan](https://cmom.org/press/cmom-press-release-childrens-museum-of-manhattan-announces-opening-of-lets-dance/).",
+      "topic": "Generic"
     }
   ],
   "tasks": [
