@@ -18,7 +18,7 @@ module.exports = {
   head: {
     htmlAttrs: {
       lang: 'en'
-    },
+    },  
     // title: pkg.name,
     // title: 'Henry Holmes',
     titleTemplate: titleChunk => {

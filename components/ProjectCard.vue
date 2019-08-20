@@ -68,9 +68,11 @@ export default {
       }
     },
     bgURL: function() {
+      var filter = 'cyren/75';
+      var baseURL = this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/gamma/75/-/filter/' + filter + '/';
       return {
-        normal: this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/filter/adaris/',
-        hover: this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/filter/adaris/-/blur/75/'
+        normal: baseURL,
+        hover: baseURL + '-/blur/75/'
       }
     }
   },
