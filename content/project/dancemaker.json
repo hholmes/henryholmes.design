@@ -12,19 +12,37 @@
       "topic": "Product Design"
     },
     {
-      "heading": "Screens",
-      "body": "Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.",
-      "topic": "UI Design"
+      "heading": "Establishing context",
+      "body": "DEL provides dance education training to teachers and students, empowering them to lead exercises and design lessons for many kinds of classrooms and studios. \n\nThe DEL model is built with a clear structure and rationale, which I interpreted into a proposal for digital interaction through a process of research and collaboration.",
+      "topic": ""
     },
     {
-      "heading": "Copy",
-      "body": "Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.",
-      "topic": "Writing & Microcopy"
+      "heading": "Listening & learning",
+      "body": "At the onset of our design process, we worked with a panel of professional advisors to establish goals and determine avenues of concern. I led a series of discussions where we whittled an extensive proposal down to a clear, purposeful scope.\n\nThe most important change we made was to reduce the number of steps in our  MVP, focusing instead on the “exploration” and “development” components of the 7-part lesson outline. We made this change for two reasons: \n\n1. Teachers each have a unique way of working on and running lessons, so it’s unlikely a turn-key lesson building walkthrough would satisfy most of our users.\n2. Reducing complexity in this case increases flexibility of application, an especially significant gain for an app designed to expand creative thinking and encourage imagination.",
+      "topic": ""
+    },
+    {
+      "heading": "Exploring a click-a-bout",
+      "body": "I assembled a series of wireframes and interactive prototypes to communicate the flow of interaction through several primary funnels. These funnels were meant to address the needs of our educator personas. \n\nAs our research evolved, I adjusted our prototypes to emphasize certain touchpoints, mitigate confusion and reinforce the underlying principles of DEL’s method.",
+      "topic": ""
     },
     {
       "heading": "Outcomes",
       "body": "We built something useful that students and teachers around the country understand and enjoy using. By grounding the experience in clear written language, we also found a way to expand the audience of the underlying concepts and increase engagement with DEL’s pedagogy.\n\nUnexpectedly, teachers of ELL students (English Language Learners) have shared their success using the app to build on language concepts during creative exercises, suggesting new possibilities for the future.\n\nDancemaker is available on iOS and Android. It’s been featured in the press (eg. [Broadway World](https://www.broadwayworld.com/article/92Y-Unveils-Free-Dance-Maker-Choreography-App-20170918)) and was incorporated into [an exhibit at the Children’s Museum of Manhattan](https://cmom.org/press/cmom-press-release-childrens-museum-of-manhattan-announces-opening-of-lets-dance/).",
       "topic": "Generic"
+    },
+    {
+      "heading": "Building content",
+      "body": "After arriving at specifications for a minimum viable product, I extrapolated placeholders into an information architecture with a supporting content strategy the community could engage with.\n\nWorking directly with students and teachers, I built out a database of vocabulary terms and converted existing materials into a format our interface would be able to understand.\n\nI also produced basic documentation and schedules for content generation, with guidelines meant to scaffold on DEL’s programs and professional development courses."
+    },
+    {
+      "heading": "Painting with pixels",
+      "body": "Borrowing from DEL’s visual identity, I came up with a set of basic principles that would define the app’s look & feel. I conformed our wireframes to this style in a Sketch file for developers to reference. \n\nI designed a preliminary logo and app icon for DEL to provide feedback on. Subsequent discussions gave me the clarity I needed to produce a more refined icon. The result drew inspiration from a Laban Movement Analysis chart, one of the conceptual cornerstones to DEL’s methodology.",
+      "topic": "UI Design"
+    },
+    {
+      "heading": "Implementation",
+      "body": "What we lacked in resources we made up for with an ambition to do more with less. I worked closely with our developer throughout the implementation stage to clarify and revise almost every detail of the application, from custom algorithms to pixel polish.\n\nTogether we were able to build a native iOS app on a firebase backend that responded live to content updates, worked reliably across a variety of devices and generated the analytics we would need to provide meaningful improvements over the product’s life."
     }
   ],
   "tasks": [
