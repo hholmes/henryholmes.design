@@ -3,6 +3,7 @@
   "sections": [
     {
       "heading": "Summary",
+      "sectionBanner": "https://ucarecdn.com/aee4d2e8-cddd-4342-8c37-388de984002d/",
       "body": "Working hand-in-hand with students, teachers and administrators, I led the concept and development of an app for 92Y Dance Education Laboratory (DEL) to advance their mission of bringing dance into every New York City classroom.\n\nI carefully guided the project from concept to implementation by facilitating user research, iterating through a series of interactive prototypes, modeling and developing a content database, designing a visual identity with cross-platform mobile interfaces, overseeing development, and leading app-related professional development classes for the community.",
       "topic": "Generic"
     },
@@ -28,7 +29,7 @@
     },
     {
       "heading": "Oblique Strategies",
-      "body": "As the application’s features began to coalesce, I noticed a pattern to learning that reminded me of something I’d experimented with before, Brian Eno and Peter Schmidt’s [Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies). _Strategies_ presents a method of encouraging lateral thinking by subverting the prototypical relationships among various ideas and actions. In other words it breaks us out of our usual way of thinking about things.\n\nI put two and two together and sketched out a feature called the “Idea Machine” that would source thought exercises from the DEL community as an extension of the app’s main workflow.\n\nWhen I presented the feature to our team, we realized it could incorporate suggestions from the NYC DoE Blueprint for Dance, a document we had been trying to incorporate into the app in other ways.\n\nThe resulting module offered a novel, non-linear way for teachers to brainstorm institutionally validated lesson objectives for a given K-12 age cohort.\n\n![Three screenshots depicting the tips and tricks feature (originally idea machine)](https://ucarecdn.com/5235c8ab-b0fd-4e24-94a6-92504f50fdf1/ \"Tips and tricks\")",
+      "body": "As the application’s features began to coalesce, I noticed a pattern to learning that reminded me of something I’d experimented with before, Brian Eno and Peter Schmidt’s [Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies). _Strategies_ presents a method of encouraging lateral thinking by subverting the prototypical relationships among ideas and actions. In other words, it helps us break out of our usual ways of thinking.\n\nI put two and two together and sketched out a feature called the “Idea Machine” that would source thought exercises from the DEL community as an extension of the app’s main workflow.\n\nWhen I presented the feature to our team, we realized it could incorporate suggestions from the [NYC DoE Blueprint for Dance](https://www.weteachnyc.org/resources/resource/dance-blueprint-for-teaching-and-learning/), a document we'd been working to incorporate somehow.\n\nThe resulting module offered a novel, non-linear way for teachers to brainstorm institutionally validated lesson objectives for a given K-12 age cohort.\n\n![Three screenshots depicting the tips and tricks feature (originally idea machine)](https://ucarecdn.com/5235c8ab-b0fd-4e24-94a6-92504f50fdf1/ \"Tips and tricks\")",
       "topic": "Prototyping"
     },
     {
