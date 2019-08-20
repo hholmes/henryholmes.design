@@ -43,6 +43,10 @@
     {
       "heading": "Implementation",
       "body": "What we lacked in resources we made up for with an ambition to do more with less. I worked closely with our developer throughout the implementation stage to clarify and revise almost every detail of the application, from custom algorithms to pixel polish.\n\nTogether we were able to build a native iOS app on a firebase backend that responded live to content updates, worked reliably across a variety of devices and generated the analytics we would need to provide meaningful improvements over the product’s life."
+    },
+    {
+      "heading": "Sharing and caring",
+      "body": "App in hand, we returned to the community for a series of presentations and workshops. I led a variety of exercises and discussions around the intentions and techniques of using the app before and during class. \n\nWe consolidated feedback and first impressions, brainstormed next-steps and considered the implications of the product at both the individual and systemic level."
     }
   ],
   "tasks": [
