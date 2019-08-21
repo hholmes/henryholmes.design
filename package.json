@@ -9,7 +9,7 @@
     "dev-debug": "node --inspect node_modules/.bin/nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && gulp",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "test": "ava"
@@ -23,6 +23,8 @@
     "@nuxtjs/google-analytics": "^2.2.0",
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^5.2.0",
+    "gulp": "^4.0.2",
+    "gulp-html-minifier": "^0.1.8",
     "lodash": "^4.17.15",
     "luminous-lightbox": "^2.3.2",
     "netlify-identity-widget": "^1.5.5",
