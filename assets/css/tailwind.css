@@ -76,11 +76,33 @@ blockquote {
   @apply ml-12;
 }
 
+ul {
+  @apply list-none;
+}
+
 ol {
-  @apply list-outside list-decimal;
+  counter-reset: ol-counter;
+  @apply flex flex-wrap;
 }
 ol li {
-  @apply mb-main;
+  counter-increment: ol-counter;
+  @apply flex mt-rhythm1/2x;
+}
+ol li::before {
+  content: counter(ol-counter);
+  @apply align-text-top text-6xl font-bold text-gray-300 -mt-8 mr-8;
+}
+article ol {
+  @apply list-inside list-decimal w-3/4 text-xl;
+}
+@screen lg {
+  ol {
+    @apply list-outside;
+  }
+  ol li::before {
+    @apply mr-0 absolute;
+    margin-left: -1em;
+  }
 }
 
 .form-input {

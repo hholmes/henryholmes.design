@@ -32,6 +32,7 @@ module.exports = {
         'screen-3/4': '75vh',
         '30p': '30%',
         main: '1rem',
+        'rhythm1/2x': '2rem',
         rhythm: '4rem',
         rhythm2x: '8rem'
       }
