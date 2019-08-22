@@ -1,11 +1,11 @@
 <template>
   <nuxt-link :to="url">
     <div 
-      class="projectCard text-white container rounded overflow-hidden h-screen-1/3 lg:h-screen-1/2 relative scrim-t bg-cover bg-center"
+      class="projectCard text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-cover bg-center"
       :style="showTopics ? bgImage.hover : bgImage.normal"
-      @mouseenter="showTopics = true"
+      @mouseover="showTopics = true"
       @mouseleave="showTopics = false">
-      <h4 class="type-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-2 z-10">
+      <h4 class="font-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-2 z-10">
         {{ project.title }}
       </h4>
       <h2 class="bold pr-12 leading-tight text-4xl z-10">
@@ -21,7 +21,7 @@
         v-on:leave="leave"
       >
         <li
-          class="inline-block bg-white text-gray-900 type-sans font-bold uppercase tracking-wider text-sm rounded py-1 px-4 mr-2 mt-2"
+          class="inline-block bg-white text-gray-900 font-sans font-bold uppercase tracking-wider text-sm rounded py-1 px-4 mr-2 mt-2"
           v-for="(topic, index) in projectTopics"
           v-bind:key="topic"
           v-bind:data-index="index"

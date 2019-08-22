@@ -1,7 +1,7 @@
 <template>
   <footer 
     :style="{ backgroundColor: bg || '' }" 
-    class="text-sm text-gray py-rhythm type-sans">
+    class="text-sm text-gray py-rhythm font-sans">
     <div class="mainstream flex">
       <div class="hidden lg:block lg:w-1/4"></div>
       <div class="w-1/3 lg:w-1/6">

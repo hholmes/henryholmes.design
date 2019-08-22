@@ -4,7 +4,7 @@
       <ul class="list-reset">
         <li class="mr-8 inline">
           <NuxtLink 
-            :class="['text-black', 'type-sans', 'text-sm']" 
+            :class="['text-black', 'font-sans', 'text-sm']" 
             :to="'/'">{{ homeLink ? 'Home' : 'Henry Holmes' }}</NuxtLink>
         </li>
         <span
@@ -14,7 +14,7 @@
             v-if="global.nav.includes(link.title)"
             class="mr-8 inline">
             <NuxtLink 
-              :class="['text-gray-900', 'type-sans', 'text-sm']" 
+              :class="['text-gray-900', 'font-sans', 'text-sm']" 
               :to='link._path'>{{ link.title }}</NuxtLink>
           </li>
         </span>

@@ -2,7 +2,7 @@
   <div>
     <section class="flex flex-wrap overflow-hidden mb-rhythm">
       <div class="introTitle w-full md:w-3/5 lg:w-4/6">
-        <h1 class="max-w-48 type-serif leading-none">I'm Henry Holmes, a&nbsp;designer.</h1>
+        <h1 class="max-w-48 font-serif leading-none">I'm Henry Holmes, a&nbsp;designer.</h1>
         <div 
           class="text-lg mt-8 mb-6 md:mb-0s"
           v-html="$md.render(home.body)" />

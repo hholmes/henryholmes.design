@@ -40,7 +40,7 @@
       <img class="w-full my-0" :src="section.sectionBanner" />
       <div :style="{ backgroundColor: section.bg, color: section.fg }">
         <div class="mainstream flex flex-wrap clearfix py-rhythm">
-          <h2 class="w-full lg:pr-8 lg:-mt-2 lg:leading-tight lg:w-1/4">{{ section.heading }}</h2>
+          <h2 class="hyphenate w-full mb-rhythm break-words sm:text-center lg:text-left lg:pr-8 lg:mb-auto lg:text-xl lg:mt-1 lg:leading-tight lg:w-1/4 xl:pr-16 xl:text-2xl xl:mt-0">{{ section.heading }}</h2>
           <div 
             class="w-full lg:w-2/4 xl:max-w-full"
             v-html="processHTML($md.render(section.body))" />
@@ -89,7 +89,7 @@ export default {
       const c = cheerio.load(html)
       c('img').each(function(i, image) {
         c(this)
-          .append('<figcaption class=\'text-xs text-gray-500 tracking-wide font-semibold text-right type-sans\'>' + c(this).attr('title') + '</figcaption>')
+          .append('<figcaption>' + c(this).attr('title') + '</figcaption>')
           .wrap('<a href=\'' + c(this).attr('src') + '\' class=\'lightbox\'>')
           .wrap('<figure>')
       });
@@ -118,13 +118,13 @@ export default {
 
 <style scoped>
   .title {
-    @apply bg-center bg-cover;
-    /* white-space: nowrap; */
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: calc(86px + (180 - 86) * ((100vw - 480px) / (1600 - 480)));
+    font-size: calc(86px + (160 - 86) * ((100vw - 480px) / (1600 - 480)));
     line-height: 1em;
+    hyphens: auto;
+    @apply bg-center bg-cover break-words;
   }
 
   .subtitle { 

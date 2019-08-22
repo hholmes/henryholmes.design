@@ -3,7 +3,7 @@
     <h3 v-if="header">
       {{ header }}
     </h3>
-    <ul :class="[useIcons ? 'fa-ul' : '', 'leading-loose', 'list-reset', 'uppercase', 'tracking-widest', 'text-sm', 'mt-10', 'type-sans']">
+    <ul :class="[useIcons ? 'fa-ul' : '', 'leading-loose', 'list-reset', 'uppercase', 'tracking-widest', 'text-sm', 'mt-10', 'font-sans']">
       <li 
         v-for="(item, index) in items"
         :key="index">

@@ -5,6 +5,31 @@ module.exports = {
   important: true,
   separator: ':',
   theme: {
+    fontFamily: {
+      sans: [
+        '"Aktiv Grotesk"',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        '"Noto Sans"',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"'
+      ],
+      serif: [
+        '"Freight Text Pro"',
+        'Georgia',
+        'Cambria',
+        '"Times New Roman"',
+        'Times',
+        'serif'
+      ]
+    },
     extend: {
       boxShadow: {
         darken: 'inset 0 0 0 150vw rgba(0,0,0,0.4)'
