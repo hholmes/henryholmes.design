@@ -73,7 +73,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~assets/css/tailwind.css'],
+  css: ['~assets/css/a11y-light.css', '~assets/css/tailwind.css'],
 
   /*
   ** Plugins to load before mounting the App
@@ -130,7 +130,7 @@ module.exports = {
     preset: 'default',
     linkify: true,
     breaks: true,
-    use: ['markdown-it-div', 'markdown-it-attrs']
+    use: ['markdown-it-div', 'markdown-it-attrs', 'markdown-it-highlightjs']
   },
 
   router: {

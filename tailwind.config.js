@@ -35,6 +35,7 @@ module.exports = {
         darken: 'inset 0 0 0 150vw rgba(0,0,0,0.4)'
       },
       colors: {
+        'light-gray': '#fafafa',
         'black-300t': 'rgba(0,0,0,0.3)',
         'black-500t': 'rgba(0,0,0,0.5)',
         'black-700t': 'rgba(0,0,0,0.7)'

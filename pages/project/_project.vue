@@ -34,86 +34,70 @@
         :items="project.tools"
         />
     </section>
-    <section 
+    <ArticleSection 
       v-for="(section, index) in project.sections" 
-      :key="index">
-      <img class="w-full my-0" :src="section.sectionBanner" />
-      <div :style="{ backgroundColor: section.bg, color: section.fg }">
-        <div class="mainstream flex flex-wrap clearfix py-rhythm">
-          <h2 class="hyphenate w-full mb-rhythm break-words sm:text-center lg:text-left lg:pr-8 lg:mb-auto lg:text-xl lg:mt-1 lg:leading-tight lg:w-1/4 xl:pr-16 xl:text-2xl xl:mt-0">{{ section.heading }}</h2>
-          <div 
-            class="w-full lg:w-2/4 xl:max-w-full"
-            v-html="processHTML($md.render(section.body))" />
-        </div>
-      </div>
-    </section>
+      :key="index"
+      :banner="{ src: section.sectionBanner }"
+      :colors="{ bg: section.bg, fg: section.fg }"
+      :title="section.heading"
+      :body="section.body"
+    />
   </article>
 </template>
 
 <script>
-import SimpleList from "~/components/SimpleList"
-import { Luminous, LuminousGallery } from 'luminous-lightbox';
-const cheerio = require('cheerio')
+  import SimpleList from "~/components/SimpleList"
+  import ArticleSection from "~/components/ArticleSection"
+  import { Luminous, LuminousGallery } from 'luminous-lightbox'
 
-export default {
-  name: 'Project',
-  layout: 'project',
-  async asyncData({ params, route }) {
-    const projectData = await import('~/content/project/' +
-      route.params.project +
-      '.json')
-    return {
-      project: projectData
-    }
-  },
-  head() {
-    return {
-      title: this.project.title
-    }
-  },
-  computed: {
-    timeframeText() {
-      return this.project.start + (this.project.ongoing ? ' →' : '<br />↓<br />' + this.project.end); 
-    }
-  },
-  components: {
-    SimpleList
-  },
-  // data () {
-  //   return {
-  //     position: { scrollTop: 0, scrollLeft: 0 }
-  //   };
-  // },
-  methods: {
-    processHTML: function(html) {
-      const c = cheerio.load(html)
-      c('img').each(function(i, image) {
-        c(this)
-          .append('<figcaption>' + c(this).attr('title') + '</figcaption>')
-          .wrap('<a href=\'' + c(this).attr('src') + '\' class=\'lightbox\'>')
-          .wrap('<figure>')
-      });
-      return c.html();
-    }
-  },
-  mounted () {
-    // Set footer color
-    if (this.project.sections && this.project.sections.length > 0) {
-      this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)
-    }
-
-    // Enable Lightbox
-    new LuminousGallery(
-      document.querySelectorAll(".lightbox"),
-      {
-        caption: function(trigger) {
-          console.log('caption for ' + trigger);
-          return trigger.querySelector("img").getAttribute("alt");
-        }
+  export default {
+    name: 'Project',
+    layout: 'project',
+    async asyncData({ params, route }) {
+      const projectData = await import('~/content/project/' +
+        route.params.project +
+        '.json')
+      return {
+        project: projectData
       }
-    );
+    },
+    head() {
+      return {
+        title: this.project.title
+      }
+    },
+    computed: {
+      timeframeText() {
+        return this.project.start + (this.project.ongoing ? ' →' : '<br />↓<br />' + this.project.end); 
+      }
+    },
+    components: {
+      SimpleList,
+      ArticleSection
+    },
+    // data () {
+    //   return {
+    //     position: { scrollTop: 0, scrollLeft: 0 }
+    //   };
+    // },
+    mounted () {
+      // Set footer color
+      if (this.project.sections && this.project.sections.length > 0) {
+        this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)
+      }
+
+      // Enable Lightbox
+      new LuminousGallery(
+        document.querySelectorAll(".lightbox"),
+        {
+          caption: function(trigger) {
+            console.log('caption for ' + trigger);
+            return trigger.querySelector("img").getAttribute("alt");
+          }
+        }
+      );
+    }
   }
-}
 </script>
 
 <style scoped>

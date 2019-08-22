@@ -71,29 +71,7 @@ ul {
   @apply list-none;
 }
 
-article ol {
-  counter-reset: ol-counter;
-  @apply flex flex-wrap list-inside list-decimal text-xl;
-}
-article ol li::before {
-  content: counter(ol-counter);
-  @apply align-text-top font-bold font-sans -ml-24;
-}
-article ol li {
-  counter-increment: ol-counter;
-  @apply flex mt-rhythm1/2x pl-24;
-}
-@screen lg {
-  article ol {
-    @apply list-outside;
-  }
-  ol li::before {
-    @apply mr-0 absolute -ml-12 w-4 text-right;
-  }
-  article ol li {
-    @apply border-l-2 border-dotted pl-main -ml-main;
-  }
-}
+
 
 .form-input {
   @apply appearance-none border rounded-lg w-full py-3 px-4 leading-tight;
