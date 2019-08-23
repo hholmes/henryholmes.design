@@ -31,7 +31,6 @@
             .wrap('<figure>')
         });
         c('pre').each(function(i, snippet) {
-          console.log("processing snippet: " + c(this).html());
           c(this)
             .wrap('<figure>')
             .after(c(this).children('code').attr('title') ? '<figcaption>' + c(this).children('code').attr('title') + '</figcaption>' : '')

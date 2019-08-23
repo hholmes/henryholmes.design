@@ -126,8 +126,9 @@ module.exports = {
   },
 
   markdownit: {
-    injected: true,
     preset: 'default',
+    html: true,
+    injected: true,
     linkify: true,
     breaks: true,
     use: ['markdown-it-div', 'markdown-it-attrs', 'markdown-it-highlightjs']
