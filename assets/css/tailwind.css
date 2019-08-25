@@ -101,6 +101,7 @@ button:hover {
   opacity: 0;
 } */
 
+/* purgecss start ignore */
 .layout-enter-active, 
 .layout-leave-to,
 .page-enter-active,
@@ -340,3 +341,5 @@ button:hover {
 @screen md { .mainstream { @apply max-w-3xl; }}
 @screen lg { .mainstream { @apply max-w-4xl; }}
 @screen xl { .mainstream { @apply max-w-6xl; }}
+
+/* purgecss end ignore */

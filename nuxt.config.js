@@ -164,11 +164,7 @@ module.exports = {
         path: '/project/:project',
         component: 'project/_project.vue'
       }
-    ],
-    // middleware: 'pages',
-    scrollBehavior: function(to, from, savedPosition) {
-      return { x: 0, y: 0 }
-    }
+    ]
   },
 
   generate: {
