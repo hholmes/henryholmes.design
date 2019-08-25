@@ -153,7 +153,7 @@
       @apply pl-0 m-0 pr-12;
     }
     .introList {
-      margin-top: 7.5rem;
+      margin-top: 7rem;
       padding: 0;
     }
     .projectsList {
@@ -173,7 +173,7 @@
       @apply pr-24;
     }
     .introList {
-      margin-top: 4.25rem;
+      margin-top: 4rem;
     }
     .projectsList {
       margin-left: calc(theme('spacing.main') * -3);
@@ -187,9 +187,6 @@
   @screen xl {
     .introTitle {
       @apply pr-48;
-    }
-    .introList {
-      margin-top: 4.25rem;
     }
     .projectsList {
       margin-left: calc(theme('spacing.main') * -4);

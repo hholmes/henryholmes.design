@@ -16,18 +16,16 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  /* font-family: 'Aktiv Grotesk', sans-serif; */
   @apply text-5xl font-extrabold;
 }
 h2 {
   @apply text-3xl font-extrabold;
 }
 h3 {
-  /* font-family: 'Aktiv Grotesk', sans-serif; */
+  padding-top: .33rem;
   @apply tracking-wide text-lg font-extrabold text-gray-800;
 }
 h4 {
-  /* font-family: 'Aktiv Grotesk', sans-serif; */
   @apply text-xl font-bold tracking-wide;
 }
 

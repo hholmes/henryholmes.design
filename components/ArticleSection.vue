@@ -26,7 +26,7 @@
         const c = cheerio.load(html)
         c('img').each(function(i, image) {
           c(this)
-            .append('<figcaption>' + c(this).attr('title') + '</figcaption>')
+            .append(c(this).attr('title') ? '<figcaption>' + c(this).attr('title') + '</figcaption>' : '')
             .wrap('<a href=\'' + c(this).attr('src') + '\' class=\'lightbox\'>')
             .wrap('<figure>')
         });
