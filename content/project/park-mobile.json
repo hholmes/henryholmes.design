@@ -52,7 +52,7 @@
   "subtitle": "Equipping an app for the great outdoors",
   "title": "Park Mobile",
   "type": "Case Study",
-  "end": "Invalid date",
+  "end": "July 2019",
   "id": "0",
   "tools": [
     "Sketch",
@@ -61,7 +61,7 @@
     "Python",
     "XCode"
   ],
-  "ongoing": true,
+  "ongoing": false,
   "roles": [
     "Product Designer"
   ]
