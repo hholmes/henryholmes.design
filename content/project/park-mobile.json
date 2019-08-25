@@ -2,11 +2,27 @@
   "start": "January 2016",
   "sections": [
     {
-      "heading": "Atria vertex",
+      "heading": "Summary",
+      "body": "I was a core member of the small team tasked with building the National Park Service official mobile app. I provided direction and deliverables across the full scope of the project from piloting and prototypes to deployment and maintenance. \n\nIn order to produce a framework that could adapt reliably to the needs of 300 million annual visitors across more than 400 sites nationwide we built a flexible content model and editor, facilitating high quality contributions from hundreds of park rangers around the country.",
+      "topic": "Product Design"
+    },
+    {
+      "heading": "Challenges",
+      "body": "###Data and other deserts\nGiven the remoteness and extreme conditions in most national parks, we knew to expect significant challenges around connectivity and byte-budgeting. This was only exacerbated by a lackluster CDN beyond our control and wildly inconsistent data policies across the park system. We responded creatively with a myriad of compromises to mitigate visitor pain and re-center the core experience, included amplifying preparatory touchpoints in wifi-enabled locations, improving the clarity asynchronous interactions, and building resilient live features to deliver the freshest data possible at every turn.\n\n###The content frontier\nAbsent a mature content and data API from the Park Service, each instance of the app would require a new set of contributors from the relevant parks who would need to create and organize a fresh dataset and content package. Our response was twofold: on the backend I scaffolded UX fieldwork into a robust editor model that could be translated into a CMS; on the frontend I helped to polish the interface and reinforce visual patterns that could adapt to a wide variety of content types and image qualities without compromising the overarching Park Mobile and NPS brands.\n\n###Accessibility matters\nI was responsible for devising a proprietary indoor proximity system to deliver audio descriptions at visitor centers across the system in compliance with federal accessibility guidelines. In order to accomplish this within budget, I led the design and configuration of an iBeacon-enabled indoor exhibit module that could be adapted for a wide variety of physical spaces.",
+      "topic": "Information Architecture"
+    },
+    {
+      "heading": "Prototyping",
       "sectionBanner": "https://ucarecdn.com/86d6abff-dc32-4a88-9b3a-fca77bd74f1e/",
       "body": "Penetralia debere illic tamen audito loca flammis! Silvas quem magnum enim precor et vinci ipse honorque, volui; et ferunt natas aures prius.\n\n### Substiterat et dispar Priamum corpus in verba\n\nEt deum glaebam incurrere rettulit oppressos munera: in illam pectora, messoris Haliumque satos quaque amplexas ut tamen. Loca iuvenci dixit malo, minus, omnia inpositus tamen naufragus. Undis posuere, respicere, nostra? Per Iovis iussum, voverat nam di moderantum at quisquam tenent obstitit at censu.\n\nCaeleste narrare dominoque invecta vestigia inprudens quoque est. Exorata nimiumque pelagi, dextra, protinus tendentem primos gaudetque mediis. Tantum deos viam robora, indicat voce cauda, superosque, retracto parte.",
       "bg": "#F2F1E9",
       "topic": "Interaction & Animation"
+    },
+    {
+      "heading": "Interfaces",
+      "body": "Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.\n\nLorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.",
+      "bg": "#F2F1E9",
+      "topic": "UI Design"
     },
     {
       "heading": "Non et hosti mihi inter est ille",
