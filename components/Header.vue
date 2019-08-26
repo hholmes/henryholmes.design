@@ -7,17 +7,20 @@
             :class="['text-black', 'font-sans', 'text-sm']" 
             :to="'/'">{{ homeLink ? 'Home' : 'Henry Holmes' }}</NuxtLink>
         </li>
-        <span
-          v-for="link in navPages"
-          :key="link.id">
-          <li
-            v-if="global.nav.includes(link.title)"
-            class="mr-8 inline">
-            <NuxtLink 
-              :class="['text-gray-900', 'font-sans', 'text-sm']" 
-              :to='link._path'>{{ link.title }}</NuxtLink>
-          </li>
-        </span>
+        <li
+          v-for="(linkTitle, index) in global.nav"
+          class="mr-8 inline"
+          :key="index">
+          <NuxtLink
+            :class="['text-gray-900', 'font-sans', 'text-sm']"
+            :to='linkForNavTitle(linkTitle)'>{{ linkTitle }}</NuxtLink>
+        </li>
+        <li class="mr-8 inline">
+          <span id="css1" class="py-1 px-2 rounded mx-2 bg-red-300">1</span>
+          <span id="css2" class="py-1 px-2 rounded mx-2 bg-blue-300">2</span>
+          <span id="css3" class="py-1 px-2 rounded mx-2 bg-green-300">3</span>
+          <span id="css4" class="py-1 px-2 rounded mx-2 bg-yellow-300">4</span>
+        </li>
       </ul>
     </nav>
   </header>
@@ -37,6 +40,16 @@ export default {
     return {
       global,
       navPages
+    }
+  },
+  methods: {
+    linkForNavTitle(navItem) {
+      for (var page in this.navPages) {
+        if (page.title == navItem) {
+          return page._path;
+        }
+      }
+      return '';
     }
   }
 }
