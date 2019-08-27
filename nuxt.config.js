@@ -194,7 +194,7 @@ module.exports = {
   purgeCSS: {
     mode: 'postcss',
     whitelist: ['html', 'body', 'svg', 'path'],
-    whitelistPatterns: [/\S*-*fa-*\S*/]
+    whitelistPatterns: [/\S*-*fa-*\S*|\bhljs\S*/]
     // paths: glob.sync([
     //   path.join(__dirname, './pages/**/*.vue'),
     //   path.join(__dirname, './layouts/**/*.vue'),
