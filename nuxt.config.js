@@ -137,17 +137,6 @@ module.exports = {
     ]
   },
 
-  // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/
-  purgeCSS: {
-    paths: glob.sync([
-      path.join(__dirname, './pages/**/*.vue'),
-      path.join(__dirname, './layouts/**/*.vue'),
-      path.join(__dirname, './components/**/*.vue')
-    ]),
-    whitelist: ['html', 'body', 'ul', 'ol', 'pre', 'code', 'blockquote'],
-    whitelistPatterns: [/\bhljs\S*/]
-  },
-
   markdownit: {
     preset: 'default',
     html: true,
@@ -199,5 +188,28 @@ module.exports = {
         })
       }
     }
+  },
+
+  // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/
+  purgeCSS: {
+    mode: 'postcss'
+    // paths: glob.sync([
+    //   path.join(__dirname, './pages/**/*.vue'),
+    //   path.join(__dirname, './layouts/**/*.vue'),
+    //   path.join(__dirname, './components/**/*.vue')
+    // ]),
+    // whitelist: [
+    //   'html',
+    //   'body',
+    //   'ul',
+    //   'ol',
+    //   'pre',
+    //   'code',
+    //   'blockquote',
+    //   'figure',
+    //   'figcaption',
+    //   'img'
+    // ],
+    // whitelistPatterns: [/\bhljs\S*/]
   }
 }

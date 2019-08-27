@@ -51,7 +51,7 @@ a:hover, nav a:hover {
 }
 
 article figure {
-  @apply my-rhythm;
+  @apply my-rhythm inline-block;
 }
 article figcaption {
   @apply text-xs tracking-wide text-right font-sans mt-2;
