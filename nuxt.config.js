@@ -192,7 +192,8 @@ module.exports = {
 
   // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/
   purgeCSS: {
-    mode: 'postcss'
+    mode: 'postcss',
+    whitelistPatterns: [/fa-\S*/]
     // paths: glob.sync([
     //   path.join(__dirname, './pages/**/*.vue'),
     //   path.join(__dirname, './layouts/**/*.vue'),
@@ -210,6 +211,5 @@ module.exports = {
     //   'figcaption',
     //   'img'
     // ],
-    // whitelistPatterns: [/\bhljs\S*/]
   }
 }
