@@ -5,9 +5,10 @@ backend:
   auth_endpoint: auth
 
 media_library:
-  name: uploadcare
+  name: cloudinary
   config:
-    publicKey: 6e0aed1d8c0dcc0424c4
+    cloud_name: henryholmesdesign
+    api_key: 879599492333283
     
 media_folder: "static/images" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images" # The src attribute for uploaded media will begin with /images
