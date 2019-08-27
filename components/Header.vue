@@ -15,12 +15,12 @@
             :class="['text-gray-900', 'font-sans', 'text-sm']"
             :to='linkForNavTitle(linkTitle)'>{{ linkTitle }}</NuxtLink>
         </li>
-        <li class="mr-8 inline">
+        <!-- <li class="mr-8 inline">
           <span id="css1" class="py-1 px-2 rounded mx-2 bg-red-300">1</span>
           <span id="css2" class="py-1 px-2 rounded mx-2 bg-blue-300">2</span>
           <span id="css3" class="py-1 px-2 rounded mx-2 bg-green-300">3</span>
           <span id="css4" class="py-1 px-2 rounded mx-2 bg-yellow-300">4</span>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>
