@@ -1,7 +1,9 @@
 <template>
-  <nuxt-link :to="url">
+  <nuxt-link
+    v-show="loaded" 
+    :to="url">
     <div 
-      class="projectCard text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-cover bg-center"
+      class="projectCard text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-gray-900 bg-cover bg-center"
       :style="showTopics ? bgImage.hover : bgImage.normal"
       @mouseover="showTopics = true"
       @mouseleave="showTopics = false">
@@ -14,7 +16,7 @@
       <transition-group
         name="staggered-fade"
         tag="ul"
-        class="absolute inset-x-0 bottom-0 project-preview z-10"
+        class="absolute inset-x-0 bottom-0 project-preview z-10 hide-for-touch"
         v-bind:css="false"
         v-on:before-enter="beforeEnter"
         v-on:enter="enter"
@@ -27,93 +29,103 @@
           v-bind:data-index="index"
         >{{ topic }}</li>
       </transition-group>
+      <img 
+        :class="[loaded ? 'hidden' : '', 'invisible']"
+        :src="bgURL.normal" 
+        v-on:load="onLoaded" />
     </div>
   </nuxt-link>
 </template>
 
 <script>
-// https://snipcart.com/blog/vuejs-transitions-animations
-// https://vuejs.org/v2/guide/transitions.html#Using-Transitions-and-Animations-Together
-
-export default {
-  props: ["project", "url"],
-  data() {
-    return {
-      showTopics: false,
-      numTopics: 0,
-      topics: []
-    }
-  },
-  computed: {
-    projectTopics: function() {
-      if (this.showTopics) {
-        if (this.topics.length < 1 && this.project.sections && this.project.sections.length > 0) {
-          this.project.sections.forEach(section => {
-            if (section.topic != null 
-             && section.topic != "Generic"
-             && section.topic.length > 0
-             && this.topics.indexOf(section.topic) < 0)
-              this.topics.push(section.topic)
-          });
+  export default {
+    props: ["project", "url"],
+    data() {
+      return {
+        showTopics: false,
+        numTopics: 0,
+        topics: [],
+        loaded: false
+      }
+    },
+    computed: {
+      projectTopics: function() {
+        if (this.showTopics) {
+          if (this.topics.length < 1 && this.project.sections && this.project.sections.length > 0) {
+            this.project.sections.forEach(section => {
+              if (section.topic != null 
+              && section.topic != "Generic"
+              && section.topic.length > 0
+              && this.topics.indexOf(section.topic) < 0)
+                this.topics.push(section.topic)
+            });
+          }
+          return this.topics
+        } else {
+          return []
         }
-        return this.topics
-      } else {
-        return []
+      },
+      bgImage: function() {
+        return {
+          normal: 'background-image: url(' + this.bgURL.normal + ')',
+          hover: 'background-image: url(' + this.bgURL.hover + ')'
+        }
+      },
+      bgURL: function() {
+        var filter = 'cyren/75';
+        var baseURL = this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/gamma/75/-/filter/' + filter + '/';
+        return {
+          normal: baseURL,
+          hover: baseURL + '-/blur/75/'
+        }
       }
     },
-    bgImage: function() {
-      return {
-        normal: 'background-image: url(' + this.bgURL.normal + ')',
-        hover: 'background-image: url(' + this.bgURL.hover + ')'
+    methods: {
+      // https://snipcart.com/blog/vuejs-transitions-animations
+      // https://vuejs.org/v2/guide/transitions.html#Using-Transitions-and-Animations-Together
+      beforeEnter: function (el) {
+        el.style.opacity = 0
+      },
+      enter: function (el, done) {
+        var i = el.dataset.index
+        if (i > this.numTopics)
+            this.numTopics = i
+        var delay = i * 50
+        setTimeout(function () {
+          Velocity(
+            el,
+            { opacity: 1, translateY: ['0%', '25%'] },
+            { easing: 'easeOutExpo'},
+            { complete: done }
+          )
+        }, delay)
+      },
+      leave: function (el, done) {
+        var delay = (this.numTopics - el.dataset.index) * 50
+        setTimeout(function () {
+          Velocity(
+            el,
+            { opacity: 0, translateY: '25%' },
+            { easing: 'easeOutExpo'},
+            { complete: done }
+          )
+        }, delay)
+      },
+      onLoaded() {
+        this.loaded = true;
       }
     },
-    bgURL: function() {
-      var filter = 'cyren/75';
-      var baseURL = this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/gamma/75/-/filter/' + filter + '/';
-      return {
-        normal: baseURL,
-        hover: baseURL + '-/blur/75/'
-      }
+    mounted: function() {
+      this.bgImageObject = new Image();
+      this.bgImageObject.src = this.bgURL.normal;
+
+      this.bgImageObjectHover = new Image();
+      this.bgImageObjectHover.src = this.bgURL.hover;
+    },
+    destroyed () {
+      window.removeEventListener('touchstart', onFirstTouch, false);
     }
-  },
-  methods: {
-    beforeEnter: function (el) {
-      el.style.opacity = 0
-    },
-    enter: function (el, done) {
-      var i = el.dataset.index
-      if (i > this.numTopics)
-          this.numTopics = i
-      var delay = i * 50
-      setTimeout(function () {
-        Velocity(
-          el,
-          { opacity: 1, translateY: ['0%', '25%'] },
-          { easing: 'easeOutExpo'},
-          { complete: done }
-        )
-      }, delay)
-    },
-    leave: function (el, done) {
-      var delay = (this.numTopics - el.dataset.index) * 50
-      setTimeout(function () {
-        Velocity(
-          el,
-          { opacity: 0, translateY: '25%' },
-          { easing: 'easeOutExpo'},
-          { complete: done }
-        )
-      }, delay)
-    }
-  },
-  mounted: function() {
-    var imagePrefetch = new Image();
-    var imagePrefetchHover = new Image();
-    
-    imagePrefetch.src = this.bgURL.normal;
-    imagePrefetchHover.src = this.bgURL.hover;
   }
-}
 </script>
 
 <style>

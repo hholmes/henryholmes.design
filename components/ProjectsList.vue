@@ -1,10 +1,10 @@
 <template>
   <section>
     <div
-        v-for="project in orderBy(projectsToShow,'id')"
-        class="w-full md:w-1/2 py-2 px-0 sm:p-2"
-        :key="project.id">
-        <ProjectCard :project="project" :url="'/project' + project._path" />
+      v-for="project in orderBy(projectsToShow,'id')"
+      class="w-full md:w-1/2 py-2 px-0 sm:p-2"
+      :key="project.id">
+      <ProjectCard :project="project" :url="'/project' + project._path" />
     </div>
     <p class="text-right hidden">
       <a href="/work">see more projects ›</a>

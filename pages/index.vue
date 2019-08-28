@@ -116,6 +116,21 @@
       ProjectsList,
       ContactForm,
       SimpleList
+    },
+    created () {
+      // Check for touch device
+      // https://codeburst.io/the-only-way-to-detect-touch-with-javascript-7791a3346685
+      if (process.browser) { 
+          window.addEventListener('touchstart', function onFirstTouch() {
+            var elements = document.getElementsByClassName('hide-for-touch')
+            console.log(elements.length)
+            for (var i = 0; i < elements.length; i++) {
+              console.log(elements[i].innerHTML)
+              elements[i].classList.add('hidden');
+            }
+            window.removeEventListener('touchstart', onFirstTouch, false);
+          }, false);
+      }
     }
   }
 </script>
