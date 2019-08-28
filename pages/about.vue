@@ -3,7 +3,7 @@
     <h1>{{ page.title }}</h1>
     <div v-html="$md.render(page.body)" />
     <SimpleList 
-          class="w-full text-center md:text-left mt-rhythm md:mt-8"
+          class="w-full text-center md:text-left mt-rhythm md:mt-8 mb-rhythm"
           :useIcons="true"
           :items="[
             {
@@ -23,6 +23,7 @@
             }
           ]"
         />
+    <div class="hover-none:shadow-lg">Shadow if touch is enabled</div>
   </div>
 </template>
 

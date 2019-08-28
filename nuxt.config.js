@@ -119,8 +119,7 @@ module.exports = {
       }
     ],
     'nuxt-purgecss',
-    'nuxt-webfontloader',
-    'tailwindcss-fluid'
+    'nuxt-webfontloader'
   ],
 
   fontawesome: {

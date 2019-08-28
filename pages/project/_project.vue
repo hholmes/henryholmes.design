@@ -6,25 +6,25 @@
     <div class="cover mainstream flex items-center min-h-screen-1/2 md:min-h-screen-5/8">
       <div>
         <h1 class="title"
-          :style="{ backgroundImage: `url('${ project.cover }')` }">
-          {{ project.title }}
+          :style="{ backgroundImage: `url('${ project.cover }')` }"
+          v-html="project.title">
         </h1>
         <p class="subtitle skip-kern">{{ project.subtitle }}</p>
       </div>
     </div>
     <section class="flex flex-wrap items-top mainstream min-h-screen-1/2 md:min-h-screen-1/4 md:mb-rhythm">
       <SimpleList
-        class="w-1/2 md:w-1/4"
+        class="w-1/2 md:w-1/4 mb-rhythm md:mb-0 pr-8 md:mr-0"
         :header="'Timeframe'" 
         :items="[timeframeText]"
         />
       <SimpleList
-        class="w-1/2 md:flex-auto md:w-auto"
+        class="w-1/2 md:flex-auto md:w-auto mb-rhythm md:mb-0"
         :header="'Roles'" 
         :items='project.roles'
         />
       <SimpleList
-        class="w-1/2 md:flex-auto md:w-auto"
+        class="w-1/2 md:flex-auto md:w-auto pr-8 md:pr-0"
         :header="'Tasks'" 
         :items="project.tasks"
         />
@@ -63,7 +63,7 @@
     },
     head() {
       return {
-        title: this.project.title
+        title: (this.project.title).replace(/<[^>]*>?/gm, '')
       }
     },
     computed: {
@@ -105,7 +105,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: calc(86px + (160 - 86) * ((100vw - 480px) / (1600 - 480)));
+    font-size: calc(72px + (136 - 72) * ((100vw - 320px) / (1280 - 320)));
     line-height: 1em;
     hyphens: auto;
     @apply bg-center bg-cover break-words;

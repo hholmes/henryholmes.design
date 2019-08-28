@@ -44,12 +44,13 @@ export default {
   },
   methods: {
     linkForNavTitle(navItem) {
-      for (var page in this.navPages) {
-        if (page.title == navItem) {
-          return page._path;
+      var path = ''
+      this.navPages.forEach(function(page, index) {
+        if (page.title.valueOf() == navItem.valueOf()) {
+          path = page._path;
         }
-      }
-      return '';
+      })
+      return path;
     }
   }
 }

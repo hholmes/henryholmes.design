@@ -3,10 +3,11 @@
     <h3 v-if="header">
       {{ header }}
     </h3>
-    <ul :class="[useIcons ? 'fa-ul' : '', 'leading-loose', 'list-reset', 'uppercase', 'tracking-widest', 'text-sm', 'mt-10', 'font-sans']">
+    <ul :class="[useIcons ? 'fa-ul' : '', 'leading-snug', 'list-reset', 'uppercase', 'tracking-widest', 'text-sm', 'mt-10', 'font-sans']">
       <li 
         v-for="(item, index) in items"
-        :key="index">
+        :key="index"
+        class="my-main">
         <SmartItem v-if="typeof(item) === 'object'" :isList=true :href="item.href" :target="item.hrefTarget" :icon="item.icon" :iconColor="item.iconColor" :content="item.content" />
         <SmartItem v-else-if="typeof(item) === 'string'" :content="item" />
       </li>

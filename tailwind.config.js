@@ -29,6 +29,12 @@ module.exports = {
         'Times',
         'serif'
       ]
+      // screens: {
+      //   sm: '640px',
+      //   md: '768px',
+      //   lg: '1024px',
+      //   xl: '1280px'
+      // }
     },
     extend: {
       boxShadow: {
@@ -84,6 +90,10 @@ module.exports = {
       colors: {
         default: [`rgba(0,0,0,0.6)`, `rgba(0,0,0,0.1)`]
       }
-    })
-  ]
+    }),
+    require('tailwindcss-touch')()
+  ],
+  modules: {
+    shadow: ['responsive', 'hover', 'focus', 'hover-hover', 'hover-none']
+  }
 }
