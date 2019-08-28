@@ -1,12 +1,16 @@
 <template>
   <nuxt-link
+    class="inline-block no-underline border-0"
     v-show="loaded" 
     :to="url">
     <div 
       class="projectCard text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-gray-900 bg-cover bg-center"
-      :style="showTopics ? bgImage.hover : bgImage.normal"
+      :style="bgImage.normal"
       @mouseover="showTopics = true"
       @mouseleave="showTopics = false">
+      <div
+        class="blurBg z-0 inset-0 absolute bg-cover bg-center h-full w-full"
+        :style="bgImage.hover"></div>
       <h4 class="font-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-2 z-10"
         v-html="project.title">
       </h4>
@@ -73,7 +77,7 @@
       },
       bgURL: function() {
         var filter = 'cyren/75';
-        var baseURL = this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/gamma/75/-/filter/' + filter + '/';
+        var baseURL = this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/resize/640x/-/gamma/75/-/filter/' + filter + '/';
         return {
           normal: baseURL,
           hover: baseURL + '-/blur/75/'
@@ -121,20 +125,22 @@
 
       this.bgImageObjectHover = new Image();
       this.bgImageObjectHover.src = this.bgURL.hover;
-    },
-    destroyed () {
-      window.removeEventListener('touchstart', onFirstTouch, false);
     }
   }
 </script>
 
 <style>
-  .projectCard {
+  .projectCard, .projectCard .blurBg {
     transition: all 200ms ease;
   }
-  .projectCard:hover {
-    @apply shadow-darken;
+  .projectCard .blurBg {
+    opacity: 0;
   }
+  .projectCard:hover .blurBg {
+    @apply shadow-darken;
+    opacity: 1;
+  }
+  .projectCard:hover
   .staggered-fade-enter, 
   .staggered-fade-leave-to {
     opacity: 0;
