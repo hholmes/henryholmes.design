@@ -37,7 +37,7 @@
     },
     {
       "heading": "Oblique Strategies",
-      "body": "As the application’s features began to coalesce, I noticed a recurring pattern of approach that reminded me of something I’d experimented with before, Brian Eno and Peter Schmidt’s [Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies). _**Strategies**_ presents a method of encouraging lateral thinking by subverting the prototypical relationships among ideas and actions. In other words, it helps us break out of our usual ways of thinking.\n\nI put two and two together and sketched out a feature called the “Idea Machine” that would source thought exercises from the DEL community as an extension of the app’s main workflow.\n\nWhen I presented the feature to our team, we realized it could incorporate suggestions from the [NYC DoE Blueprint for Dance](https://www.weteachnyc.org/resources/resource/dance-blueprint-for-teaching-and-learning/), a document we'd been working to incorporate somehow.\n\nThe resulting module offered a novel, non-linear way for teachers to brainstorm institutionally validated lesson objectives for a given K-12 age cohort.\n\n![Three screenshots depicting the tips and tricks feature (originally idea machine)](https://ucarecdn.com/5235c8ab-b0fd-4e24-94a6-92504f50fdf1/ \"Tips and tricks\")",
+      "body": "As the application’s features began to coalesce, I noticed a recurring pattern of approach that reminded me of something I’d experimented with before, Brian Eno and Peter Schmidt’s [Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies). **_Strategies_** presents a method of encouraging lateral thinking by subverting the prototypical relationships among ideas and actions. In other words, it helps us break out of our usual ways of thinking.\n\nI put two and two together and sketched out a feature called the “Idea Machine” that would source thought exercises from the DEL community as an extension of the app’s main workflow.\n\nWhen I presented the feature to our team, we realized it could incorporate suggestions from the [NYC DoE Blueprint for Dance](https://www.weteachnyc.org/resources/resource/dance-blueprint-for-teaching-and-learning/), a document we'd been working to incorporate somehow.\n\nThe resulting module offered a novel, non-linear way for teachers to brainstorm institutionally validated lesson objectives for a given K-12 age cohort.\n\n![Three screenshots depicting the tips and tricks feature (originally idea machine)](https://ucarecdn.com/5235c8ab-b0fd-4e24-94a6-92504f50fdf1/ \"Tips and tricks\")",
       "topic": "Prototyping"
     },
     {
@@ -73,7 +73,7 @@
   ],
   "cover": "https://ucarecdn.com/d49c1fbe-3c4f-405a-bbd5-9e989b4b2f50/-/preview/-/enhance/70/",
   "subtitle": "Shaping the future of dance education",
-  "title": "Dancemaker",
+  "title": "Dance&#8203;maker",
   "type": "Case Study",
   "end": "July 2018",
   "id": "1",
