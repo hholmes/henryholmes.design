@@ -29,13 +29,14 @@
     },
     {
       "heading": "Animating prototypes",
-      "body": "<gifs>",
+      "body": "I built a series of animated prototypes in [Origami](https://origami.design) to conceive and illustrate behaviors for our developers. \n\n\\| l | r |\n\n\\| --- | --- |\n\n\\| git status | List all new or modified files |\n\n\\| git diff | Show file differences that haven't been staged |",
       "bg": "#F2F1E9",
       "topic": "Interaction & Animation"
     },
     {
       "heading": "Building a content editor",
-      "body": "CMS"
+      "body": "CMS",
+      "bg": "#F2F1E9"
     },
     {
       "heading": "Handling Connectivity",
