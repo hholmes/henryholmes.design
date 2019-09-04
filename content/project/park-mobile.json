@@ -70,7 +70,8 @@
   "id": "0",
   "tools": [
     "Sketch",
-    "Framer/Origami",
+    "Sheets",
+    "Origami",
     "Airtable",
     "Python",
     "XCode"
