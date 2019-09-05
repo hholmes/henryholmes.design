@@ -65,9 +65,10 @@
       "bg": "#DCD9C7"
     },
     {
-      "heading": "-",
+      "heading": "<span></span>",
       "sectionBanner": "https://res.cloudinary.com/henryholmesdesign/image/upload/v1567710967/Park%20Mobile/Park_Mobile_android_icons.png",
-      "body": "-"
+      "body": "&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;",
+      "bg": "#DCD9C7"
     }
   ],
   "tasks": [
