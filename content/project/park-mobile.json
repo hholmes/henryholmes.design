@@ -39,11 +39,17 @@
       "bg": "#F2F1E9"
     },
     {
-      "heading": "Handling Connectivity",
+      "heading": "Anticipating poor connections",
       "sectionBanner": "https://ucarecdn.com/8cd538d0-dc9f-4bb1-9fb0-8b2ebfe0b414/",
-      "body": "We needed to figure out how best to deliver all this rich media and content to visitors in places with poor-to-no connectivity. I helped identify and prioritize downloads based on visitor needs, interface dependencies and timeliness. \n\n![]()",
+      "body": "We needed to figure out how best to deliver all this rich media and content to visitors in places with poor-to-no connectivity. I helped identify and prioritize downloads based on visitor needs, interface dependencies and timeliness. \n\n![A diagram of downloadable content types, sizes and priorities](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567637329/Park%20Mobile/data-download-priority.jpg \"Visualizing data priorities\")\n\nOnce we'd made sense of our priorities for downloading logic, I produced technical specifications that everyone on the team could understand and discuss.\n\n![A series of timelines depicting how information is downloaded](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567637252/Park%20Mobile/downloading-scheme.png \"Downloading logic diagrams\")\n\n### Dealing with imperfection\n\nOur approach to offline use was never perfect. Low connectivity is a hard problem to solve, in our case made harder still by the bifurcation of resources between our AWS backend and the government CDN hosting NPS media. \n\nAs we continued to refine our implementation, I pushed to build out more transparency for our users around what was happening with their connection and how it was impacting their app.",
       "bg": "#EAE8DB",
-      "topic": "Generic"
+      "topic": "Code & QA"
+    },
+    {
+      "heading": "Keeping things fresh",
+      "body": "As the Park Service works to modernize their digital infrastructure, new opportunities are emerging to provide live data directly to visitors on their mobile devices. I led the effort to design and implement a series of live data layers in the app, which we prototyped at Yellowstone National Park.\n\n![An array of visual blocks depicting live data UI elements](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567704442/Park%20Mobile/live-data-elements.jpg \"Live data elements\")\n\nI also worked on evolutions of the push notification logic, an important component of the timely UX strategy.\n\n![Several phone screens with push notifications](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567704606/Park%20Mobile/notifications.jpg \"Outlining notification touchpoints\")",
+      "bg": "#EAE8DB",
+      "topic": "Interaction & Animation"
     },
     {
       "heading": "Improving Accessibility",
@@ -51,7 +57,7 @@
       "body": "IEM",
       "bg": "#DCD9C7",
       "fg": "",
-      "topic": "Writing & Microcopy"
+      "topic": "UX Research"
     }
   ],
   "tasks": [
