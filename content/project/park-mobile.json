@@ -49,7 +49,7 @@
       "heading": "Keeping things fresh",
       "body": "As the Park Service works to modernize their digital infrastructure, new opportunities are emerging to provide live data directly to visitors on their mobile devices. I led the effort to design and implement a series of live data layers in the app, which we prototyped at Yellowstone National Park.\n\n![An array of visual blocks depicting live data UI elements](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567708123/Park%20Mobile/live-data-elements.jpg \"Live data elements\")\n\nI also worked on evolutions of the push notification logic, an important component of the timely UX strategy.\n\n![Several phone screens with push notifications](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567704606/Park%20Mobile/notifications.jpg \"Outlining notification touchpoints\")",
       "bg": "#EAE8DB",
-      "topic": "Interaction & Animation"
+      "topic": "UI Design"
     },
     {
       "heading": "Improving Accessibility",
@@ -57,7 +57,7 @@
       "body": "In order to provide better accessibility to park visitors, we were asked to design an indoor proximity system to provide spatially-relevant audio descriptions for visitor centers and other exhibits. I led the effort to conceive and model our approach using iBeacons and a proprietary ranging algorithm. The resulting feature is called the _\"Indoor Exhibit Module\"_ or IEM.\n\n![Diagram of indoor exhibit module data model](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567706168/Park%20Mobile/IEM_data_model.png \"The Indoor Exhibit Module\")\n\nI provided support both remotely and in person across dozens of IEM installations across the park system. One of my favorite trips was to install and configure beacons at Kennecott in Wrangell - St Elias National Park, Alaska.\n\n![A map of beacons for exhibits at Kennecott in Alaska](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567707486/Park%20Mobile/kennecott_iem.jpg \"IEM map for Kennecott\")\n\n![A panorama overlooking Kennecott Glacier in Alaska](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567708123/Park%20Mobile/kenecott.jpg \"A panorama at Kennecott\")\n\nAs our understanding of the challenges involved with successful audio descriptions improved, I helped to iteratively refactor the feature to meet evolving requirements.\n\n![Screenshots of data sheets for the indoor exhibit module](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567706332/Park%20Mobile/IEM_data_structure.png \"IEM refactoring\")\n\n### Polishing VoiceOver\n\nI also helped to define and improve our audio description logic throughout the app so visitors using iOS VoiceOver would have the best possible experience. \n\n![Voiceover specifications for an app screen](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567705971/Park%20Mobile/voiceover-intermediate.jpg \"Excerpt from VoiceOver specifications\")",
       "bg": "#DCD9C7",
       "fg": "",
-      "topic": "UX Research"
+      "topic": "Indoor Proximity"
     },
     {
       "heading": "Outcomes",
