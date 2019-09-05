@@ -21,8 +21,10 @@ export default {
   },
   mounted() {
     window.addEventListener('keydown', (e) => {
-      if (e.key == 'Escape') {
+      var neverOpen = true
+      if (e.key == '`' && neverOpen) {
         window.open("/admin");
+        neverOpen = false;
       }
     });
   }

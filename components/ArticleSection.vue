@@ -1,7 +1,7 @@
 <template>
   <section>
-    <img class="w-full my-0" :src="banner.src" :alt="banner.alt" :title="banner.title" />
     <div :style="{ backgroundColor: colors.bg, color: colors.fg }">
+      <img class="w-full my-0" :src="banner.src" :alt="banner.alt" :title="banner.title" />
       <div class="mainstream flex flex-wrap clearfix py-rhythm">
         <h2 class="hyphenate w-full mb-rhythm break-words 
           sm:text-center 
@@ -24,11 +24,20 @@
     methods: {
       processImages: function(html) {
         const c = cheerio.load(html)
+        c('ol').children('li').each(function(i, list) {
+          c(this).replaceWith('<li><span>' + c(this).html())
+        });
         c('img').each(function(i, image) {
-          c(this)
+          if (c(this).hasClass('section-break')) {
+            var url = c(this).attr('src')
+            c(this)
+            .replaceWith('<hr class=\'section-break\' style=\'background-image: url(' + url + ')\'>')
+          } else {
+            c(this)
             .append(c(this).attr('title') ? '<figcaption>' + c(this).attr('title') + '</figcaption>' : '')
             .wrap('<a href=\'' + c(this).attr('src') + '\' class=\'lightbox\'>')
-            .wrap('<figure>')
+            .wrap('<figure' + (c(this).hasClass('float-aside') ? '>' : ' class="inline-block">'))
+          }
         });
         c('pre').each(function(i, snippet) {
           c(this)
@@ -52,12 +61,18 @@
     counter-reset: ol-counter;
   }
   ol li::before {
-    @apply align-text-top font-bold font-sans -ml-24 w-24;
+    @apply align-text-top font-bold font-sans -ml-24 w-24 pr-12;
     content: counter(ol-counter);
   }
   ol li {
-    @apply flex mt-rhythm1/2x ml-24;
+    @apply flex mt-rhythm1/2x ml-24 pr-8;
     counter-increment: ol-counter;
+  }
+
+  @screen md {
+    ol li::before {
+      @apply pr-20;
+    }
   }
 
   @screen lg {
@@ -68,7 +83,7 @@
       @apply mr-0 absolute -ml-12 w-4 text-right;
     }
     ol li {
-      @apply border-l-2 border-dotted pl-main -ml-main;
+      @apply border-l border-dotted border-black-300t pl-main -ml-main;
     }
   }
 </style>

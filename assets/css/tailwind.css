@@ -51,7 +51,7 @@ a:hover, nav a:hover {
 }
 
 article figure {
-  @apply my-rhythm inline-block;
+  @apply my-rhythm;
 }
 article figure a:hover {
   cursor: zoom-in;
@@ -72,7 +72,39 @@ ul {
   @apply list-none;
 }
 
+/* Decorative horizontal rule
+ * https://stackoverflow.com/questions/35610251/style-hr-with-image */
+article .section-break {
+  @apply mt-rhythm2x;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  height: 2rem;
+  border: 0;
+  position: relative;
+}
+/* .section-break:before {
+  left: 0;
+  right: 50%;
+}
+.section-break:after {
+  right: 0;
+  left: 50%;
+} */
+figure ~ .section-break {
+  @apply mt-rhythm;
+}
+.section-break ~ h3 {
+  @apply mt-rhythm2x;
+}
 
+article table figure {
+  @apply my-0;
+}
+article table {
+  @apply my-rhythm;
+}
 
 .form-input {
   @apply appearance-none border rounded-lg w-full py-3 px-4 leading-tight;
@@ -246,11 +278,13 @@ button:hover {
   background: rgba(0, 0, 0, 0.6);
   cursor: zoom-out;
 }
-
+a.lightbox {
+  text-decoration: none;
+  border: none;
+}
 .lum-lightbox-inner img {
   @apply relative mx-auto;
 }
-
 .lum-lightbox-inner .lum-lightbox-caption {
   margin: 0 auto;
   color: #fff;
