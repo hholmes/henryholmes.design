@@ -47,7 +47,7 @@
     },
     {
       "heading": "Keeping things fresh",
-      "body": "As the Park Service works to modernize their digital infrastructure, new opportunities are emerging to provide live data directly to visitors on their mobile devices. I led the effort to design and implement a series of live data layers in the app, which we prototyped at Yellowstone National Park.\n\n![An array of visual blocks depicting live data UI elements](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567704442/Park%20Mobile/live-data-elements.jpg \"Live data elements\")\n\nI also worked on evolutions of the push notification logic, an important component of the timely UX strategy.\n\n![Several phone screens with push notifications](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567704606/Park%20Mobile/notifications.jpg \"Outlining notification touchpoints\")",
+      "body": "As the Park Service works to modernize their digital infrastructure, new opportunities are emerging to provide live data directly to visitors on their mobile devices. I led the effort to design and implement a series of live data layers in the app, which we prototyped at Yellowstone National Park.\n\n![An array of visual blocks depicting live data UI elements](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567708123/Park%20Mobile/live-data-elements.jpg \"Live data elements\")\n\nI also worked on evolutions of the push notification logic, an important component of the timely UX strategy.\n\n![Several phone screens with push notifications](https://res.cloudinary.com/henryholmesdesign/image/upload/v1567704606/Park%20Mobile/notifications.jpg \"Outlining notification touchpoints\")",
       "bg": "#EAE8DB",
       "topic": "Interaction & Animation"
     },
@@ -58,6 +58,11 @@
       "bg": "#DCD9C7",
       "fg": "",
       "topic": "UX Research"
+    },
+    {
+      "heading": "Project Outcomes",
+      "body": "todo",
+      "bg": "#DCD9C7"
     }
   ],
   "tasks": [
