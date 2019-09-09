@@ -7,6 +7,9 @@ backend:
 media_library:
   name: cloudinary
   config:
+    default_transformations:
+              -   - fetch_format: auto
+                    quality: auto
     cloud_name: henryholmesdesign
     api_key: 879599492333283
     
