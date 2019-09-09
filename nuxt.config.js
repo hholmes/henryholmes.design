@@ -65,16 +65,6 @@ module.exports = {
         type: 'text/yaml',
         rel: 'cms-config-url'
       }
-    ],
-    script: [
-      {
-        type: 'text/javascript',
-        src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
-      },
-      {
-        type: 'text/javascript',
-        src: '//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js'
-      }
     ]
   },
 
@@ -101,7 +91,12 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/vue2-filters', '~/plugins/vue-scroll'],
+  plugins: [
+    '~/plugins/vue2-filters',
+    '~/plugins/vue-scroll',
+    '~/plugins/netlify-identity-widget',
+    '~/plugins/velocity'
+  ],
 
   /*
   ** Nuxt.js modules
