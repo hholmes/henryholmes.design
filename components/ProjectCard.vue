@@ -77,12 +77,26 @@
         }
       },
       bgURL: function() {
-        var filter = 'cyren/75';
-        var baseURL = this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/resize/640x/-/gamma/75/-/filter/' + filter + '/';
+        // assumes Cloudinary CDN
+
+        var baseAdjustments = 'e_art:linen,'
+        var hoverAdjustments = 'e_blur:1000,'
+
+        var normalURL = this.project.cover.split("upload/")[0] + 'upload/' + baseAdjustments + this.project.cover.split("upload/")[1]
+        var hoverURL = this.project.cover.split("upload/")[0] + 'upload/' + baseAdjustments + hoverAdjustments + this.project.cover.split("upload/")[1]
+        
         return {
-          normal: baseURL,
-          hover: baseURL + '-/blur/75/'
+          normal: normalURL,
+          hover: hoverURL
         }
+
+        // Uploadcare variation
+        // var filter = 'cyren/75';
+        // var baseURL = this.project.cover + (this.project.cover.indexOf('preview') < 0 ? '-/preview/' : '') + '-/resize/640x/-/gamma/75/-/filter/' + filter + '/';
+        // return {
+        //   normal: baseURL,
+        //   hover: baseURL + '-/blur/75/'
+        // }
       }
     },
     methods: {

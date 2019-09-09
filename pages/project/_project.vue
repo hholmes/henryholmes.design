@@ -6,7 +6,7 @@
     <div class="cover mainstream flex items-center min-h-screen-1/2 md:min-h-screen-5/8">
       <div>
         <h1 class="title"
-          :style="{ backgroundImage: `url('${ project.cover }-/resize/1024x/')` }"
+          :style="{ backgroundImage: `url('${ project.cover.split('upload/')[0] + 'upload/w_1024,e_art:linen,' + project.cover.split('upload/')[1] }')` }"
           v-html="project.title">
         </h1>
         <p class="subtitle skip-kern">{{ project.subtitle }}</p>
