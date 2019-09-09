@@ -92,7 +92,7 @@ article .section-break {
   right: 0;
   left: 50%;
 } */
-figure ~ .section-break {
+figure + .section-break {
   @apply mt-rhythm;
 }
 .section-break ~ h3 {

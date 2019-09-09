@@ -7,7 +7,8 @@
           sm:text-center 
           lg:text-left lg:pr-8 lg:mb-auto lg:text-xl lg:mt-1 
             lg:leading-tight lg:w-1/4 
-          xl:pr-16 xl:text-2xl xl:mt-0">{{ title }}</h2>
+          xl:pr-16 xl:text-2xl xl:mt-0"
+          v-html="title"></h2>
         <div 
           class="section-content w-full lg:w-2/4 xl:max-w-full"
           v-html="processImages($md.render(body))" />

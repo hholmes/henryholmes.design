@@ -23,6 +23,7 @@
         class="absolute inset-x-0 bottom-0 project-preview z-10 hide-for-touch"
         v-bind:css="false"
         v-on:before-enter="beforeEnter"
+        v-on:enter-cancelled="leave"
         v-on:enter="enter"
         v-on:leave="leave"
       >
