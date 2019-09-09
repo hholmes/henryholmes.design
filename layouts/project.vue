@@ -30,10 +30,10 @@ export default {
     this.$nuxt.$on('footer-bg', (e) => {
       this.footerBg = e;
     });
-    this.$nuxt.$on('left-contents', (e) => {
+    this.$nuxt.$on('previous-link', (e) => {
       this.leftContents = e;
     });
-    this.$nuxt.$on('right-contents', (e) => {
+    this.$nuxt.$on('next-link', (e) => {
       this.rightContents = e;
     });
   },

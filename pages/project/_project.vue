@@ -86,6 +86,14 @@
         this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)
       }
 
+      if (this.project.previous) {
+        this.$nuxt.$emit('previous-link', this.project.previous)
+      }
+
+      if (this.project.next) {
+        this.$nuxt.$emit('next-link', this.project.next)
+      }
+
       // Enable Lightbox
       new LuminousGallery(
         document.querySelectorAll(".lightbox"),

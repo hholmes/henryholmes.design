@@ -29,6 +29,7 @@ collections:
             searchFields: ["title"]
             valueField: "title"
             multiple: true
+            required: false
       - label: "Home"
         name: "home"
         file: "content/home.json"
@@ -67,6 +68,8 @@ collections:
       - {label: Tasks, name: tasks, widget: list, required: true}
       - {label: Tools, name: tools, widget: list, required: true}
       - {label: CoverImage, name: cover, widget: image, required: false}
+      - {label: Previous, name: previous, widget: string, required: false}
+      - {label: Next, name: next, widget: string, required: false}  
       - label: Sections
         name: "sections"
         widget: list
