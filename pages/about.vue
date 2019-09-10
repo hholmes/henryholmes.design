@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import SimpleList from "~/components/SimpleList"
+  import SmartList from "~/components/SmartList"
   const page = require('~/content/page/about.json')
 
   export default {
@@ -15,7 +15,7 @@
       }
     },
     components: {
-      SimpleList
+      SmartList
     },
     head() {
       return {

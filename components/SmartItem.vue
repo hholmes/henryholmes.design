@@ -1,7 +1,7 @@
 <template>
   <span>
     <fa v-if="icon" :icon="icon" :class="[ isList ? 'fa-li' : '', iconColor ]" />
-    <a v-if="href" :href="href" :target="hrefTarget || '_self'">{{ content }}</a>
+    <a v-if="href" :href="href" :target="target || '_self'">{{ content }}</a>
     <span v-else v-html="content" />
   </span>
 </template>
@@ -16,7 +16,7 @@
       icon: Array,
       iconColor: String,
       href: String,
-      hrefTarget: String,
+      target: String,
       content: String
     },
     computed: {

@@ -13,22 +13,22 @@
       </div>
     </div>
     <section class="flex flex-wrap items-top mainstream min-h-screen-1/2 md:min-h-screen-1/4 md:mb-rhythm">
-      <SimpleList
+      <SmartList
         class="w-1/2 md:w-1/4 mb-rhythm md:mb-0 pr-8 md:mr-0"
         :header="'Timeframe'" 
         :items="[timeframeText]"
         />
-      <SimpleList
+      <SmartList
         class="w-1/2 md:flex-auto md:w-auto mb-rhythm md:mb-0"
         :header="'Roles'" 
         :items='project.roles'
         />
-      <SimpleList
+      <SmartList
         class="w-1/2 md:flex-auto md:w-auto pr-8 md:pr-0"
         :header="'Tasks'" 
         :items="project.tasks"
         />
-      <SimpleList
+      <SmartList
         class="w-1/2 md:flex-auto md:w-auto"
         :header="'Tools'" 
         :items="project.tools"
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-  import SimpleList from "~/components/SimpleList"
+  import SmartList from "~/components/SmartList"
   import ArticleSection from "~/components/ArticleSection"
   import { Luminous, LuminousGallery } from 'luminous-lightbox'
 
@@ -72,7 +72,7 @@
       }
     },
     components: {
-      SimpleList,
+      SmartList,
       ArticleSection
     },
     // data () {

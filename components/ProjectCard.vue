@@ -4,7 +4,7 @@
     v-show="loaded" 
     :to="url">
     <div 
-      class="projectCard text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-gray-900 bg-cover bg-center"
+      class="projectCard cardPad text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-gray-900 bg-cover bg-center"
       :style="bgImage.normal"
       @mouseover="showTopics = true"
       @mouseleave="showTopics = false">

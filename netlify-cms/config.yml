@@ -47,6 +47,14 @@ collections:
             searchFields: ["title"]
             valueField: "title"
             multiple: true
+          - label: "Resume"
+            name: "resume"
+            widget: "file"
+            media_library:
+              config:
+                multiple: false
+                default_transformations:
+                  -   - fetch_format: pdf
           - {label: Details, name: details, widget: markdown, required: false}
           - {label: Facebook, name: facebook, widget: string, required: false}
           - {label: Twitter, name: twitter, widget: string, required: false}

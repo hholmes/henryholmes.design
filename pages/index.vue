@@ -7,12 +7,12 @@
           class="text-lg mt-8 mb-6 md:mb-0s"
           v-html="$md.render(home.body)" />
       </div>
-      <SimpleList 
+      <SmartList 
         class="introList w-1/2 md:w-1/5 lg:w-1/6 sm:border-l-2 md:border-dotted md:px-2 xl:px-4"
         :header="'I can...'" 
         :items="['Design', 'Code', 'Write', 'Teach']" 
         />
-      <SimpleList 
+      <SmartList 
         class="introList w-1/2 md:w-1/5 lg:w-1/6 sm:border-l-2 md:border-dotted md:px-2 xl:px-4"
         :header="'Previously,'" 
         :items="[
@@ -40,16 +40,16 @@
       :visibleProjects="home.projects"
       />
     <section class="flex flex-wrap md:items-center overflow-hidden mt-rhythm2x mb-rhythm">
-      <div class="details-block md:pl-0 md:w-1/2">
+      <div class="details-block pl-0 mb-rhythm lg:mb-0 md:w-1/2">
         <h2>Exposition</h2>
         <p>Raised in rural Wisconsin, I earned my BFA at <a href="https://www.wisc.edu">UW Madison</a>. I studied algorithms through a choreographic lens, considering software as an extension of the human psyche. I moved to Brooklyn to work with non-profits, artists, educators and others at the intersection of <i>real</i> and <i>virtual</i> life, building digital infrastructure that makes a difference in the daily lives of actual people.</p>
       </div>
-      <div class="details-block md:w-1/2 lg:p-8 xl:p-24">
+      <div class="md:w-1/2 lg:p-8 xl:p-24">
         <img class="w-full" src="https://res.cloudinary.com/henryholmesdesign/image/upload/c_scale,w_128/v1568060774/home/paper-plane.svg" />
       </div>
     </section>
     <section class="flex flex-wrap md:items-center md:flex-row-reverse overflow-hidden mb-rhythm2x">
-      <div class="details-block md:w-1/2">
+      <div class="details-block mb-rhythm lg:mb-0 md:w-1/2">
         <h2>Under the hood</h2>
         <p>I built this site on <a href="https://nuxtjs.org">Nuxt</a>, a framework for another framework (<a href="https://vuejs.org">Vue.js</a>.) Commits are automatically published to <a href="https://netlify.com">Netlify</a> and I manage content with <a href="https://www.netlifycms.org">Netlify CMS</a>. Wherever possible I've chosen open source software and well-maintained libraries. This is roughly the 12th iteration of my portfolio over a decade's time. It will never be finished.</p>
       </div>
@@ -66,11 +66,18 @@
             />
         </div>
         <div class="column-spacer hidden md:block md:w-1/6"></div>
-        <SimpleList 
+        <SmartList 
           class="w-full text-center md:text-left md:w-1/6 lg:w-1/6 mt-rhythm pt-2 md:mt-8"
-          :header="'Elsewhere'"
+          :header="'Also'"
           :useIcons="true"
           :items="[
+            {
+              href: home.resume,
+              hrefTarget: '_blank',
+              icon: ['fas', 'file-pdf'],
+              iconColor: 'text-gray-300',
+              content: 'resume'
+            },
             {
               href: home.twitter,
               hrefTarget: '_blank',
@@ -102,7 +109,7 @@
 <script>
   import ProjectsList from "~/components/ProjectsList"
   import ContactForm from "~/components/ContactForm"
-  import SimpleList from "~/components/SimpleList"
+  import SmartList from "~/components/SmartList"
 
   const home = require('~/content/home.json')
 
@@ -115,7 +122,7 @@
     components: {
       ProjectsList,
       ContactForm,
-      SimpleList
+      SmartList
     },
     created () {
       // Check for touch device
@@ -142,7 +149,7 @@
     padding-right: calc(theme('spacing.main'));
   }
 
-  .projectCard, .details-block {
+  .cardPad {
     padding: calc(theme('spacing.main'));
   }
 
@@ -158,7 +165,7 @@
       margin-left: calc(theme('spacing.main') * -.5);
       margin-right: calc(theme('spacing.main') * -.5);
     }
-    .projectCard, .introForm, .project-preview, .details-block {
+    .cardPad, .introForm, .project-preview {
       padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 2);
     }
   }
@@ -175,7 +182,7 @@
       margin-left: calc(theme('spacing.main') * -2);
       margin-right: calc(theme('spacing.main') * -2);
     }
-    .projectCard, .project-preview, .details-block {
+    .cardPad, .project-preview {
       padding: calc(theme('spacing.main') * 1.5) calc(theme('spacing.main') * 1.5);
     }
     .introForm {
@@ -194,7 +201,7 @@
       margin-left: calc(theme('spacing.main') * -3);
       margin-right: calc(theme('spacing.main') * -3);
     }
-    .projectCard, .project-preview, .details-block {
+    .cardPad, .project-preview, .details-block {
       padding: calc(theme('spacing.main') * 2) calc(theme('spacing.main') * 2.5);
     }
   }
@@ -207,7 +214,7 @@
       margin-left: calc(theme('spacing.main') * -4);
       margin-right: calc(theme('spacing.main') * -4);
     }
-    .projectCard, .project-preview, .details-block {
+    .cardPad, .project-preview, .details-block {
       padding: calc(theme('spacing.main') * 2.5) calc(theme('spacing.main') * 3.5);
     }
   }
