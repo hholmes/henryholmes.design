@@ -20,7 +20,9 @@ export default {
     Footer
   },
   data() {
-    admin = false
+    return {
+      admin: false
+    }
   },
   mounted() {
     window.addEventListener('keydown', (e) => {
