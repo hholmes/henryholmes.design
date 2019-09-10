@@ -67,12 +67,12 @@
     }
   ],
   "tasks": [
+    "UI Design",
     "UX",
     "Prototyping",
     "Animations",
     "Info Architecture",
-    "Content Strategy",
-    "UI Design"
+    "Content Strategy"
   ],
   "next": "<a href=\"/project/dancemaker\">Dancemaker ⤑</a>",
   "cover": "https://res.cloudinary.com/henryholmesdesign/image/upload/f_auto,q_auto/v1568066608/Park%20Mobile/NPS_Selfie-min.jpg",
@@ -83,10 +83,9 @@
   "id": "0",
   "tools": [
     "Sketch",
-    "Sheets",
     "Origami",
     "Airtable",
-    "Python",
+    "Invision",
     "XCode"
   ],
   "ongoing": false,
