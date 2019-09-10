@@ -135,11 +135,11 @@
       }
     },
     mounted: function() {
-      this.bgImageObject = new Image();
-      this.bgImageObject.src = this.bgURL.normal;
+      // this.bgImageObject = new Image();
+      // this.bgImageObject.src = this.bgURL.normal;
 
-      this.bgImageObjectHover = new Image();
-      this.bgImageObjectHover.src = this.bgURL.hover;
+      // this.bgImageObjectHover = new Image();
+      // this.bgImageObjectHover.src = this.bgURL.hover;
     }
   }
 </script>
