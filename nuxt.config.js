@@ -190,7 +190,7 @@ module.exports = {
   // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/
   purgeCSS: {
     mode: 'postcss',
-    whitelist: ['html', 'body', 'svg', 'path'],
+    whitelist: ['html', 'body', 'svg', 'path', 'figure', 'figcaption'],
     whitelistPatterns: [/\S*-*fa-*\S*|\bhljs\S*/]
     // paths: glob.sync([
     //   path.join(__dirname, './pages/**/*.vue'),
