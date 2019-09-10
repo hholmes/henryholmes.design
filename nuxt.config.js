@@ -66,16 +66,7 @@ module.exports = {
         rel: 'cms-config-url'
       }
     ],
-    script: [
-      {
-        type: 'text/javascript',
-        src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
-      },
-      {
-        type: 'text/javascript',
-        src: '//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js'
-      }
-    ]
+    scripts: []
   },
 
   /*
@@ -104,7 +95,9 @@ module.exports = {
   plugins: [
     '~/plugins/vue2-filters',
     '~/plugins/vue-scroll',
-    '~/plugins/vue-lazyload'
+    '~/plugins/vue-lazyload',
+    { src: '~/plugins/vendor.js', ssr: false },
+    { src: '~/plugins/velocity.js', ssr: false }
   ],
 
   /*
@@ -190,7 +183,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['velocity']
   },
 
   // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/

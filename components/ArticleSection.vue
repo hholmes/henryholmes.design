@@ -30,15 +30,15 @@
           c(this).replaceWith('<li><span>' + c(this).html())
         });
         c('img').each(function(i, image) {
+          var url = c(this).attr('src')
           if (c(this).hasClass('section-break')) {
-            var url = c(this).attr('src')
             c(this)
             .replaceWith('<hr class=\'section-break\' style=\'background-image: url(' + url + ')\'>')
           } else {
             c(this)
-            .attr('data-src',c(this).attr('src')).attr('src',null)
+            .attr('data-src', url).attr('src',null)
             .append(c(this).attr('title') ? '<figcaption>' + c(this).attr('title') + '</figcaption>' : '')
-            .wrap('<a href=\'' + c(this).attr('src') + '\' class=\'lightbox\'>')
+            .wrap('<a href=\'' + url + '\' class=\'lightbox\'>')
             .wrap('<figure' + (c(this).hasClass('float-aside') ? '>' : ' class="inline-block">'))
           }
         });

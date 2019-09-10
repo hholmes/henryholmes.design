@@ -101,20 +101,26 @@
         el.style.opacity = 0
       },
       enter: function (el, done) {
+        el.classList.remove('topicDisabled')
         var i = el.dataset.index
         if (i > this.numTopics)
             this.numTopics = i
         var delay = i * 50
         setTimeout(function () {
-          Velocity(
-            el,
-            { opacity: 1, translateY: ['0%', '25%'] },
-            { easing: 'easeOutExpo'},
-            { complete: done }
-          )
+          console.log('enter for ' + el.html + ', ' + el.classList.contains('topicDisabled'))
+          if (!el.classList.contains('topicDisabled')) {
+            Velocity(
+              el,
+              { opacity: 1, translateY: ['0%', '25%'] },
+              { easing: 'easeOutExpo'},
+              { complete: done }
+            )
+          }
         }, delay)
       },
       leave: function (el, done) {
+        el.classList.add('topicDisabled')
+        console.log('leave: ' + el.classList)
         var delay = (this.numTopics - el.dataset.index) * 50
         setTimeout(function () {
           Velocity(
@@ -127,6 +133,9 @@
       },
       onLoaded() {
         this.loaded = true;
+      },
+      showingTopics() {
+        return this.showTopics
       }
     },
     mounted: function() {
