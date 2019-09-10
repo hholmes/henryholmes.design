@@ -11,6 +11,7 @@
           v-html="title"></h2>
         <div 
           class="section-content w-full lg:w-2/4 xl:max-w-full"
+          v-lazy-container="{ selector: 'img' }"
           v-html="processImages($md.render(body))" />
       </div>
     </div>
@@ -35,6 +36,7 @@
             .replaceWith('<hr class=\'section-break\' style=\'background-image: url(' + url + ')\'>')
           } else {
             c(this)
+            .attr('data-src',c(this).attr('src')).attr('src',null)
             .append(c(this).attr('title') ? '<figcaption>' + c(this).attr('title') + '</figcaption>' : '')
             .wrap('<a href=\'' + c(this).attr('src') + '\' class=\'lightbox\'>')
             .wrap('<figure' + (c(this).hasClass('float-aside') ? '>' : ' class="inline-block">'))

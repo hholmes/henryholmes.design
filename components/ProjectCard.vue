@@ -4,40 +4,41 @@
     v-show="loaded" 
     :to="url">
     <div 
-      class="projectCard cardPad text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-gray-900 bg-cover bg-center"
-      :style="bgImage.normal"
+      v-lazy-container="{ selector: 'img' }"
+      class="projectCard text-white container rounded overflow-hidden h-screen-1/2 lg:h-screen-1/2 relative scrim-t bg-gray-900"
       @mouseover="showTopics = true"
       @mouseleave="showTopics = false">
-      <div
-        class="blurBg z-0 inset-0 absolute bg-cover bg-center h-full w-full"
-        :style="bgImage.hover"></div>
-      <h4 class="font-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-2 z-10"
-        v-html="project.title">
-      </h4>
-      <h2 class="bold pr-12 leading-tight text-4xl z-10"
-        v-html="project.subtitle">
-      </h2>
-      <transition-group
-        name="staggered-fade"
-        tag="ul"
-        class="absolute inset-x-0 bottom-0 project-preview z-10 hide-for-touch"
-        v-bind:css="false"
-        v-on:before-enter="beforeEnter"
-        v-on:enter-cancelled="leave"
-        v-on:enter="enter"
-        v-on:leave="leave"
-      >
-        <li
-          class="inline-block bg-white text-gray-900 font-sans font-bold uppercase tracking-wider text-sm rounded py-1 px-4 mr-2 mt-2"
-          v-for="(topic, index) in projectTopics"
-          v-bind:key="topic"
-          v-bind:data-index="index"
-        >{{ topic }}</li>
-      </transition-group>
       <img 
-        :class="[loaded ? 'hidden' : '', 'invisible']"
-        :src="bgURL.normal" 
-        v-on:load="onLoaded" />
+        class="z-0 absolute object-cover h-full"
+        :data-src="bgURL.normal" />
+      <img 
+        class="blurBg z-0 absolute object-cover h-full"
+        :data-src="bgURL.hover" />
+      <div class="cardPad relative h-full">
+        <h4 class="font-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-2 z-10"
+          v-html="project.title">
+        </h4>
+        <h2 class="bold pr-12 leading-tight text-4xl z-10"
+          v-html="project.subtitle">
+        </h2>
+        <transition-group
+          name="staggered-fade"
+          tag="ul"
+          class="absolute inset-x-0 bottom-0 project-preview z-10 hide-for-touch"
+          v-bind:css="false"
+          v-on:before-enter="beforeEnter"
+          v-on:enter-cancelled="leave"
+          v-on:enter="enter"
+          v-on:leave="leave"
+        >
+          <li
+            class="inline-block bg-white text-gray-900 font-sans font-bold uppercase tracking-wider text-sm rounded py-1 px-4 mr-2 mt-2"
+            v-for="(topic, index) in projectTopics"
+            v-bind:key="topic"
+            v-bind:data-index="index"
+          >{{ topic }}</li>
+        </transition-group>
+      </div>
     </div>
   </nuxt-link>
 </template>
@@ -68,12 +69,6 @@
           return this.topics
         } else {
           return []
-        }
-      },
-      bgImage: function() {
-        return {
-          normal: 'background-image: url(' + this.bgURL.normal + ')',
-          hover: 'background-image: url(' + this.bgURL.hover + ')'
         }
       },
       bgURL: function() {
