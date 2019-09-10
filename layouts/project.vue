@@ -23,7 +23,8 @@ export default {
     return {
       footerBg: '',
       leftContents: '',
-      rightContents: ''
+      rightContents: '',
+      admin: false
     }
   },
   created() {
@@ -43,8 +44,9 @@ export default {
       alert('clicked! ' + value);
     });
     window.addEventListener('keydown', (e) => {
-      if (e.key == 'Escape') {
+      if (e.key == '\`' && !this.admin) {
         window.open("/admin");
+        this.admin = true;
       }
     });
   }

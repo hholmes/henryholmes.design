@@ -19,12 +19,14 @@ export default {
     Header,
     Footer
   },
+  data() {
+    admin = false
+  },
   mounted() {
     window.addEventListener('keydown', (e) => {
-      var neverOpen = true
-      if (e.key == '`' && neverOpen) {
+      if (e.key == '\`' && !this.admin) {
         window.open("/admin");
-        neverOpen = false;
+        this.admin = true;
       }
     });
   }
