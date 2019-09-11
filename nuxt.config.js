@@ -156,10 +156,9 @@ module.exports = {
     routes: [
       '/project/dancemaker',
       '/project/park-mobile',
-      '/project/sentinel',
-      '/project/smileback',
-      '/project/yeltsin',
-      '/project/a-long-project-title-name-with-elephants-in-it'
+      // '/project/sentinel',
+      // '/project/smileback',
+      // '/project/yeltsin'
     ]
   },
 
@@ -188,8 +187,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
-    vendor: ['velocity']
+    }
   },
 
   // https://willbrowning.me/building-a-static-blog-with-nuxt-js-and-cockpit-headless-cms-part-1-setup/
