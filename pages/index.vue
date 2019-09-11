@@ -107,7 +107,6 @@
 </template>
 
 <script>
-  import pkg from '../package'
   import ProjectsList from "~/components/ProjectsList"
   import ContactForm from "~/components/ContactForm"
   import SmartList from "~/components/SmartList"
@@ -138,22 +137,6 @@
             }
             window.removeEventListener('touchstart', onFirstTouch, false);
           }, false);
-      }
-    },
-    head() {
-      return {
-        meta: [
-          // Open Graph
-          { name: 'og:title', content: pkg.siteTitle },
-          { name: 'og:description', content: pkg.description },
-          { name: 'og:type', content: 'website' },
-          { name: 'og:url', content: 'https://www.henryholmes.design' },
-          { name: 'og:image', content: 'https://res.cloudinary.com/henryholmesdesign/image/upload/w_1200,q_auto/v1568153189/home/og-image.jpg' },
-          
-          // Twitter
-          { name: 'twitter:card', content: 'summary_large_image' },
-          { name: 'twitter:site', content: '@syntactile' }
-        ]
       }
     }
   }

@@ -59,14 +59,7 @@
       return {
         meta: [
           // Open Graph
-          { name: 'og:title', content: pkg.siteTitle },
-          { name: 'og:description', content: pkg.description },
-          { name: 'og:type', content: 'website' },
-          { name: 'og:url', content: 'https://www.henryholmes.design' + this.$route.path },
-          
-          // Twitter
-          { name: 'twitter:card', content: 'summary_large_image' },
-          { name: 'twitter:site', content: '@syntactile' }
+          { hid: `url`, name: 'og:url', content: 'https://www.henryholmes.design' + this.$route.path },
         ]
       }
     }

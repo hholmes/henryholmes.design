@@ -13,8 +13,8 @@ module.exports = {
   },
 
   /*
-  ** Headers of the page
-  */
+     ** Headers of the page
+     */
   head: {
     htmlAttrs: {
       lang: 'en'
@@ -26,10 +26,66 @@ module.exports = {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description },
-      { name: 'msapplication-TitleColor', content: '#b91d47' },
-      { name: 'theme-color', content: '#ffffff' }
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: pkg.description
+      },
+      {
+        name: 'msapplication-TitleColor',
+        content: '#b91d47'
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff'
+      },
+
+      // Open Graph,
+      {
+        name: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'ogTitle',
+        name: 'og:title',
+        content: pkg.siteTitle
+      },
+      {
+        hid: 'ogDescription',
+        name: 'og:description',
+        content: pkg.description
+      },
+      {
+        hid: 'url',
+        name: 'og:url',
+        content: 'https://www.henryholmes.design'
+      },
+      {
+        hid: 'ogImage',
+        name: 'og:image',
+        content:
+          'https://res.cloudinary.com/henryholmesdesign/image/upload/w_1200,q_auto/v1568153189/home/og-image.jpg'
+      },
+      {
+        hid: 'ogImageAlt',
+        name: 'og:image:alt',
+        content:
+          'Paper plane illustration with lowercase purple hh in upper left corner'
+      },
+
+      // Twitter
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        name: 'twitter:site',
+        content: '@syntactile'
+      }
     ],
     link: [
       {
@@ -69,9 +125,11 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#dc6017' },
+     ** Customize the progress-bar color
+     */
+  loading: {
+    color: '#dc6017'
+  },
 
   /* Page Transitions */
   pageTransition: {
@@ -84,24 +142,30 @@ module.exports = {
   // },
 
   /*
-  ** Global CSS
-  */
+     ** Global CSS
+     */
   css: ['~assets/css/a11y-light.css', '~assets/css/tailwind.css'],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+     ** Plugins to load before mounting the App
+     */
   plugins: [
     '~/plugins/vue2-filters',
     '~/plugins/vue-scroll',
     '~/plugins/vue-lazyload',
-    { src: '~/plugins/vendor.js', ssr: false },
-    { src: '~/plugins/velocity.js', ssr: false }
+    {
+      src: '~/plugins/vendor.js',
+      ssr: false
+    },
+    {
+      src: '~/plugins/velocity.js',
+      ssr: false
+    }
   ],
 
   /*
-  ** Nuxt.js modules
-  */
+     ** Nuxt.js modules
+     */
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
@@ -155,7 +219,7 @@ module.exports = {
   generate: {
     routes: [
       '/project/dancemaker',
-      '/project/park-mobile',
+      '/project/park-mobile'
       // '/project/sentinel',
       // '/project/smileback',
       // '/project/yeltsin'
@@ -168,8 +232,8 @@ module.exports = {
   },
 
   /*
-  ** Build configuration
-  */
+     ** Build configuration
+     */
   build: {
     postcss: {
       plugins: {
@@ -177,7 +241,7 @@ module.exports = {
       }
     },
     extractCSS: true,
-    extend(config, { isDev }) {
+    xtend(config, { isDev }) {
       if (isDev && process.client) {
         config.devtool = 'eval-source-map'
         config.module.rules.push({

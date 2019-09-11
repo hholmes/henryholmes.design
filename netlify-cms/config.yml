@@ -8,129 +8,172 @@ media_library:
   name: cloudinary
   config:
     default_transformations:
-              -   - fetch_format: auto
-                    quality: auto
+      - - fetch_format: auto
+          quality: auto
     cloud_name: henryholmesdesign
     api_key: 879599492333283
-    
-media_folder: "static/images" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images" # The src attribute for uploaded media will begin with /images
+
+media_folder: 'static/images' # Media files will be stored in the repo under static/images/uploads
+public_folder: '/images' # The src attribute for uploaded media will begin with /images
 
 collections:
-  - label: "Basics"
-    name: "basics"
+  - label: 'Basics'
+    name: 'basics'
     files:
-      - label: "Global"
-        name: "global"
-        file: "content/global.json"
-        format: "json"
+      - label: 'Global'
+        name: 'global'
+        file: 'content/global.json'
+        format: 'json'
         fields:
-          - label: "Navigation"
-            name: "nav"
-            widget: "relation"
-            collection: "pages"
-            searchFields: ["title"]
-            valueField: "title"
+          - label: 'Navigation'
+            name: 'nav'
+            widget: 'relation'
+            collection: 'pages'
+            searchFields: ['title']
+            valueField: 'title'
             multiple: true
             required: false
-      - label: "Home"
-        name: "home"
-        file: "content/home.json"
-        format: "json"
+      - label: 'Home'
+        name: 'home'
+        file: 'content/home.json'
+        format: 'json'
         fields:
-          - {label: "logo", name: "logo", widget: image}
-          - {label: Body, name: body, widget: markdown, required: true}
-          - label: "Projects"
-            name: "projects"
-            widget: "relation"
-            collection: "project"
-            searchFields: ["title"]
-            valueField: "title"
+          - { label: 'logo', name: 'logo', widget: image }
+          - { label: Body, name: body, widget: markdown, required: true }
+          - label: 'Projects'
+            name: 'projects'
+            widget: 'relation'
+            collection: 'project'
+            searchFields: ['title']
+            valueField: 'title'
             multiple: true
-          - label: "Resume"
-            name: "resume"
-            widget: "file"
+          - label: 'Resume'
+            name: 'resume'
+            widget: 'file'
             media_library:
               config:
                 multiple: false
                 default_transformations:
-                  -   - fetch_format: pdf
-          - {label: Details, name: details, widget: markdown, required: false}
-          - {label: Facebook, name: facebook, widget: string, required: false}
-          - {label: Twitter, name: twitter, widget: string, required: false}
-          - {label: GitHub, name: github, widget: string, required: false}
-          - {label: Instagram, name: instagram, widget: string, required: false}
-          - {label: LinkedIn, name: linkedin, widget: string, required: false}
-  - label: "Project"
-    name: "project"
-    folder: "content/project"
+                  - - fetch_format: pdf
+          - { label: Details, name: details, widget: markdown, required: false }
+          - { label: Facebook, name: facebook, widget: string, required: false }
+          - { label: Twitter, name: twitter, widget: string, required: false }
+          - { label: GitHub, name: github, widget: string, required: false }
+          - {
+              label: Instagram,
+              name: instagram,
+              widget: string,
+              required: false,
+            }
+          - { label: LinkedIn, name: linkedin, widget: string, required: false }
+  - label: 'Project'
+    name: 'project'
+    folder: 'content/project'
     create: true
-    slug: "{{slug}}"
-    format: "json"
+    slug: '{{slug}}'
+    format: 'json'
     fields:
-      - {label: ID, name: id, widget: string, required: true}
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Type, name: type, widget: string, required: true}
-      - {label: Subtitle, name: subtitle, widget: string, required: false}
-      - {label: Start Date, name: start, widget: date, format: "MMMM YYYY", required: true}
-      - {label: End Date, name: end, widget: date, format: "MMMM YYYY", required: false}
-      - {label: Ongoing, name: ongoing, widget: boolean, default: true, required: false}
-      - {label: Roles, name: roles, widget: list, required: true}
-      - {label: Tasks, name: tasks, widget: list, required: true}
-      - {label: Tools, name: tools, widget: list, required: true}
-      - {label: CoverImage, name: cover, widget: image, required: false}
-      - {label: Previous, name: previous, widget: string, required: false}
-      - {label: Next, name: next, widget: string, required: false}  
+      - { label: ID, name: id, widget: string, required: true }
+      - { label: Title, name: title, widget: string, required: true }
+      - { label: Type, name: type, widget: string, required: true }
+      - { label: Subtitle, name: subtitle, widget: string, required: false }
+      - {
+          label: Start Date,
+          name: start,
+          widget: date,
+          format: 'MMMM YYYY',
+          required: true,
+        }
+      - {
+          label: End Date,
+          name: end,
+          widget: date,
+          format: 'MMMM YYYY',
+          required: false,
+        }
+      - {
+          label: Ongoing,
+          name: ongoing,
+          widget: boolean,
+          default: true,
+          required: false,
+        }
+      - { label: Roles, name: roles, widget: list, required: true }
+      - { label: Tasks, name: tasks, widget: list, required: true }
+      - { label: Tools, name: tools, widget: list, required: true }
+      - { label: CoverImage, name: cover, widget: image, required: false }
+      - { label: Previous, name: previous, widget: string, required: false }
+      - { label: Next, name: next, widget: string, required: false }
       - label: Sections
-        name: "sections"
+        name: 'sections'
         widget: list
         required: false
         fields:
-          - {label: Heading, name: heading, widget: string, required: true}
-          - {label: SectionBanner, name: sectionBanner, widget: image, required: false}
-          - {label: Body, name: body, widget: markdown, required: true}
-          - {label: Background Color, name: bg, widget: string, required: false}
-          - {label: Foreground Color, name: fg, widget: string, required: false}
-          - label: "Topic"
-            name: "topic"
-            widget: "relation"
-            collection: "topic"
-            searchFields: ["title"]
-            valueField: "title"
+          - { label: Heading, name: heading, widget: string, required: true }
+          - {
+              label: SectionBanner,
+              name: sectionBanner,
+              widget: image,
+              required: false,
+            }
+          - { label: Body, name: body, widget: markdown, required: true }
+          - {
+              label: Background Color,
+              name: bg,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Foreground Color,
+              name: fg,
+              widget: string,
+              required: false,
+            }
+          - label: 'Topic'
+            name: 'topic'
+            widget: 'relation'
+            collection: 'topic'
+            searchFields: ['title']
+            valueField: 'title'
             required: false
-  - label: "Article"
-    name: "article"
-    folder: "content/article"
+  - label: 'Article'
+    name: 'article'
+    folder: 'content/article'
     create: true
-    slug: "{{slug}}"
-    format: "json"
+    slug: '{{slug}}'
+    format: 'json'
     fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Description, name: description, widget: string, required: true}
-      - {label: Call to Action, name: cta, widget: string, required: true}
-      - {label: CoverImage, name: cover, widget: image, required: false}
+      - { label: Title, name: title, widget: string, required: true }
+      - {
+          label: Description,
+          name: description,
+          widget: string,
+          required: true,
+        }
+      - { label: Call to Action, name: cta, widget: string, required: true }
+      - { label: CoverImage, name: cover, widget: image, required: false }
       - label: Sections
-        name: "sections"
+        name: 'sections'
         widget: list
         required: false
         fields:
-          - {label: Body, name: body, widget: markdown, required: false}
-          - label: "Topic"
-            name: "topic"
-            widget: "relation"
-            collection: "topic"
-            searchFields: ["title"]
-            valueField: "title"
-  - label: "Topic"
-    name: "topic"
-    folder: "content/topic"
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: 'Topic'
+            name: 'topic'
+            widget: 'relation'
+            collection: 'topic'
+            searchFields: ['title']
+            valueField: 'title'
+  - label: 'Topic'
+    name: 'topic'
+    folder: 'content/topic'
     create: true
-    slug: "{{slug}}"
-    format: "json"
+    slug: '{{slug}}'
+    format: 'json'
     fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Abbr, name: abbr, widget: string, required: true}
-      - {label: Description, name: description, widget: text, required: false}
+      - { label: Title, name: title, widget: string, required: true }
+      - { label: Abbr, name: abbr, widget: string, required: true }
+      - { label: Description, name: description, widget: text, required: false }
   # - label: "Resume"
   #   name: "resume"
   #   file: "content/resume.json"
@@ -144,12 +187,12 @@ collections:
   #         - {label: Title, name: title, widget: string, required: true}
   #         - {label: Logo, name: logo, widget: image, required: false}
   #         - {label: Acronym, name: acronym, widget: string, required: false}
-  - label: "Pages"
-    name: "pages"
-    folder: "content/page"
+  - label: 'Pages'
+    name: 'pages'
+    folder: 'content/page'
     create: true
-    format: "json"
-    slug: "{{title}}"
+    format: 'json'
+    slug: '{{title}}'
     fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Body, name: body, widget: markdown}
+      - { label: Title, name: title, widget: string, required: true }
+      - { label: Body, name: body, widget: markdown }

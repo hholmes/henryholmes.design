@@ -12,7 +12,7 @@
         <p class="subtitle skip-kern">{{ project.subtitle }}</p>
       </div>
     </div>
-    <section class="flex flex-wrap items-top mainstream min-h-screen-1/2 md:min-h-screen-1/4 md:mb-rhythm">
+    <section class="flex flex-wrap items-top mainstream mb-rhythm min-h-screen-1/2 md:min-h-screen-1/4">
       <SmartList
         class="w-1/2 md:w-1/4 mb-rhythm md:mb-0 pr-8 md:mr-0"
         :header="'Timeframe'" 
@@ -66,7 +66,13 @@
       return {
         title: (this.project.title).replace(/<[^>]*>?/gm, ''),
         meta: [
-          { name: 'og:image', content: this.ogURL(this.project.cover) }
+          { hid: `ogTitle`, name: 'og:title', content: `${ this.project.subtitle }` },
+          { hid: `description`, name: 'description', content: `${ (this.project.title).replace(/<[^>]*>?/gm, '') }, a portfolio case study by Henry Holmes'` },
+          { hid: `ogDescription`, name: 'og:description', content: `${ this.project.subtitle }` },
+          { hid: `ogImage`, name: 'og:image', content: this.ogURL(this.project.cover) },
+
+          // todo: CMS -> alt for all images
+          { hid: `ogImageAlt`, name: 'og:image:alt', content: (this.project.title).replace(/<[^>]*>?/gm, '') + ' banner image' }
         ]
       }
     },
@@ -81,7 +87,7 @@
     },
     methods: {
       ogURL: function(url) {
-        return url.split("upload/")[0] + 'upload/w_1200,h_630,c_fill,' + url.split("upload/")[1].replace('c_scale,','').replace(',w_640','')
+        return url.replace('upload/','upload/w_1200,h_630,c_fill,').replace('c_scale,','').replace(',w_640','')
       },
       removeStr: function(str, remove) {
         if (str.indexOf(remove) > -1 && str.indexOf(remove) == str.lastIndexOf(remove)) {
