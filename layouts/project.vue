@@ -11,44 +11,64 @@
 </template>
 
 <script>
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
+  import pkg from '../package'
+  import Header from '~/components/Header.vue'
+  import Footer from '~/components/Footer.vue'
 
-export default {
-  components: {
-    Header,
-    Footer
-  },
-  data() {
-    return {
-      footerBg: '',
-      leftContents: '',
-      rightContents: '',
-      admin: false
-    }
-  },
-  created() {
-    this.$nuxt.$on('footer-bg', (e) => {
-      this.footerBg = e;
-    });
-    this.$nuxt.$on('previous-link', (e) => {
-      this.leftContents = e;
-    });
-    this.$nuxt.$on('next-link', (e) => {
-      this.rightContents = e;
-    });
-  },
-  mounted() {
-    // console.log('template mounted')
-    this.$nuxt.$on('clicked', function(value) {
-      alert('clicked! ' + value);
-    });
-    window.addEventListener('keydown', (e) => {
-      if (e.key == '\`' && !this.admin) {
-        window.open("/admin");
-        this.admin = true;
+  export default {
+    components: {
+      Header,
+      Footer
+    },
+    data() {
+      return {
+        footerBg: '',
+        leftContents: '',
+        rightContents: '',
+        coverImage: '',
+        admin: false
       }
-    });
+    },
+    created() {
+      this.$nuxt.$on('footer-bg', (e) => {
+        this.footerBg = e;
+      });
+      this.$nuxt.$on('previous-link', (e) => {
+        this.leftContents = e;
+      });
+      this.$nuxt.$on('next-link', (e) => {
+        this.rightContents = e;
+      });
+      this.$nuxt.$on('cover-image', (e) => {
+        this.coverImage = e;
+      });
+    },
+    mounted() {
+      // console.log('template mounted')
+      this.$nuxt.$on('clicked', function(value) {
+        alert('clicked! ' + value);
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key == '\`' && !this.admin) {
+          window.open("/admin");
+          this.admin = true;
+        }
+      });
+    },
+    head() {
+      return {
+        meta: [
+          // Open Graph
+          { name: 'og:title', content: pkg.siteTitle },
+          { name: 'og:description', content: pkg.description },
+          { name: 'og:type', content: 'website' },
+          { name: 'og:url', content: 'https://www.henryholmes.design' + this.$route.path },
+          
+          // Twitter
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:site', content: '@syntactile' }
+        ]
+      }
+    }
   }
-}
 </script>

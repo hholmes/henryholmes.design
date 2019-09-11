@@ -18,12 +18,11 @@ module.exports = {
   head: {
     htmlAttrs: {
       lang: 'en'
-    },  
-    // title: pkg.name,
-    // title: 'Henry Holmes',
+    },
     titleTemplate: titleChunk => {
-      // If undefined or blank then we don't need the hyphen
-      return titleChunk ? `${titleChunk} - Henry Holmes` : 'Henry Holmes'
+      return titleChunk
+        ? `${titleChunk} - Henry Holmes`
+        : 'Henry Holmes is a designer.'
     },
     meta: [
       { charset: 'utf-8' },
@@ -116,7 +115,8 @@ module.exports = {
       }
     ],
     'nuxt-purgecss',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/sitemap'
   ],
 
   fontawesome: {
@@ -161,6 +161,11 @@ module.exports = {
       '/project/yeltsin',
       '/project/a-long-project-title-name-with-elephants-in-it'
     ]
+  },
+
+  sitemap: {
+    gzip: true,
+    exclude: ['/admin/**']
   },
 
   /*

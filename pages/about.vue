@@ -6,7 +6,7 @@
 
 <script>
   import SmartList from "~/components/SmartList"
-  const page = require('~/content/page/about.json')
+  // const page = require('~/content/page/about.json')
 
   export default {
     data () {
@@ -19,7 +19,7 @@
     },
     head() {
       return {
-        title: this.page.title
+        // title: this.page.title
       }
     }
   }

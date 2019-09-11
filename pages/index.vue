@@ -44,7 +44,7 @@
         <h2>Exposition</h2>
         <p>Raised in rural Wisconsin, I earned my BFA at <a href="https://www.wisc.edu">UW Madison</a>. I studied algorithms through a choreographic lens, considering software as an extension of the human psyche. I moved to Brooklyn to work with non-profits, artists, educators and others at the intersection of <i>real</i> and <i>virtual</i> life, building digital infrastructure that makes a difference in the daily lives of actual people.</p>
       </div>
-      <div class="md:w-1/2 lg:p-8 xl:p-24">
+      <div class="md:w-1/2 p-4 lg:p-8 xl:p-24">
         <img class="w-full" src="https://res.cloudinary.com/henryholmesdesign/image/upload/c_scale,w_128/v1568060774/home/paper-plane.svg" />
       </div>
     </section>
@@ -53,7 +53,7 @@
         <h2>Under the hood</h2>
         <p>I built this site on <a href="https://nuxtjs.org">Nuxt</a>, a framework for another framework (<a href="https://vuejs.org">Vue.js</a>.) Commits are automatically published to <a href="https://netlify.com">Netlify</a> and I manage content with <a href="https://www.netlifycms.org">Netlify CMS</a>. Wherever possible I've chosen open source software and well-maintained libraries. This is roughly the 12th iteration of my portfolio over a decade's time. It will never be finished.</p>
       </div>
-      <div class="details-block md:pl-0 md:w-1/2 lg:p-8 xl:p-24">
+      <div class="details-block md:pl-0 md:w-1/2 p-4 lg:p-8 xl:p-24">
         <img class="w-full" src="https://res.cloudinary.com/henryholmesdesign/image/upload/c_scale,w_128/v1568060888/home/paper-unfolded.svg" />
       </div>
     </section>
@@ -107,6 +107,7 @@
 </template>
 
 <script>
+  import pkg from '../package'
   import ProjectsList from "~/components/ProjectsList"
   import ContactForm from "~/components/ContactForm"
   import SmartList from "~/components/SmartList"
@@ -138,6 +139,22 @@
             window.removeEventListener('touchstart', onFirstTouch, false);
           }, false);
       }
+    },
+    head() {
+      return {
+        meta: [
+          // Open Graph
+          { name: 'og:title', content: pkg.siteTitle },
+          { name: 'og:description', content: pkg.description },
+          { name: 'og:type', content: 'website' },
+          { name: 'og:url', content: 'https://www.henryholmes.design' },
+          { name: 'og:image', content: 'https://res.cloudinary.com/henryholmesdesign/image/upload/w_1200,q_auto/v1568153189/home/og-image.jpg' },
+          
+          // Twitter
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:site', content: '@syntactile' }
+        ]
+      }
     }
   }
 </script>
@@ -149,7 +166,7 @@
     padding-right: calc(theme('spacing.main'));
   }
 
-  .cardPad {
+  .cardPad, .project-preview {
     padding: calc(theme('spacing.main'));
   }
 

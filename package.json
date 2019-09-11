@@ -1,8 +1,9 @@
 {
   "name": "henryholmes.design",
   "version": "1.0.12",
-  "description": "Henry Holmes is a designer in Brooklyn.",
+  "description": "Henry is a designer and artist in Brooklyn who helps people build meaningful software.",
   "author": "Henry Holmes",
+  "siteTitle": "Henry Holmes is a designer.",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -21,6 +22,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/sitemap": "^1.3.0",
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^5.2.0",
     "fs": "0.0.1-security",

@@ -374,9 +374,9 @@ a.lightbox {
   }
 }
 
-.mainstream { @apply w-full mx-auto px-main; }
-@screen sm { .mainstream { @apply max-w-xl; }}
-@screen md { .mainstream { @apply max-w-3xl; }}
+.mainstream { @apply w-full mx-auto px-4; }
+@screen sm { .mainstream { @apply max-w-xl px-6; }}
+@screen md { .mainstream { @apply max-w-2xl; }}
 @screen lg { .mainstream { @apply max-w-4xl; }}
 @screen xl { .mainstream { @apply max-w-6xl; }}
 

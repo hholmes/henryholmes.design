@@ -15,7 +15,7 @@
         class="blurBg z-0 absolute object-cover h-full"
         :data-src="bgURL.hover" />
       <div class="cardPad relative h-full">
-        <h4 class="font-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mb-2 z-10"
+        <h4 class="font-sans text-white font-normal text-xs md:text-sm uppercase opacity-80 tracking-widest mt-4 mb-1 md:mt-0 md:mb-2 z-10"
           v-html="project.title">
         </h4>
         <h2 class="bold pr-12 leading-tight text-4xl z-10"
@@ -107,7 +107,7 @@
             this.numTopics = i
         var delay = i * 50
         setTimeout(function () {
-          console.log('enter for ' + el.html + ', ' + el.classList.contains('topicDisabled'))
+          // console.log('enter for ' + el.html + ', ' + el.classList.contains('topicDisabled'))
           if (!el.classList.contains('topicDisabled')) {
             Velocity(
               el,

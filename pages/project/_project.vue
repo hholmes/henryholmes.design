@@ -63,7 +63,10 @@
     },
     head() {
       return {
-        title: (this.project.title).replace(/<[^>]*>?/gm, '')
+        title: (this.project.title).replace(/<[^>]*>?/gm, ''),
+        meta: [
+          { name: 'og:image', content: this.ogURL(this.project.cover) }
+        ]
       }
     },
     computed: {
@@ -75,12 +78,22 @@
       SmartList,
       ArticleSection
     },
-    // data () {
-    //   return {
-    //     position: { scrollTop: 0, scrollLeft: 0 }
-    //   };
-    // },
+    methods: {
+      ogURL: function(url) {
+        return url.split("upload/")[0] + 'upload/w_1200,h_630,c_fill,' + url.split("upload/")[1].replace('c_scale,','').replace(',w_640','')
+      },
+      removeStr: function(str, remove) {
+        if (str.indexOf(remove) > -1 && str.indexOf(remove) == str.lastIndexOf(remove)) {
+          return str.split(remove)[0] + str.split(remove)[1];
+        } else {
+          return str
+        }
+          
+      }
+    },
     mounted () {
+      this.$nuxt.$emit('cover-image', this.project.cover)
+
       // Set footer color
       if (this.project.sections && this.project.sections.length > 0) {
         this.$nuxt.$emit('footer-bg', this.project.sections[this.project.sections.length - 1].bg)
