@@ -1,6 +1,7 @@
 <template>
   <section>
-    <form name="contact" action="/" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+    <form name="contactForm" action="/" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+      <input type="hidden" name="form-name" value="contactForm" />
       <div class="hidden">
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
       </div>    
