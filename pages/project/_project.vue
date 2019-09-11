@@ -66,9 +66,9 @@
       return {
         title: (this.project.title).replace(/<[^>]*>?/gm, ''),
         meta: [
+          { hid: `description`, name: 'description', content: `${ this.project.subtitle }` },
           { hid: `ogTitle`, name: 'og:title', content: `${ this.project.subtitle }` },
-          { hid: `description`, name: 'description', content: `${ (this.project.title).replace(/<[^>]*>?/gm, '') }, a portfolio case study by Henry Holmes'` },
-          { hid: `ogDescription`, name: 'og:description', content: `${ this.project.subtitle }` },
+          { hid: `ogDescription`, name: 'og:description', content: `${ (this.project.title).replace(/<[^>]*>?/gm, '') }, a portfolio case study by Henry Holmes'` },
           { hid: `ogImage`, name: 'og:image', content: this.ogURL(this.project.cover) },
 
           // todo: CMS -> alt for all images
