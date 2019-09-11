@@ -10,10 +10,11 @@
 </template>
 
 <script>
-export default {
-  async asyncData({ params, app, payload, route, store }) {
-    const thisPage = await import('~/content/pages/' + params.slug + '.json')
-    return thisPage
+  const cloneDeep = require('clone-deep');
+  export default {
+    async asyncData({ params, app, payload, route, store }) {
+      const thisPage = await import('~/content/pages/' + params.slug + '.json')
+      return cloneDeep(thisPage)
+    }
   }
-}
 </script>

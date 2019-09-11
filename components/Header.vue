@@ -28,28 +28,28 @@
 
 <script>
 const global = require('~/content/global.json')
-const context = require.context('~/content/page/', false, /\.json$/);
-const navPages = context.keys().map(key => ({
-    ...context(key),
-    _path: `/${key.replace('.json', '').replace('./', '')}`
-  }));
+// const context = require.context('~/content/page/', false, /\.json$/);
+// const navPages = context.keys().map(key => ({
+//     ...context(key),
+//     _path: `/${key.replace('.json', '').replace('./', '')}`
+//   }));
 
 export default {
   props: ['homeLink'],
   data () {
     return {
       global,
-      navPages
+      // navPages
     }
   },
   methods: {
     linkForNavTitle(navItem) {
       var path = ''
-      this.navPages.forEach(function(page, index) {
-        if (page.title.valueOf() == navItem.valueOf()) {
-          path = page._path;
-        }
-      })
+      // this.navPages.forEach(function(page, index) {
+      //   if (page.title.valueOf() == navItem.valueOf()) {
+      //     path = page._path;
+      //   }
+      // })
       return path;
     }
   }

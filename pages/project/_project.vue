@@ -49,6 +49,7 @@
   import SmartList from "~/components/SmartList"
   import ArticleSection from "~/components/ArticleSection"
   import { Luminous, LuminousGallery } from 'luminous-lightbox'
+  const cloneDeep = require('clone-deep');
 
   export default {
     name: 'Project',
@@ -58,7 +59,7 @@
         route.params.project +
         '.json')
       return {
-        project: projectData
+        project: cloneDeep(projectData)
       }
     },
     head() {

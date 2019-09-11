@@ -19,20 +19,21 @@
 </template>
 
 <script>
-// import axios from 'axios'
-export default {
-  async asyncData({ params, route }) {
-    const articleContents = await import('~/content/article/' +
-      route.params.article +
-      '.json')
-    return {
-      article: articleContents
-    }
-  },
-  head() {
-    return {
-      title: this.article.title
+  const cloneDeep = require('clone-deep');
+
+  export default {
+    async asyncData({ params, route }) {
+      const articleContents = await import('~/content/article/' +
+        route.params.article +
+        '.json')
+      return {
+        article: cloneDeep(articleContents)
+      }
+    },
+    head() {
+      return {
+        title: this.article.title
+      }
     }
   }
-}
 </script>
