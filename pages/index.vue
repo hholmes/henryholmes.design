@@ -45,7 +45,7 @@
         <p>Raised in rural Wisconsin, I earned my BFA at <a href="https://www.wisc.edu">UW Madison</a>. I studied algorithms through a choreographic lens, considering software as an extension of the human psyche. I moved to Brooklyn to work with non-profits, artists, educators and others at the intersection of <i>real</i> and <i>virtual</i> life, building digital infrastructure that makes a difference in the daily lives of actual people.</p>
       </div>
       <div class="md:w-2/5 lg:w-1/2 p-4 lg:p-8 xl:p-24">
-        <img class="w-full" src="https://res.cloudinary.com/henryholmesdesign/image/upload/c_scale,w_128/v1568060774/home/paper-plane.svg" />
+        <img class="w-full" src="https://res.cloudinary.com/henryholmesdesign/image/upload/c_scale,w_156/v1568060774/home/paper-plane-2.svg" />
       </div>
     </section>
     <section class="flex flex-wrap md:items-center md:flex-row-reverse overflow-hidden mb-rhythm2x">
@@ -54,7 +54,7 @@
         <p>I built this site on <a href="https://nuxtjs.org">Nuxt</a>, a framework for another framework (<a href="https://vuejs.org">Vue.js</a>.) Commits are automatically published to <a href="https://netlify.com">Netlify</a> and I manage content with <a href="https://www.netlifycms.org">Netlify CMS</a>. Wherever possible I've chosen open source software and well-maintained libraries. This is roughly the 12th iteration of my portfolio over a decade's time. It will never be finished.</p>
       </div>
       <div class="details-block p-4 md:pl-0 md:w-2/5 lg:w-1/2 lg:p-8 xl:p-24">
-        <img class="w-full" src="https://res.cloudinary.com/henryholmesdesign/image/upload/c_scale,w_128/v1568060888/home/paper-unfolded.svg" />
+        <img class="w-full" src="https://res.cloudinary.com/henryholmesdesign/image/upload/c_scale,w_156/v1568060888/home/paper-unfolded.svg" />
       </div>
     </section>
     <section class="container">
