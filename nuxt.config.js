@@ -68,7 +68,7 @@ module.exports = {
         hid: 'ogImage',
         name: 'og:image',
         content:
-          'https://res.cloudinary.com/henryholmesdesign/image/upload/w_1200,q_auto/v1568153189/home/og-image.jpg'
+          'https://res.cloudinary.com/henryholmesdesign/image/upload/w_1200,h_620,c_fill/v1568153189/home/og-image-2.png'
       },
       {
         hid: 'ogImageAlt',
