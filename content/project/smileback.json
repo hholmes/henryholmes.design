@@ -2,13 +2,13 @@
   "start": "January 2018",
   "sections": [
     {
-      "heading": "Building a Better Culture",
-      "body": "Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.",
+      "heading": "Summary",
+      "body": "I served as design principle for the relaunch of SmileBack to iOS and Android, undertaking a full identity refresh and UI revamp over the course of a year's time. Working closely with our team, I produced designs and assets for each of the app's views and associated states, iterating and refining every pixel in response to analytics, user interviews and internal discussion.",
       "topic": "Product Design"
     },
     {
-      "heading": "Screens",
-      "body": "Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.",
+      "heading": "Challenges",
+      "body": "1. In order to work efficiently and maintain consistency across thousands of interface elements, I built a detailed system of Sketch symbols that increased the speed and precision of mockups and specifications.\n2. I came up with a reliable technique for using symbols and constraints to generate artboards for both iOS and Android simultaneously, so we could push changes to Zeplin for painless handoff.\n3. To personalize users' experience geographically as a unique selling point, I designed an illustration for each city and college in which we launched.",
       "topic": "UI Design"
     }
   ],
