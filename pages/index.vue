@@ -79,13 +79,6 @@
               content: 'resume'
             },
             {
-              href: home.twitter,
-              hrefTarget: '_blank',
-              icon: ['fab', 'twitter'],
-              iconColor: 'text-gray-300',
-              content: 'twitter'
-            },
-            {
               href: home.github,
               hrefTarget: '_blank',
               icon: ['fab', 'github'],
